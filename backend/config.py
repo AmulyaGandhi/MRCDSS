@@ -1,0 +1,22 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+OUTPUTS_DIR = os.path.join(PROJECT_ROOT, "outputs")
+
+PREPROCESSED_CSV = os.path.join(OUTPUTS_DIR, "preprocessed_output.csv")
+FINAL_FEATURES_CSV = os.path.join(OUTPUTS_DIR, "selected_features", "final_model_features.csv")
+RISK_CLUSTERS_CSV = os.path.join(OUTPUTS_DIR, "risk_classification", "district_year_risk_clusters.csv")
+CLUSTER_PROFILES_CSV = os.path.join(OUTPUTS_DIR, "risk_classification", "cluster_profiles.csv")
+CLUSTER_CENTROIDS_CSV = os.path.join(OUTPUTS_DIR, "risk_classification", "cluster_centroids.csv")
+CLUSTERING_METRICS_TXT = os.path.join(OUTPUTS_DIR, "risk_classification", "clustering_metrics.txt")
+SENSITIVITY_CLUSTERS_CSV = os.path.join(OUTPUTS_DIR, "risk_classification", "sensitivity_without_severe_anemia", "district_year_risk_clusters.csv")
+SENSITIVITY_METRICS_TXT = os.path.join(OUTPUTS_DIR, "risk_classification", "sensitivity_without_severe_anemia", "clustering_metrics.txt")
+SENSITIVITY_PROFILES_CSV = os.path.join(OUTPUTS_DIR, "risk_classification", "sensitivity_without_severe_anemia", "cluster_profiles.csv")
+FEATURE_IMPORTANCE_CSV = os.path.join(OUTPUTS_DIR, "explainability", "feature_importance.csv")
+SHAP_VALUES_TEST_CSV = os.path.join(OUTPUTS_DIR, "explainability", "shap_values_test.csv")
+DECISION_SUPPORT_CSV = os.path.join(OUTPUTS_DIR, "decision_support", "district_decision_support.csv")
+PRIORITY_SUMMARY_CSV = os.path.join(OUTPUTS_DIR, "decision_support", "district_priority_summary.csv")
+PLANNING_RULES_CSV = os.path.join(OUTPUTS_DIR, "decision_support", "planning_rules.csv")
+MODEL_COMPARISON_CSV = os.path.join(OUTPUTS_DIR, "classification", "model_comparison.csv")
+BEST_MODEL_METRICS_JSON = os.path.join(OUTPUTS_DIR, "classification", "best_model_metrics.json")

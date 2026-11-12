@@ -1,0 +1,25 @@
+{
+ "invalid_per_feature": {
+  "ANC_First_Trimester_Pct": {
+   "invalid_lt_0": 0,
+   "invalid_gt_100": 0,
+   "invalid_gt_100_max": null
+  },
+  "TT2_Booster_Pct": {
+   "invalid_lt_0": 0,
+   "invalid_gt_100": 368,
+   "invalid_gt_100_max": 185.9296
+  },
+  "Severe_Anemia_Pct": {
+   "invalid_lt_0": 0,
+   "invalid_gt_100": 5,
+   "invalid_gt_100_max": 354.5455
+  },
+  "Obstetric_Complications_Pct": {
+   "invalid_lt_0": 0,
+   "invalid_gt_100": 11,
+   "invalid_gt_100_max": 762.4329
+  }
+ },
+ "flags_file_rows": 1955
+}

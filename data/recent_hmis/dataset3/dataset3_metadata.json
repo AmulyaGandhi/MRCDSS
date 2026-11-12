@@ -1,0 +1,88 @@
+{
+  "dataset": "dataset3_recent_hmis",
+  "purpose": "Standalone district-year analytical dataset of recent-HMIS maternal indicators reconstructed from cumulative annual HMIS raw files (district Total columns).",
+  "granularity": "State + District + Fiscal Year",
+  "years": [
+    "2020-2021",
+    "2021-2022",
+    "2022-2023",
+    "2023-2024",
+    "2024-2025"
+  ],
+  "source": "NHSRC HMIS portal cumulative annual releases (B.Cummulative UpTo_Mar files); 2024-2025 only where UpTo_Mar files were acquired",
+  "year_selection": "annual cumulative UpTo_Mar file per state; partial cumulative months (2024-25) excluded",
+  "primary_columns": [
+    "State",
+    "District",
+    "Year",
+    "source_dataset",
+    "ANC_First_Trimester_Pct",
+    "TT2_Booster_Pct",
+    "Severe_Anemia_Pct",
+    "Obstetric_Complications_Pct"
+  ],
+  "district_value": "district Total column (Total = Public + Private = Urban + Rural; state = sum of districts)",
+  "features": {
+    "ANC_First_Trimester_Pct": {
+      "formula": "1.1.1 (ANC within 1st trimester) / 1.1 ((NEW) PW ANC registered) x 100",
+      "years": "all"
+    },
+    "TT2_Booster_Pct": {
+      "formula": "(1.2.2 TT2/Td2 + 1.2.3 TT/Td Booster) / 1.1 ((NEW) PW ANC registered) x 100 - possible double-count for women given both doses",
+      "years": "all"
+    },
+    "Severe_Anemia_Pct": {
+      "formula": "1.4.3 (Hb<7 old schema / Hb<=7 new schema) / 1.4.2 (Hb<11) x 100 - definition changed across schema; recent-HMIS indicator only",
+      "years": "all"
+    },
+    "Obstetric_Complications_Pct": {
+      "formula": "5.1 (aggregate obstetric complications attended) / (home SBA + home non-SBA + institutional deliveries) x 100; available 2020-21 .. 2022-23 only",
+      "years": [
+        "2020-2021",
+        "2021-2022",
+        "2022-2023"
+      ]
+    }
+  },
+  "caveats": {
+    "TT2_Booster_Pct": "TT2 and booster sums may double-count women given both; preserved, not adjusted.",
+    "Severe_Anemia_Pct": "Definition changed: threshold <7 (2020-23) to <=7 (2023-24+); Hb<11 terminology relabelled (7.1-10.9 g/dl). Recent-HMIS indicator only; not claimed as harmonized with Dataset 1/2.",
+    "Obstetric_Complications_Pct": "Aggregate item 5.1 exists 2020-21..2022-23 only; schema break in 2023-24+ to HRP items. Left NaN for 2023-24 and 2024-25. Not replaced by event-count components."
+  },
+  "excluded": {
+    "Institutional_Delivery_Pct": "Legacy denominator was ANC registrations (2.2/1.1), newer schema uses a different delivery structure; not constructed to avoid non-comparability.",
+    "PNC_48h_Pct": "No comparable within-48-hour institutional PNC indicator across required years (6.1 home-only; 6.2 is 48h-14d; 2.2.1 meaning changed across eras).",
+    "legacy_2020_21_ut_files": [
+      "Dadra & Nagar Haveli",
+      "Daman & Diu"
+    ],
+    "partial_2024_25_months": "apr..feb cumulative files available for 36 states but excluded from annual panel",
+    "fy_2025_26": "files listed on portal but anonymous downloads returned HTTP 500; not downloaded, not included"
+  },
+  "validation": {
+    "denominator_zero_returns_nan": true,
+    "missing_numerator_returns_nan": true,
+    "missing_denominator_returns_nan": true,
+    "no_clipping": true,
+    "out_of_range_flagged_not_fixed": true,
+    "no_imputation": true
+  },
+  "rounding": "percentages written to 4 decimals; computed from full integer counts; NaN = unavailable",
+  "generated_at": "2026-09-21T15:41:59.430642+00:00",
+  "row_counts": {
+    "total": 3306,
+    "per_year": {
+      "2020-2021": 782,
+      "2021-2022": 782,
+      "2022-2023": 791,
+      "2023-2024": 783,
+      "2024-2025": 168
+    }
+  },
+  "coverage": {
+    "n_unique_state_district": 812,
+    "n_states_overall": 36,
+    "reference_36_states_matched": 36,
+    "reference_707_units_matched_overall": 707
+  }
+}

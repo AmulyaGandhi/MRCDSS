@@ -1,0 +1,40 @@
+base:
+  src_dir: src/
+  output_dir: outputs/
+  test_dir: tests/
+
+backend:
+  framework: fastapi
+  host: 0.0.0.0
+  port: 8000
+  reload: true
+
+frontend:
+  framework: react
+  port: 3000
+
+api:
+  prefix: /api
+  frontend_url: http://localhost:3000
+
+data:
+  dataset1: dataset1.csv
+  dataset2: dataset2.csv
+  preprocessed: outputs/preprocessed_output.csv
+  final_features: outputs/selected_features/final_model_features.csv
+  risk_clusters: outputs/risk_classification/district_year_risk_clusters.csv
+  decision_support: outputs/decision_support/district_decision_support.csv
+
+features:
+  - ANC_First_Trimester_Pct
+  - TT2_Booster_Pct
+  - Severe_Anemia_Pct
+  - Institutional_Delivery_Pct
+  - PNC_48h_Pct
+  - Obstetric_Complications_Pct
+
+model:
+  random_state: 42
+  test_size: 0.2
+  n_init: 10
+  k_clusters: 3

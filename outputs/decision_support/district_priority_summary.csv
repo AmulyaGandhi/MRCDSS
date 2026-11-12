@@ -1,0 +1,708 @@
+State,District,years_observed,high_risk_years,medium_risk_years,low_risk_years,high_risk_proportion,latest_year,latest_risk_class,persistent_priority,common_contributing_features
+Andaman And Nicobar Islands,Nicobars,12,8,0,4,0.6667,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Andaman And Nicobar Islands,North And Middle Andaman,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Andaman And Nicobar Islands,South Andamans,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Andhra Pradesh,Alluri Sitharama Raju,6,0,0,6,0.0,2013,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Andhra Pradesh,Ananthapuramu,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Andhra Pradesh,Chittoor,12,2,1,9,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Andhra Pradesh,East Godavari,12,1,0,11,0.0833,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Andhra Pradesh,Eluru,6,0,0,6,0.0,2013,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Andhra Pradesh,Guntur,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Andhra Pradesh,Krishna,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Andhra Pradesh,Kurnool,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Andhra Pradesh,Prakasam,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Andhra Pradesh,Sri Potti Sriramulu Nellore,12,0,3,9,0.0,2019,Low Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Andhra Pradesh,Srikakulam,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Andhra Pradesh,Visakhapatnam,12,1,2,9,0.0833,2019,Low Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Andhra Pradesh,Vizianagaram,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Andhra Pradesh,West Godavari,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Andhra Pradesh,Y.S.R.,12,1,4,7,0.0833,2019,Low Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Arunachal Pradesh,Anjaw,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Arunachal Pradesh,Changlang,12,11,1,0,0.9167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Arunachal Pradesh,Dibang Valley,12,10,0,2,0.8333,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Arunachal Pradesh,East Kameng,12,11,1,0,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Arunachal Pradesh,East Siang,12,9,1,2,0.75,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Arunachal Pradesh,Kra Daadi,5,4,0,1,0.8,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Arunachal Pradesh,Kurung Kumey,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Arunachal Pradesh,Lohit,12,11,0,1,0.9167,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Arunachal Pradesh,Longding,8,6,0,2,0.75,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Arunachal Pradesh,Lower Dibang Valley,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Arunachal Pradesh,Lower Subansiri,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Arunachal Pradesh,Namsai,5,2,1,2,0.4,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Arunachal Pradesh,Papum Pare,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Arunachal Pradesh,Siang,5,3,0,2,0.6,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Arunachal Pradesh,Tawang,12,10,2,0,0.8333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Arunachal Pradesh,Tirap,12,11,1,0,0.9167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Arunachal Pradesh,Upper Siang,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Arunachal Pradesh,Upper Subansiri,12,11,1,0,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Arunachal Pradesh,West Kameng,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Arunachal Pradesh,West Siang,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Assam,Baksa,12,3,1,8,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Assam,Barpeta,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Assam,Bongaigaon,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Assam,Cachar,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Assam,Chirang,12,6,0,6,0.5,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Assam,Darrang,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Assam,Dhemaji,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Assam,Dhubri,12,5,1,6,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Assam,Dibrugarh,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Assam,Dima Hasao,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Assam,Goalpara,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Assam,Golaghat,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Assam,Hailakandi,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Assam,Jorhat,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Assam,Kamrup,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; TT2_Booster_Pct
+Assam,Kamrup Metro,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Assam,Karbi Anglong,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Assam,Karimganj,12,5,1,6,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Assam,Kokrajhar,12,5,1,6,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Assam,Lakhimpur,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Assam,Marigaon,12,3,1,8,0.25,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Assam,Nagaon,12,3,2,7,0.25,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Assam,Nalbari,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Assam,Sivasagar,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Obstetric_Complications_Pct; PNC_48h_Pct
+Assam,Sonitpur,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Assam,Tinsukia,12,4,1,7,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Assam,Udalguri,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; TT2_Booster_Pct
+Bihar,Araria,12,3,1,8,0.25,2019,High Risk,Persistent High Priority,Severe_Anemia_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Bihar,Arwal,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Bihar,Aurangabad,12,7,1,4,0.5833,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Bihar,Banka,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Bihar,Begusarai,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Bihar,Bhagalpur,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Bihar,Bhojpur,12,2,1,9,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Bihar,Buxar,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Bihar,Darbhanga,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Bihar,Gaya,12,9,2,1,0.75,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Bihar,Gopalganj,12,8,1,3,0.6667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Bihar,Jamui,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Bihar,Jehanabad,12,4,1,7,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Bihar,Kaimur (Bhabua),12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Bihar,Katihar,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Bihar,Khagaria,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Bihar,Kishanganj,12,9,3,0,0.75,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Bihar,Lakhisarai,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Bihar,Madhepura,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Bihar,Madhubani,12,5,0,7,0.4167,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Bihar,Munger,12,3,1,8,0.25,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Bihar,Muzaffarpur,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Bihar,Nalanda,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Bihar,Nawada,12,5,2,5,0.4167,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Bihar,Pashchim Champaran,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,PNC_48h_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Bihar,Patna,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Bihar,Purbi Champaran,12,7,1,4,0.5833,2019,Low Risk,Persistent High Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Bihar,Purnia,12,5,2,5,0.4167,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Bihar,Rohtas,12,3,0,9,0.25,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Bihar,Saharsa,12,5,0,7,0.4167,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Bihar,Samastipur,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Bihar,Saran,12,4,1,7,0.3333,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Bihar,Sheikhpura,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Bihar,Sheohar,12,5,4,3,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Bihar,Sitamarhi,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Bihar,Siwan,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Bihar,Supaul,12,3,0,9,0.25,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Bihar,Vaishali,12,1,0,11,0.0833,2019,Low Risk,Persistent Low Priority,Severe_Anemia_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Chandigarh,Chandigarh,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Chhattisgarh,Balod,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Chhattisgarh,Balodabazar-Bhatapara,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Chhattisgarh,Balrampur Ramanujganj,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Chhattisgarh,Bastar,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Chhattisgarh,Bemetara,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Chhattisgarh,Bijapur,12,7,2,3,0.5833,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Chhattisgarh,Bilaspur,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Chhattisgarh,Dakshin Bastar Dantewada,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Chhattisgarh,Dhamtari,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Chhattisgarh,Durg,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Chhattisgarh,Gariyaband,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Chhattisgarh,Janjgir-Champa,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Chhattisgarh,Jashpur,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Chhattisgarh,Kabeerdham,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Chhattisgarh,Kondagaon,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Chhattisgarh,Korba,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Chhattisgarh,Korea,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Chhattisgarh,Mahasamund,12,2,4,6,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Chhattisgarh,Mungeli,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Chhattisgarh,Narayanpur,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Chhattisgarh,Raigarh,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Chhattisgarh,Raipur,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Chhattisgarh,Rajnandgaon,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Chhattisgarh,Sukma,12,5,1,6,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Chhattisgarh,Surajpur,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Chhattisgarh,Surguja,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Chhattisgarh,Uttar Bastar Kanker,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Delhi,Central,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Delhi,East,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Delhi,New Delhi,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Delhi,North,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Delhi,North East,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Delhi,North West,12,10,1,1,0.8333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Delhi,Shahdara,12,9,0,3,0.75,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Delhi,South,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Delhi,South East,12,9,0,3,0.75,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Delhi,South West,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Delhi,West,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Goa,North Goa,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Goa,South Goa,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Gujarat,Ahmadabad,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Gujarat,Amreli,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Gujarat,Anand,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Gujarat,Arvalli,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Gujarat,Banas Kantha,12,0,4,8,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Gujarat,Bharuch,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Gujarat,Bhavnagar,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Gujarat,Botad,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Severe_Anemia_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Gujarat,Chhotaudepur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Gujarat,Dang,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Gujarat,Devbhumi Dwarka,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Gujarat,Dohad,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Gujarat,Gandhinagar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Gujarat,Gir Somnath,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Gujarat,Jamnagar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Gujarat,Junagadh,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Gujarat,Kachchh,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Gujarat,Kheda,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Gujarat,Mahesana,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Gujarat,Mahisagar,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Gujarat,Morbi,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Gujarat,Narmada,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Gujarat,Navsari,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Gujarat,Panch Mahals,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Gujarat,Patan,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Gujarat,Porbandar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Gujarat,Rajkot,12,0,5,7,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Gujarat,Sabar Kantha,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Gujarat,Surat,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Gujarat,Surendranagar,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Gujarat,Tapi,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Gujarat,Vadodara,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Gujarat,Valsad,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Haryana,Ambala,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Haryana,Bhiwani,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Haryana,Charki Dadri,3,2,1,0,0.6667,2019,Medium Risk,Persistent High Priority,Severe_Anemia_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Haryana,Faridabad,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Haryana,Fatehabad,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Haryana,Gurugram,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Haryana,Hisar,12,1,2,9,0.0833,2019,Low Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Haryana,Jhajjar,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Haryana,Jind,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Haryana,Kaithal,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Haryana,Karnal,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Haryana,Kurukshetra,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Haryana,Mahendragarh,12,1,5,6,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Haryana,Nuh,12,10,2,0,0.8333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Haryana,Palwal,12,8,1,3,0.6667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Haryana,Panchkula,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Haryana,Panipat,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Haryana,Rewari,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Haryana,Rohtak,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Haryana,Sirsa,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Haryana,Sonipat,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Haryana,Yamunanagar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Himachal Pradesh,Bilaspur,12,2,2,8,0.1667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Himachal Pradesh,Chamba,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Himachal Pradesh,Hamirpur,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Himachal Pradesh,Kangra,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Himachal Pradesh,Kinnaur,12,9,1,2,0.75,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Himachal Pradesh,Kullu,12,3,1,8,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Himachal Pradesh,Lahul And Spiti,12,9,0,3,0.75,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Himachal Pradesh,Mandi,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Himachal Pradesh,Shimla,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Himachal Pradesh,Sirmaur,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Himachal Pradesh,Solan,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Himachal Pradesh,Una,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Anantnag,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Jammu And Kashmir,Bandipora,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Baramulla,12,7,3,2,0.5833,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Budgam,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Doda,12,7,2,3,0.5833,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Jammu And Kashmir,Ganderbal,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Jammu And Kashmir,Jammu,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Jammu And Kashmir,Kathua,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Kishtwar,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Jammu And Kashmir,Kulgam,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Kupwara,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Poonch,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Jammu And Kashmir,Pulwama,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Jammu And Kashmir,Rajouri,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Jammu And Kashmir,Ramban,12,9,3,0,0.75,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Jammu And Kashmir,Reasi,12,9,1,2,0.75,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Samba,12,9,3,0,0.75,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jammu And Kashmir,Shopian,12,7,2,3,0.5833,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Jammu And Kashmir,Srinagar,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Jammu And Kashmir,Udhampur,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jharkhand,Bokaro,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jharkhand,Chatra,12,9,0,3,0.75,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Jharkhand,Deoghar,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Jharkhand,Dhanbad,12,7,0,5,0.5833,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Jharkhand,Dumka,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Jharkhand,East Singhbum,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Jharkhand,Garhwa,12,8,0,4,0.6667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Jharkhand,Giridih,12,9,2,1,0.75,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Jharkhand,Godda,12,4,1,7,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Jharkhand,Gumla,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Jharkhand,Hazaribagh,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Jharkhand,Jamtara,12,7,3,2,0.5833,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jharkhand,Khunti,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Jharkhand,Koderma,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Jharkhand,Latehar,12,9,2,1,0.75,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Jharkhand,Lohardaga,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Jharkhand,Pakur,12,9,0,3,0.75,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Jharkhand,Palamu,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Jharkhand,Ramgarh,12,10,2,0,0.8333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Jharkhand,Ranchi,12,9,2,1,0.75,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Jharkhand,Sahebganj,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jharkhand,Saraikela Kharsawan,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Jharkhand,Simdega,12,7,0,5,0.5833,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Jharkhand,West Singhbhum,12,9,1,2,0.75,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Karnataka,Bagalkote,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Karnataka,Ballari,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Karnataka,Belagavi,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Karnataka,Bengaluru Rural,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Karnataka,Bengaluru Urban,12,7,2,3,0.5833,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Karnataka,Bidar,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Karnataka,Chamarajanagara,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Karnataka,Chikkaballapura,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Karnataka,Chikkamagaluru,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Karnataka,Chitradurga,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Karnataka,Dakshina Kannada,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Karnataka,Davangere,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Karnataka,Dharwad,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Karnataka,Gadag,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Karnataka,Hassan,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Karnataka,Haveri,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Karnataka,Kalaburagi,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Karnataka,Kodagu,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Karnataka,Kolar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Karnataka,Koppal,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Karnataka,Mandya,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Karnataka,Mysuru,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Karnataka,Raichur,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Karnataka,Ramanagara,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Karnataka,Shivamogga,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Karnataka,Tumakuru,12,1,4,7,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Karnataka,Udupi,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Karnataka,Uttara Kannada,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Karnataka,Vijayapura,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Karnataka,Yadgir,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Kerala,Alappuzha,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Kerala,Ernakulam,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Kerala,Idukki,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Kerala,Kannur,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Kerala,Kasaragod,12,1,1,10,0.0833,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Kerala,Kollam,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Kerala,Kottayam,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Kerala,Kozhikode,12,0,2,10,0.0,2019,Low Risk,Persistent Medium Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Kerala,Malappuram,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Kerala,Palakkad,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Kerala,Pathanamthitta,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Kerala,Thiruvananthapuram,12,2,2,8,0.1667,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Kerala,Thrissur,12,1,1,10,0.0833,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Kerala,Wayanad,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Ladakh,Kargil,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Ladakh,Leh Ladakh,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Lakshadweep,Lakshadweep District,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Madhya Pradesh,Agar-Malwa,12,0,2,10,0.0,2019,Low Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Madhya Pradesh,Alirajpur,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Madhya Pradesh,Anuppur,12,0,0,12,0.0,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Madhya Pradesh,Ashoknagar,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Balaghat,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Madhya Pradesh,Barwani,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Madhya Pradesh,Betul,12,1,1,10,0.0833,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Madhya Pradesh,Bhind,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Madhya Pradesh,Bhopal,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Madhya Pradesh,Burhanpur,12,5,0,7,0.4167,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Madhya Pradesh,Chhatarpur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Madhya Pradesh,Chhindwara,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Damoh,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Madhya Pradesh,Datia,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Madhya Pradesh,Dewas,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Madhya Pradesh,Dhar,12,1,1,10,0.0833,2019,Medium Risk,Persistent Low Priority,TT2_Booster_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Madhya Pradesh,Dindori,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Madhya Pradesh,Guna,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Madhya Pradesh,Gwalior,12,3,1,8,0.25,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Madhya Pradesh,Harda,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Indore,12,3,2,7,0.25,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Jabalpur,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Madhya Pradesh,Jhabua,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Madhya Pradesh,Katni,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Khandwa (East Nimar),12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Madhya Pradesh,Khargone (West Nimar),12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Madhya Pradesh,Mandla,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Madhya Pradesh,Mandsaur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Madhya Pradesh,Morena,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Narmadapuram,12,0,0,12,0.0,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Narsimhapur,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Neemuch,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Madhya Pradesh,Panna,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Madhya Pradesh,Raisen,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Madhya Pradesh,Rajgarh,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Madhya Pradesh,Ratlam,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Rewa,12,3,0,9,0.25,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Madhya Pradesh,Sagar,12,5,1,6,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Madhya Pradesh,Satna,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Madhya Pradesh,Sehore,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Seoni,12,0,0,12,0.0,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Madhya Pradesh,Shahdol,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Madhya Pradesh,Shajapur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Madhya Pradesh,Sheopur,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Madhya Pradesh,Shivpuri,12,1,1,10,0.0833,2019,Low Risk,Persistent Low Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Madhya Pradesh,Sidhi,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Madhya Pradesh,Singrauli,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Madhya Pradesh,Tikamgarh,12,1,0,11,0.0833,2019,Low Risk,Persistent Low Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Madhya Pradesh,Ujjain,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Madhya Pradesh,Umaria,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Madhya Pradesh,Vidisha,12,1,5,6,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Maharashtra,Ahmednagar,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Maharashtra,Akola,12,2,4,6,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Maharashtra,Amravati,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Maharashtra,Beed,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Maharashtra,Bhandara,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Maharashtra,Buldhana,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Maharashtra,Chandrapur,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Maharashtra,Chhatrapati Sambhajinagar,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Maharashtra,Dharashiv,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Maharashtra,Dhule,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Maharashtra,Gadchiroli,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Maharashtra,Gondia,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Maharashtra,Hingoli,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Maharashtra,Jalgaon,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Maharashtra,Jalna,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Maharashtra,Kolhapur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Latur,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Mumbai,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Maharashtra,Nagpur,12,9,3,0,0.75,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Maharashtra,Nanded,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Maharashtra,Nandurbar,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Nashik,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Maharashtra,Palghar,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; TT2_Booster_Pct
+Maharashtra,Parbhani,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Maharashtra,Pune,12,2,4,6,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Raigad,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Ratnagiri,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Maharashtra,Sangli,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Satara,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Sindhudurg,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Maharashtra,Solapur,12,1,4,7,0.0833,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Maharashtra,Thane,12,2,4,6,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Wardha,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Maharashtra,Washim,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Maharashtra,Yavatmal,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Manipur,Bishnupur,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Manipur,Chandel,12,11,1,0,0.9167,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Manipur,Churachandpur,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Manipur,Imphal East,12,9,1,2,0.75,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Manipur,Imphal West,12,8,0,4,0.6667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Manipur,Senapati,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Manipur,Tamenglong,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Manipur,Thoubal,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Manipur,Ukhrul,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Meghalaya,East Garo Hills,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Meghalaya,East Jaintia Hills,12,6,0,6,0.5,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Meghalaya,East Khasi Hills,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Meghalaya,North Garo Hills,12,6,0,6,0.5,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Meghalaya,Ri Bhoi,12,11,1,0,0.9167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Meghalaya,South Garo Hills,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Meghalaya,South West Garo Hills,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Meghalaya,South West Khasi Hills,12,6,0,6,0.5,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; TT2_Booster_Pct
+Meghalaya,West Garo Hills,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Meghalaya,West Jaintia Hills,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Meghalaya,West Khasi Hills,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Mizoram,Aizawl,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Mizoram,Champhai,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Mizoram,Kolasib,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Mizoram,Lawngtlai,12,8,1,3,0.6667,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Mizoram,Lunglei,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Mizoram,Mamit,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; TT2_Booster_Pct
+Mizoram,Serchhip,12,1,1,10,0.0833,2019,Low Risk,Persistent Low Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Mizoram,Siaha,12,3,1,8,0.25,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Nagaland,Dimapur,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Nagaland,Kiphire,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Nagaland,Kohima,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Nagaland,Longleng,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Nagaland,Mokokchung,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Nagaland,Mon,12,11,1,0,0.9167,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Nagaland,Peren,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Nagaland,Phek,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Nagaland,Tuensang,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Nagaland,Wokha,12,9,1,2,0.75,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Nagaland,Zunheboto,12,10,2,0,0.8333,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Odisha,Anugul,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Odisha,Balangir,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Odisha,Baleshwar,12,1,1,10,0.0833,2019,Medium Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Odisha,Bargarh,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Odisha,Bhadrak,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Odisha,Boudh,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Odisha,Cuttack,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Odisha,Deogarh,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Odisha,Dhenkanal,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Odisha,Gajapati,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Odisha,Ganjam,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Odisha,Jagatsinghapur,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Odisha,Jajapur,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Odisha,Jharsuguda,12,1,1,10,0.0833,2019,Medium Risk,Persistent Low Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Odisha,Kalahandi,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Odisha,Kandhamal,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Odisha,Kendrapara,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Odisha,Kendujhar,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Odisha,Khordha,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Odisha,Koraput,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Odisha,Malkangiri,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Odisha,Mayurbhanj,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Odisha,Nabarangpur,12,4,3,5,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Odisha,Nayagarh,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Odisha,Nuapada,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Odisha,Puri,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Odisha,Rayagada,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Odisha,Sambalpur,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Odisha,Sonepur,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Odisha,Sundargarh,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Puducherry,Karaikal,12,10,1,1,0.8333,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Puducherry,Mahe,12,6,2,4,0.5,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Obstetric_Complications_Pct
+Puducherry,Pondicherry,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Puducherry,Yanam,12,7,0,5,0.5833,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Punjab,Amritsar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Punjab,Barnala,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; TT2_Booster_Pct
+Punjab,Bathinda,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Punjab,Faridkot,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Punjab,Fatehgarh Sahib,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Punjab,Fazilka,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Punjab,Ferozepur,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Punjab,Gurdaspur,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Punjab,Hoshiarpur,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Punjab,Jalandhar,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Punjab,Kapurthala,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Punjab,Ludhiana,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Punjab,Mansa,12,1,0,11,0.0833,2019,Low Risk,Persistent Low Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Punjab,Moga,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Punjab,Pathankot,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Punjab,Patiala,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Punjab,Rupnagar,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Punjab,S.A.S Nagar,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+Punjab,Sangrur,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Punjab,Shahid Bhagat Singh Nagar,12,2,2,8,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Punjab,Sri Muktsar Sahib,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Punjab,Tarn Taran,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Rajasthan,Ajmer,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Rajasthan,Alwar,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Severe_Anemia_Pct
+Rajasthan,Banswara,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Baran,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Rajasthan,Barmer,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Rajasthan,Bharatpur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Rajasthan,Bhilwara,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Bikaner,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Rajasthan,Bundi,12,0,4,8,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Rajasthan,Chittorgarh,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Rajasthan,Churu,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Rajasthan,Dausa,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Dholpur,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Dungarpur,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Rajasthan,Ganganagar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Rajasthan,Hanumangarh,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Jaipur,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Rajasthan,Jaisalmer,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Rajasthan,Jalore,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Rajasthan,Jhalawar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Rajasthan,Jhunjhunu,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Rajasthan,Jodhpur,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Rajasthan,Karauli,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Rajasthan,Kota,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Rajasthan,Nagaur,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Pali,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Rajasthan,Pratapgarh,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Rajsamand,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Rajasthan,Sawai Madhopur,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Sikar,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Rajasthan,Sirohi,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Rajasthan,Tonk,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Rajasthan,Udaipur,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Sikkim,Gangtok,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Severe_Anemia_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Sikkim,Gyalshing,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Sikkim,Mangan,12,3,0,9,0.25,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Sikkim,Namchi,12,1,2,9,0.0833,2019,Low Risk,Persistent Medium Priority,PNC_48h_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Tamil Nadu,Ariyalur,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Tamil Nadu,Chennai,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Tamil Nadu,Coimbatore,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Tamil Nadu,Cuddalore,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Tamil Nadu,Dharmapuri,12,0,0,12,0.0,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Dindigul,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Erode,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Tamil Nadu,Kanchipuram,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Kanniyakumari,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Karur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Krishnagiri,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Tamil Nadu,Madurai,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Nagapattinam,12,0,4,8,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Namakkal,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Perambalur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Tamil Nadu,Pudukkottai,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Tamil Nadu,Ramanathapuram,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Salem,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Sivaganga,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Thanjavur,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Tamil Nadu,The Nilgiris,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Theni,12,0,4,8,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Tamil Nadu,Thiruvallur,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Tamil Nadu,Thiruvarur,12,0,0,12,0.0,2019,Low Risk,Persistent Low Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Tiruchirappalli,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Tamil Nadu,Tirunelveli,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Tiruppur,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Tiruvannamalai,12,0,0,12,0.0,2019,Low Risk,Persistent Low Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Tamil Nadu,Tuticorin,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tamil Nadu,Vellore,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Tamil Nadu,Villupuram,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Tamil Nadu,Virudhunagar,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Telangana,Adilabad,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Telangana,Bhadradri Kothagudem,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Hanumakonda,12,1,2,9,0.0833,2019,Low Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Telangana,Hyderabad,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Telangana,Jagitial,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Telangana,Jangoan,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Telangana,Jayashankar Bhupalapally,12,3,1,8,0.25,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Telangana,Jogulamba Gadwal,12,3,0,9,0.25,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Telangana,Kamareddy,12,1,1,10,0.0833,2019,High Risk,Persistent Low Priority,Severe_Anemia_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Telangana,Karimnagar,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Telangana,Khammam,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Telangana,Kumuram Bheem Asifabad,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Telangana,Mahabubabad,12,0,1,11,0.0,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Telangana,Mahabubnagar,12,2,1,9,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Mancherial,12,1,4,7,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Telangana,Medak,12,3,0,9,0.25,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Telangana,Medchal Malkajgiri,12,1,1,10,0.0833,2019,Medium Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Telangana,Mulugu,12,2,1,9,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Telangana,Nagarkurnool,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Nalgonda,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Telangana,Narayanpet,6,0,0,6,0.0,2013,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Nirmal,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Telangana,Nizamabad,12,1,1,10,0.0833,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; TT2_Booster_Pct
+Telangana,Peddapalli,12,4,1,7,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Telangana,Rajanna Sircilla,12,1,2,9,0.0833,2019,Low Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Telangana,Ranga Reddy,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Telangana,Sangareddy,12,1,1,10,0.0833,2019,Medium Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Siddipet,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Suryapet,12,2,1,9,0.1667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Telangana,Vikarabad,12,1,0,11,0.0833,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Telangana,Wanaparthy,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Warangal,12,2,2,8,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Telangana,Yadadri Bhuvanagiri,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+The Dadra And Nagar Haveli And Daman And Diu,Dadra And Nagar Haveli,12,7,3,2,0.5833,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+The Dadra And Nagar Haveli And Daman And Diu,Daman,12,7,2,3,0.5833,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+The Dadra And Nagar Haveli And Daman And Diu,Diu,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Tripura,Dhalai,12,0,2,10,0.0,2019,Medium Risk,Persistent Medium Priority,PNC_48h_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Tripura,Gomati,12,1,2,9,0.0833,2019,Low Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Tripura,Khowai,12,0,1,11,0.0,2019,Medium Risk,Persistent Low Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Tripura,North Tripura,12,10,1,1,0.8333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Tripura,Sepahijala,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Tripura,South Tripura,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Tripura,Unakoti,12,3,1,8,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Tripura,West Tripura,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Agra,12,8,2,2,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Aligarh,12,1,1,10,0.0833,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Ambedkar Nagar,12,1,4,7,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Amethi,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Amroha,12,7,1,4,0.5833,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Auraiya,12,4,2,6,0.3333,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Ayodhya,12,3,0,9,0.25,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Azamgarh,12,10,0,2,0.8333,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Baghpat,12,2,1,9,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Bahraich,12,6,4,2,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Ballia,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Balrampur,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Banda,12,5,0,7,0.4167,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Barabanki,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Bareilly,12,5,0,7,0.4167,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Basti,12,4,4,4,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Bhadohi,12,9,0,3,0.75,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Bijnor,12,9,1,2,0.75,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Budaun,12,8,0,4,0.6667,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Bulandshahr,12,3,0,9,0.25,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Chandauli,12,7,3,2,0.5833,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Chitrakoot,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Deoria,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Etah,12,10,0,2,0.8333,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Etawah,12,4,1,7,0.3333,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Farrukhabad,12,12,0,0,1.0,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Fatehpur,12,11,1,0,0.9167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Firozabad,12,11,1,0,0.9167,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Gautam Buddha Nagar,12,6,2,4,0.5,2019,Medium Risk,Persistent High Priority,PNC_48h_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Ghaziabad,12,8,0,4,0.6667,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Ghazipur,12,2,2,8,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; TT2_Booster_Pct
+Uttar Pradesh,Gonda,12,11,0,1,0.9167,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Gorakhpur,12,10,0,2,0.8333,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Hamirpur,12,4,1,7,0.3333,2019,Low Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Hapur,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Hardoi,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Hathras,12,2,4,6,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; Severe_Anemia_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Jalaun,12,4,1,7,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Jaunpur,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Uttar Pradesh,Jhansi,12,4,4,4,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Kannauj,12,6,0,6,0.5,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Kanpur Dehat,12,11,1,0,0.9167,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Kanpur Nagar,12,11,1,0,0.9167,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Kasganj,12,7,0,5,0.5833,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Kaushambi,12,6,0,6,0.5,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Uttar Pradesh,Kheri,12,9,0,3,0.75,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Kushi Nagar,12,7,2,3,0.5833,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Lalitpur,12,0,0,12,0.0,2019,Low Risk,Persistent Low Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Lucknow,12,7,2,3,0.5833,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Mahoba,12,5,1,6,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Mahrajganj,12,8,0,4,0.6667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Mainpuri,12,9,0,3,0.75,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Mathura,12,8,3,1,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Mau,12,10,0,2,0.8333,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Meerut,12,10,0,2,0.8333,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Mirzapur,12,8,1,3,0.6667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Moradabad,12,11,0,1,0.9167,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Muzaffarnagar,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Pilibhit,12,5,3,4,0.4167,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Pratapgarh,12,3,0,9,0.25,2019,High Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Prayagraj,12,4,0,8,0.3333,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Uttar Pradesh,Rae Bareli,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Rampur,12,11,0,1,0.9167,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Saharanpur,12,9,2,1,0.75,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Sambhal,12,5,2,5,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Sant Kabir Nagar,12,5,0,7,0.4167,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Shahjahanpur,12,7,0,5,0.5833,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+Uttar Pradesh,Shamli,12,4,2,6,0.3333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+Uttar Pradesh,Shrawasti,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Uttar Pradesh,Siddharth Nagar,12,10,1,1,0.8333,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttar Pradesh,Sitapur,12,6,0,6,0.5,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Sonbhadra,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Sultanpur,12,4,1,7,0.3333,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttar Pradesh,Unnao,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttar Pradesh,Varanasi,12,6,1,5,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+Uttarakhand,Almora,12,6,0,6,0.5,2019,High Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttarakhand,Bageshwar,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttarakhand,Chamoli,12,2,0,10,0.1667,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; Severe_Anemia_Pct
+Uttarakhand,Champawat,12,1,0,11,0.0833,2019,Low Risk,Persistent Low Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; ANC_First_Trimester_Pct
+Uttarakhand,Dehradun,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; PNC_48h_Pct
+Uttarakhand,Haridwar,12,8,1,3,0.6667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Uttarakhand,Nainital,12,1,3,8,0.0833,2019,Medium Risk,Persistent Medium Priority,TT2_Booster_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+Uttarakhand,Pauri Garhwal,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; Institutional_Delivery_Pct
+Uttarakhand,Pithoragarh,12,1,2,9,0.0833,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+Uttarakhand,Rudra Prayag,12,6,2,4,0.5,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+Uttarakhand,Tehri Garhwal,12,9,0,3,0.75,2019,Low Risk,Persistent High Priority,Institutional_Delivery_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Uttarakhand,Udam Singh Nagar,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,Severe_Anemia_Pct; TT2_Booster_Pct; ANC_First_Trimester_Pct
+Uttarakhand,Uttar Kashi,12,5,1,6,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; TT2_Booster_Pct; PNC_48h_Pct
+West Bengal,Alipurduar,6,0,2,4,0.0,2019,Low Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; PNC_48h_Pct
+West Bengal,Bankura,12,2,1,9,0.1667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+West Bengal,Birbhum,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+West Bengal,Coochbehar,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+West Bengal,Dakshin Dinajpur,12,2,2,8,0.1667,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+West Bengal,Darjeeling,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; PNC_48h_Pct; ANC_First_Trimester_Pct
+West Bengal,Hooghly,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; Severe_Anemia_Pct
+West Bengal,Howrah,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+West Bengal,Jalpaiguri,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; TT2_Booster_Pct
+West Bengal,Jhargram,5,0,2,3,0.0,2019,Medium Risk,Persistent Medium Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; Institutional_Delivery_Pct
+West Bengal,Kalimpong,5,0,3,2,0.0,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+West Bengal,Kolkata,12,10,2,0,0.8333,2019,High Risk,Persistent High Priority,TT2_Booster_Pct; ANC_First_Trimester_Pct; Institutional_Delivery_Pct
+West Bengal,Malda,12,3,1,8,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+West Bengal,Murshidabad,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; Severe_Anemia_Pct
+West Bengal,Nadia,12,0,3,9,0.0,2019,Medium Risk,Persistent Medium Priority,Institutional_Delivery_Pct; ANC_First_Trimester_Pct; TT2_Booster_Pct
+West Bengal,North 24 Parganas,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+West Bengal,Paschim Bardhaman,5,0,3,2,0.0,2019,Medium Risk,Persistent Medium Priority,Severe_Anemia_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+West Bengal,Paschim Medinipur,12,2,2,8,0.1667,2019,Low Risk,Persistent High Priority,ANC_First_Trimester_Pct; Severe_Anemia_Pct; PNC_48h_Pct
+West Bengal,Purba Bardhaman,12,3,3,6,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+West Bengal,Purba Medinipur,12,3,2,7,0.25,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct
+West Bengal,Purulia,12,2,3,7,0.1667,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; PNC_48h_Pct; Institutional_Delivery_Pct
+West Bengal,South 24 Parganas,12,5,3,4,0.4167,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; PNC_48h_Pct
+West Bengal,Uttar Dinajpur,12,6,3,3,0.5,2019,Medium Risk,Persistent High Priority,ANC_First_Trimester_Pct; Institutional_Delivery_Pct; TT2_Booster_Pct

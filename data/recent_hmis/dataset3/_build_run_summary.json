@@ -1,0 +1,11 @@
+{
+ "selected_count": 161,
+ "excluded_count": 258,
+ "zero_denominators": {
+  "ANC_First_Trimester_Pct": 3,
+  "TT2_Booster_Pct": 3,
+  "Severe_Anemia_Pct": 12,
+  "Obstetric_Complications_Pct": 0
+ },
+ "file_errors": []
+}

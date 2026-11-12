@@ -1,0 +1,25 @@
+code,schema_presence,role,old_label,new_label
+1.1,BOTH,Denominator (ANC registrations),Total number of pregnant women registered for ANC,Total number of NEW Pregnant Women registered for ANC
+1.1.1,BOTH,Numerator ANC first-trimester,"Out of the total ANC registered, number registered within 1st trimester (within 12 weeks)","Out of the total NEW ANC registered, number registered within 1st trimester (within 12 weeks)"
+1.2.1,BOTH,TT1 coverage (context),Number of PW given TT1/ Td1,Number of PW given Td1 (Tetanus Diptheria dose 1)
+1.2.2,BOTH,Numerator component (TT2/Td2),Number of PW given TT2 / Td2,Number of PW given Td2 (Tetanus Diptheria dose 2)
+1.2.3,BOTH,Numerator component (booster),Number of PW given TT Booster/ Td Booster,Number of PW given Td Booster (Tetanus Diptheria dose booster)
+1.4.1,BOTH,Context (repeat Hb testing),Number of PW tested for Haemoglobin (Hb ) 4 or more than 4 times for respective ANCs,Number of PW tested for Haemoglobin (Hb ) 4 or more than 4 times for respective ANCs
+1.4.2,BOTH,Denominator moderate anaemia (Hb<11),Number of PW having Hb level<11 (out of total tested cases)(7.1 to 10.9),Number of PW having Hb level<11(7.1 to 10.9 g/dl) (Out of total tested cases)
+1.4.3,BOTH,Numerator severe anaemia (boundary changed <7 -> <=7),Number of PW having Hb level<7 (out of total tested cases),Number of PW having Hb level<=7 g/dl (Out of total tested cases)
+1.4.4,BOTH,Severe-anaemia treated (context),Number of PW having severe anaemia (Hb < 7) treated,Number of PW treated for severe anaemia (Hb<=7g/dl) (Out of total tested cases)
+2.1.1.a,BOTH,Home deliveries SBA (denominator component),Number of Home Deliveries attended by Skill Birth Attendant(SBA) (Doctor/Nurse/ANM/ Midwife),Number of Home Deliveries attended by Skill Birth Attendant(SBA) (Doctor/Nurse/ANM)
+2.1.1.b,BOTH,Home deliveries non-SBA (denominator component),Number of Home Deliveries attended by Non SBA (Trained Birth Attendant(TBA) /Relatives/etc.),Number of Home Deliveries attended by Non SBA (Trained Birth Attendant(TBA) /Relatives/etc.)
+2.2,BOTH,Institutional deliveries (numerator / denom component),Number of Institutional Deliveries conducted (Including C-Sections),Number of Institutional Deliveries conducted (Including C-Sections)
+2.2.1,BOTH,Institutional stay item - INVERTED meaning across eras,Out of total institutional deliveries number of women discharged within 48 hours of delivery,"Out of total institutional  deliveries(excluding C-section), number of women stayed for  48 hours or more after delivery"
+2.3,NEW,Total deliveries (new schema only) - natural %-of-deliveries denominator,,Age wise total number of delivery (Home +Institutional) reported (2.3.1+2.3.2+2.3.3+2.3.4)
+3.1,BOTH,Context,Total C -Section deliveries performed,Total number of C -Section deliveries performed
+5.1,OLD,Old aggregate obstetric complications (2020-23 only),"Number of cases of pregnant women with Obstetric Complications attended (Antepartum haemorrhage (APH), Post-Partum Hemorrhage (PPH), Sepsis, Eclampsia and others)",
+6.1,BOTH,PNC within 48h - HOME deliveries only,Women receiving 1st post partum checkups within 48 hours of home delivery,"In case of home delivery, number of women receiving 1st Postpartum checkups within 48 hours"
+6.2,BOTH,PNC 48h-14d - scope changed to institutional in new schema,Women receiving 1st post partum checkup between 48 hours and 14 days,Number of women receiving Postpartum checkup between 48 hours and 14 days after Institutional delivery
+1.9.1,NEW,HRP intrapartum aggregate (new schema),,Total High Risk Pregnancy (HRP) Intrapartum including following:
+1.9.1.a,NEW,HRP component PPH,,Number of Pregnant Women with Post-Partum Haemorrhage(Immediately after delivery) in the facility.
+1.9.1.b,NEW,HRP component sepsis,,Number of Pregnant Women with Sepsis in the facility.
+1.9.1.c,NEW,HRP component eclampsia,,Number of Pregnant Women identified with Eclampsia in the facility
+1.9.1.d,NEW,HRP component obstructed labour,,Number of Pregnant Women identified with obstructed labour in the facility.
+1.9.2,NEW,HRP antepartum new cases,,Total High Risk Pregnancy (HRP) Antepartum (Only New Cases are to be reported)

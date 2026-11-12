@@ -1,0 +1,5 @@
+model,accuracy,precision_macro,recall_macro,f1_macro,roc_auc_macro_ovr,train_time_seconds
+Logistic Regression,0.995836,0.99572,0.994258,0.994984,0.999961,0.0099
+Decision Tree,0.941701,0.943001,0.94728,0.945073,0.956868,0.0148
+Random Forest,0.964902,0.965047,0.969512,0.967214,0.997936,0.0995
+XGBoost,0.969661,0.968013,0.970521,0.969256,0.998681,0.3819

@@ -1,0 +1,7 @@
+feature,planning_focus,feature_direction
+ANC_First_Trimester_Pct,Strengthen early ANC registration and outreach,protective (higher=better)
+TT2_Booster_Pct,Strengthen antenatal TT/booster coverage,protective (higher=better)
+Severe_Anemia_Pct,"Prioritize anemia screening, prevention and program coverage",risk (higher=worse)
+Institutional_Delivery_Pct,Improve institutional-delivery access and service capacity,protective (higher=better)
+PNC_48h_Pct,Strengthen postnatal follow-up within 48 hours,protective (higher=better)
+Obstetric_Complications_Pct,Strengthen referral and emergency obstetric service planning,risk (higher=worse)

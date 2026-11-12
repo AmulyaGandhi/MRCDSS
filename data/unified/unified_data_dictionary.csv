@@ -1,0 +1,21 @@
+field,type,description,source,applicability
+State,string,State name (native HMIS/NDAP representation).,Dataset 1/2/3,All
+District,string,District name (native representation per source; not merged across eras).,Dataset 1/2/3,All
+Year,string,Fiscal/calendar year of the observation (historical: 2008-2019; recent HMIS: 2020-2021..2024-2025).,Dataset 1/2/3,All
+source_dataset,enum,Provenance label: dataset1 | dataset2 | recent_hmis.,derived,All
+data_era,enum,"HISTORICAL_MRCDSS (Dataset 1/2, 2008-2019) | RECENT_HMIS (Dataset 3, 2020-2025).",derived,All
+indicator_definition_status,string,Analytical status of indicator definitions for the record's era.,derived,All
+risk_classification_available,boolean,true when the existing MRCDSS risk classification applies to the record; false for recent HMIS records.,derived,All
+recent_hmis_available,boolean,true for recent HMIS arm records; false for historical records.,derived,All
+risk_class,enum,Preserved historical MRCDSS risk class (High/Medium/Low Risk). Empty for recent HMIS records.,outputs/risk_classification,Historical only
+priority_level,enum,Historical DSS priority level (from validated MRCDSS DSS). Empty for recent HMIS records.,outputs/decision_support,Historical only
+top_contributing_feature_1..3,string,Historical SHAP-derived contributing features. Empty for recent HMIS records.,outputs/decision_support,Historical only
+planning_focus_1..3,string,Historical DSS planning focus areas. Empty for recent HMIS records.,outputs/decision_support,Historical only
+ANC_First_Trimester_Pct,"float, 0-100",Percentage denominator: ANC registrations. Definitionally comparable across eras.,Dataset 1/2 harmonized; Dataset 3,All
+TT2_Booster_Pct,"float, may exceed 100",TT2/second dose or TT-booster percentage. Historical: harmonized; recent: comparable with caveat (double-counting possible).,Dataset 1/2 harmonized; Dataset 3,All
+Severe_Anemia_Pct,"float, 0-100",Severe anemia share. Historical: harmonized; recent: definition changed (Hb <7 to <=7 from 2023-24).,Dataset 1/2 harmonized; Dataset 3,All
+Institutional_Delivery_Pct,"float, 0-100",Institutional delivery share. Historical only; NOT available in Dataset 3 (schema change).,Dataset 1/2 harmonized,Historical only
+SBA_Home_Delivery_Pct,"float, 0-100",Skilled-birth-attendant home delivery share. Historical raw reference only (excluded from model harmonization); NOT available in Dataset 3.,Dataset 1/2 raw,Historical only
+PNC_48h_Pct,"float, 0-100",Post-natal care within 48 hours share. Historical only; NOT available in Dataset 3.,Dataset 1/2 harmonized,Historical only
+Obstetric_Complications_Pct,"float, 0-100","Obstetric complications share. Historical: harmonized; recent: available through 2022-23 only, NaN from 2023-24 (schema change).",Dataset 1/2 harmonized; Dataset 3 (<=2022-23),All (recent only <=2022-23)
+hmis_source_file,string,For recent HMIS records: the annual cumulative HMIS file the record was reconstructed from. Empty for historical records.,Dataset 3 source_file_mapping,Recent HMIS only

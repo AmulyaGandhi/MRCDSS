@@ -1,0 +1,1760 @@
+======================================================================
+DATA QUALITY REPORT
+======================================================================
+
+1. Final cleaned dataset path: /Users/amulyapagidimarri/Desktop/MRCDSS/outputs/preprocessed_output.csv
+2. Final shape: (8405, 290)
+3. Missing values before cleaning: 126911
+   D1: 104715, D2: 22196
+
+4. Invalid percentage values by feature:
+   Registrations For  Ante Natal Care (Anc) In The First Trimester (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 15
+   Janani Suraksha Yojana (Jsy) Registrations(To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 56
+   Pregnant Women Received 3  Ante Natal Care (Anc) Check Ups (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 322
+   Pregnant Women Received The Second Dose Of Tetanus-Toxoid Vaccine (Tt2) Or Booster (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 425
+   Women Received 100 Ifa Tablets (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 666
+   Pregnant Women With Hemoglobin (Hb) Levels<7 (Severe Anemia) (To Women With Hemoglobin (Hb) Levels<11 (Moderate Anemia)) (UOM:%(Percentage)), Scaling Factor:1: 23
+    Janani Suraksha Yojana (Jsy) Incentives Paid For Home Deliveries (To Total Reported Home Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 78
+   Women Discharged In Less Than 48 Hours Of Delivery (To Total Reported Deliveries In Public Institutions) (%) (UOM:%(Percentage)), Scaling Factor:1: 110
+   Institutional Deliveries (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 315
+   C-Section Deliveries To Reported Institutional Deliveries (%) (UOM:%(Percentage)), Scaling Factor:1: 9
+   C-Section Deliveries Conducted At Public Facilities To Reported Institutional Deliveries (%) (UOM:%(Percentage)), Scaling Factor:1: 2
+   C-Section Deliveries Conducted At Private Facilities (To Reported Institutional Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 67
+   Mothers Who Were Paid Janani Suraksha Yojana (Jsy) Incentives For Delivery At Public Institution (To Total Public Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 627
+   Accredited Social Health Activist (Asha) Workers Who Were Paid Janani Suraksha Yojana (Jsy) Incentives For Delivery At Public Institution (To Total Public Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 199
+   Women Received Post Partum Check Up Within 48 Hours Of Delivery (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 1379
+   Women Received A Postpartum Checkup Or Post-Natal Care Between 48 Hours To 14 Days Of Delivery (%) (UOM:%(Percentage)), Scaling Factor:1: 694
+   Total Reported Live Births (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 1670
+   Newborns Weighed At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 291
+   Newborns Having Weight Less Than 25 Kg (To Newborns Weighed At Birth) (%) (UOM:%(Percentage)), Scaling Factor:1: 12
+   New Borns Breastfed Within 1 Hour (To Total Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 79
+   Newborns Visited Within 24 Hours Of Being Delivered At Home (To Total Reported Home Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 185
+   Pregnant Women With Obstetric Complications (Who Were Attended To) (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 5
+   Complicated Pregnancies Treated With Iv Antihypertensive Or Magsulph Injection (%) (UOM:%(Percentage)), Scaling Factor:1: 220
+   Complicated Pregnancies Treated With Iv Antihypertensive/Magsulph Injection (%) (UOM:%(Percentage)), Scaling Factor:1: 550
+   Complicated Pregnancies Treated With Blood Transfusion (To Total Women With Obstetric Complications) (%) (UOM:%(Percentage)), Scaling Factor:1: 405
+   Medical Termination Of Pregnancies Conducted At Public Institutions (To Total Abortions) (%) (UOM:%(Percentage)), Scaling Factor:1: 1108
+   Wet Mount Tests Conducted (To New Rti Or Sti In Females For Which Treatment Was Initiated) (%) (UOM:%(Percentage)), Scaling Factor:1: 74
+   Laparoscopic Sterlisations At Public Institutions (To Total Mini Lap Sterilisations) (%) (UOM:%(Percentage)), Scaling Factor:1: 1
+   Post Partum Intrauterine Contraceptive Device (Iucd) Insertions In Public Facilities (To Total Iucd Insertions In Public Facilities) (%) (UOM:%(Percentage)), Scaling Factor:1: 7
+   Newborns Given Birth Dose Of Oral Polio Vaccine At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 951
+   Newborns Given Bacillus Calmettea Guerin At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 4590
+   Infants Under The Age Of 11 Months Received Measles Vaccine (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 3966
+   Immunization Dropout Between Bacillus Calmettea Guerin And Measles Vaccine (%) (UOM:%(Percentage)), Scaling Factor:1: 1927
+   Children Given Vitamin-A Dose 1 (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 3716
+   Children Given Vitamin-A Dose 9 (To Children Given Vitamin-A Dose 1) (%) (UOM:%(Percentage)), Scaling Factor:1: 1996
+   Immunisation Sessions Held (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1: 413
+   Immunisation Sessions Where  Accredited Social Health Activist (Asha) Were Present (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1: 103
+   Number Of In-Patient Department (Ipd) Deaths (To Total Patients In Ipd) (%) (UOM:%(Percentage)), Scaling Factor:1: 6
+   Patients In In-Patients Department (To Number Of Patients In Opd) (%) (UOM:%(Percentage)), Scaling Factor:1: 8
+   Hysterectomy Surgeries Performed (To Major Operations Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1: 4
+   Patients Given  Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) Treatment In Out-Patient Department (To Patients In Out-Patient Department) (%) (UOM:%(Percentage)), Scaling Factor:1: 2
+   Cases Having Hb Less Than 7gm/Dl (To Number Of Haemoglobin (Hb) Tests Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1: 3
+   Male Hiv Positive Cases (To Number Of Hiv Tests Conducted On Males) (%) (UOM:%(Percentage)), Scaling Factor:1: 9
+   Female Hiv Positive Cases (To Number Of Hiv Tests Conducted On Females) (%)  (UOM:%(Percentage)), Scaling Factor:1: 14
+   Total Hiv Positive Cases (To The Number Of Hiv Tests Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1: 12
+   Blood Smears Tested Positive For Plasmodium Falciparum (To Total Blood Smears Examined For Malaria) (%) (UOM:%(Percentage)), Scaling Factor:1: 2
+   Pregnant Women Received 4 Ante Natal Care (Anc) Check Ups (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 142
+   Pregnant Women Received Tetanus-Toxoid Vaccine (Tt2) Or Tetanus-Toxoid (Tt)  Booster (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 284
+   Women Received 180 Ifa Tablets (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 304
+   Pregnant Women With Hemoglobin (Hb) Levels<7 (Severe Anemia) (To Women With Hemoglobin (Hb) Levels<11 (Moderate Anemia)) (%) (UOM:%(Percentage)), Scaling Factor:1: 59
+   Women Discharged In Less Than 48 Hours Of Delivery In Public Institutions (%) (UOM:%(Percentage)), Scaling Factor:1: 2
+   Women Discharged In Less Than 48 Hours Of Delivery In Private Facilities (%) (UOM:%(Percentage)), Scaling Factor:1: 2
+   Reported Live Births (To Total Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 454
+   Pregnant Women Given 360 Calcium Tablets To Total Ante Natal Care (Anc) Registrations (%) (UOM:%(Percentage)), Scaling Factor:1: 132
+   Pregnant Women Given One Albendazole Tablet After First Trimester (%) (UOM:%(Percentage)), Scaling Factor:1: 7
+   Pregnant Women Tested For Blood Sugar Using Oral Glucose Tolerance Test (Ogtt) (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 86
+   Pregnant Women Tested For Syphilis Found To Be  Ante Natal Care (Anc) (%) (UOM:%(Percentage)), Scaling Factor:1: 50
+   Pregnant Women Treated For Syphilis Found To Be Sero Positive For Syphilis (%) (UOM:%(Percentage)), Scaling Factor:1: 116
+   Babies Treated For Congenital Syphilis (To Total Babies Diagnosed With Congenital Syphilis) (%) (UOM:%(Percentage)), Scaling Factor:1: 51
+   Newborns Given Oral Poliovirus Vaccines (Opv) At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 380
+   Newborns Given Bacillus Calmette Guerin  (Bcg) At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 1504
+   Newborns Given Hep-B0 (Birth Dose) At Birth (To Total Reports Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 103
+   Infants Aged Up To 11 Months Who Received Measles And Measles Rubella Vaccine (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 1514
+   Immunization Dropout Between Bacillus Calmette Guerin (Bcg) And Measles Vaccine (%) (UOM:%(Percentage)), Scaling Factor:1: 253
+   Immunisation Sessions Where Accredited Social Health Activists (Asha) Were Present (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1: 37
+   Hysterectomy Surgeries Performed (To Number Of Major Operations Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1: 18
+   Females Screened For Human Immunodeficiency Virus (Hiv) (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 198
+   Total invalid: 33012
+
+5. Imputation breakdown (stage-by-stage NaN counts):
+   NaN after load/combine: 1084694
+   NaN after percentage cleaning: 1117706
+   NaN after dropping all-NaN columns: 1117706
+   NaN immediately before imputation: 1117706
+   NaN immediately after imputation: 0
+   Actual cells changed NaN->numeric: 1117706
+   Consistency: actual_cells_changed (1117706) = nan_before (1117706) - nan_after (0) = 1117706
+   Breakdown of NaN before imputation (1117706):
+     Original missing (pre-cleaning): 126911
+     Invalid percentages → NaN: 33012
+     Column misalignment (D1/D2 different columns): 957783
+   Imputed = 1117706 (all NaN filled with median, 50430 values in dropped columns not counted)
+   Remaining missing: 0
+
+   Per-column breakdown:
+   Women Registered For Ante Natal Care (Anc) (UOM:Number), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 2112
+     actual_imputed: 2324
+     remaining: 0
+   Women Registered For Ante Natal Care (Anc) Within First Trimester (UOM:Number), Scaling Factor:1:
+     original_missing: 268
+     invalid_to_nan: 0
+     actual_imputed: 268
+     remaining: 0
+   Women Registered Under Janani Suraksha Yojana (Jsy) (UOM:Number), Scaling Factor:1:
+     original_missing: 344
+     invalid_to_nan: 2112
+     actual_imputed: 2456
+     remaining: 0
+   Registrations For  Ante Natal Care (Anc) In The First Trimester (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2127
+     actual_imputed: 2341
+     remaining: 0
+   Janani Suraksha Yojana (Jsy) Registrations(To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2168
+     actual_imputed: 2382
+     remaining: 0
+   Women Received 3 Ante Natal Care (Anc) Check-Ups (UOM:Number), Scaling Factor:1:
+     original_missing: 213
+     invalid_to_nan: 2112
+     actual_imputed: 2325
+     remaining: 0
+   Women Received The Second Dose Of Tetanus-Toxoid Vaccine (Tt2) Or Booster (UOM:Number), Scaling Factor:1:
+     original_missing: 209
+     invalid_to_nan: 2112
+     actual_imputed: 2321
+     remaining: 0
+   Pregnant Women Received 3  Ante Natal Care (Anc) Check Ups (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2434
+     actual_imputed: 2648
+     remaining: 0
+   Pregnant Women Received The Second Dose Of Tetanus-Toxoid Vaccine (Tt2) Or Booster (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2537
+     actual_imputed: 2751
+     remaining: 0
+   Pregnant Women Received 100 Iron And Folic Acid (Ifa) Tablets (UOM:Number), Scaling Factor:1:
+     original_missing: 216
+     invalid_to_nan: 2112
+     actual_imputed: 2328
+     remaining: 0
+   Women Received 100 Ifa Tablets (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2778
+     actual_imputed: 2992
+     remaining: 0
+   Women Having Tested Moderately Anemic With Hemoglobin (Hb)<11 (UOM:Number), Scaling Factor:1:
+     original_missing: 603
+     invalid_to_nan: 0
+     actual_imputed: 603
+     remaining: 0
+   Women Having Tested With Severe Anemia With Hemoglobin (Hb) And Are Being Treated At An Institution (UOM:Number), Scaling Factor:1:
+     original_missing: 721
+     invalid_to_nan: 0
+     actual_imputed: 721
+     remaining: 0
+   Pregnant Women With Hemoglobin (Hb) Levels<7 (Severe Anemia) (To Women With Hemoglobin (Hb) Levels<11 (Moderate Anemia)) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 608
+     invalid_to_nan: 2135
+     actual_imputed: 2743
+     remaining: 0
+   Cases Of Women Detected With Hypertension (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2112
+     actual_imputed: 2326
+     remaining: 0
+   Home Deliveries (UOM:Number), Scaling Factor:1:
+     original_missing: 267
+     invalid_to_nan: 0
+     actual_imputed: 267
+     remaining: 0
+   Home Deliveries Attended By Doctor Or Nurse Or Auxiliary Nurse Midwife (Anm)S Trained As Sba (UOM:Number), Scaling Factor:1:
+     original_missing: 352
+     invalid_to_nan: 2112
+     actual_imputed: 2464
+     remaining: 0
+   Home Deliveries Attended By Traditional Birth Attendants (Tba) Or Dai Non-Trained As Skill Birth Attendants (Sba) (UOM:Number), Scaling Factor:1:
+     original_missing: 313
+     invalid_to_nan: 0
+     actual_imputed: 313
+     remaining: 0
+   Home Deliveries Attended By Skilled Birth Attendants (Sba) (To Total Reported Home Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 316
+     invalid_to_nan: 2112
+     actual_imputed: 2428
+     remaining: 0
+   Janani Suraksha Yojana (Jsy) Incentives Paid For Home Deliveries (UOM:Number), Scaling Factor:1:
+     original_missing: 997
+     invalid_to_nan: 2112
+     actual_imputed: 3109
+     remaining: 0
+    Janani Suraksha Yojana (Jsy) Incentives Paid For Home Deliveries (To Total Reported Home Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 316
+     invalid_to_nan: 2190
+     actual_imputed: 2506
+     remaining: 0
+   Deliveries Conducted At Public Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 213
+     invalid_to_nan: 0
+     actual_imputed: 213
+     remaining: 0
+   Women Discharged Under 48 Hours Of Delivery In Public Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 517
+     invalid_to_nan: 0
+     actual_imputed: 517
+     remaining: 0
+   Women Discharged In Less Than 48 Hours Of Delivery (To Total Reported Deliveries In Public Institutions) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2222
+     actual_imputed: 2436
+     remaining: 0
+   Institutional Deliveries (UOM:Number), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 2112
+     actual_imputed: 2324
+     remaining: 0
+   Institutional Deliveries (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 315
+     actual_imputed: 529
+     remaining: 0
+   Total Deliveries Recorded (UOM:Number), Scaling Factor:1:
+     original_missing: 211
+     invalid_to_nan: 2112
+     actual_imputed: 2323
+     remaining: 0
+   Institutional Deliveries (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 0
+     actual_imputed: 212
+     remaining: 0
+   Safe Deliveries (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 0
+     actual_imputed: 212
+     remaining: 0
+   Home Deliveries (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 0
+     actual_imputed: 212
+     remaining: 0
+   Caesarean (C-Section) Deliveries Conducted At Public Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 464
+     invalid_to_nan: 0
+     actual_imputed: 464
+     remaining: 0
+   Caesarean (C-Section) Deliveries Conducted At Private Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 2542
+     invalid_to_nan: 0
+     actual_imputed: 2542
+     remaining: 0
+   C-Section Deliveries To Reported Institutional Deliveries (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 213
+     invalid_to_nan: 9
+     actual_imputed: 222
+     remaining: 0
+   C-Section Deliveries Conducted At Public Facilities To Reported Institutional Deliveries (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2
+     actual_imputed: 216
+     remaining: 0
+   C-Section Deliveries Conducted At Private Facilities (To Reported Institutional Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 2384
+     invalid_to_nan: 67
+     actual_imputed: 2451
+     remaining: 0
+   Deliveries Conducted At Public Facilities (To Reported Institutional Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 213
+     invalid_to_nan: 0
+     actual_imputed: 213
+     remaining: 0
+   Mothers Who Were Paid Janani Suraksha Yojana (Jsy) Incentives For Delivery At Public Institution (To Total Public Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2739
+     actual_imputed: 2953
+     remaining: 0
+   Accredited Social Health Activist (Asha) Workers Who Were Paid Janani Suraksha Yojana (Jsy) Incentives For Delivery At Public Institution (To Total Public Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2311
+     actual_imputed: 2525
+     remaining: 0
+   Deliveries Conducted At Private Institutions (To Reported Institutional Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 213
+     invalid_to_nan: 2112
+     actual_imputed: 2325
+     remaining: 0
+   Women Received Postpartum Checkup Within 48 Hours Of Delivery (UOM:Number), Scaling Factor:1:
+     original_missing: 351
+     invalid_to_nan: 2112
+     actual_imputed: 2463
+     remaining: 0
+   Women Received Post-Natal Care Or Post Partum Check-Up Between 48 Hours And 14 Days Of Delivery (UOM:Number), Scaling Factor:1:
+     original_missing: 317
+     invalid_to_nan: 2112
+     actual_imputed: 2429
+     remaining: 0
+   Women Received Post Partum Check Up Within 48 Hours Of Delivery (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 296
+     invalid_to_nan: 1379
+     actual_imputed: 1675
+     remaining: 0
+   Women Received A Postpartum Checkup Or Post-Natal Care Between 48 Hours To 14 Days Of Delivery (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 694
+     actual_imputed: 906
+     remaining: 0
+   Reported Live Births (UOM:Number), Scaling Factor:1:
+     original_missing: 218
+     invalid_to_nan: 0
+     actual_imputed: 218
+     remaining: 0
+   Total Reported Live Births (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 3782
+     actual_imputed: 3994
+     remaining: 0
+   Reported Still Births (UOM:Number), Scaling Factor:1:
+     original_missing: 241
+     invalid_to_nan: 0
+     actual_imputed: 241
+     remaining: 0
+   Reported Live Births (To Reported Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 217
+     invalid_to_nan: 0
+     actual_imputed: 217
+     remaining: 0
+   Newborns Weighed At Birth (UOM:Number), Scaling Factor:1:
+     original_missing: 220
+     invalid_to_nan: 0
+     actual_imputed: 220
+     remaining: 0
+   Newborns Weighed At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 219
+     invalid_to_nan: 291
+     actual_imputed: 510
+     remaining: 0
+   Newborns Having Weight Less Than 25 Kg (UOM:Number), Scaling Factor:1:
+     original_missing: 224
+     invalid_to_nan: 0
+     actual_imputed: 224
+     remaining: 0
+   Newborns Having Weight Less Than 25 Kg (To Newborns Weighed At Birth) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 222
+     invalid_to_nan: 12
+     actual_imputed: 234
+     remaining: 0
+   New Borns Breastfed Within 1 Hour (UOM:Number), Scaling Factor:1:
+     original_missing: 496
+     invalid_to_nan: 0
+     actual_imputed: 496
+     remaining: 0
+   New Borns Breastfed Within 1 Hour (To Total Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 219
+     invalid_to_nan: 79
+     actual_imputed: 298
+     remaining: 0
+   New Borns Visited Within 24 Hrs Of Being Delivered At Home (UOM:Number), Scaling Factor:1:
+     original_missing: 577
+     invalid_to_nan: 2112
+     actual_imputed: 2689
+     remaining: 0
+   Newborns Visited Within 24 Hours Of Being Delivered At Home (To Total Reported Home Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 316
+     invalid_to_nan: 2297
+     actual_imputed: 2613
+     remaining: 0
+   Pregnant Women With Obstetric Complications (Who Were Attended To) (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 213
+     invalid_to_nan: 5
+     actual_imputed: 218
+     remaining: 0
+   Complicated Pregnancies Treated With Iv Antihypertensive Or Magsulph Injection (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 496
+     invalid_to_nan: 2332
+     actual_imputed: 2828
+     remaining: 0
+   Complicated Pregnancies Treated With Iv Antihypertensive/Magsulph Injection (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 779
+     invalid_to_nan: 2662
+     actual_imputed: 3441
+     remaining: 0
+   Complicated Pregnancies Treated With Blood Transfusion (To Total Women With Obstetric Complications) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 583
+     invalid_to_nan: 405
+     actual_imputed: 988
+     remaining: 0
+   Post Natal Care (Pnc) Maternal Complicates (To Total Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 2112
+     actual_imputed: 2324
+     remaining: 0
+   Abortions Reported (UOM:Number), Scaling Factor:1:
+     original_missing: 368
+     invalid_to_nan: 0
+     actual_imputed: 368
+     remaining: 0
+   Medical Termination Of Pregnancies (Mtps) At Public Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 398
+     invalid_to_nan: 0
+     actual_imputed: 398
+     remaining: 0
+   Medical Termination Of Pregnancies Conducted At Public Institutions (To Total Abortions) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 393
+     invalid_to_nan: 1108
+     actual_imputed: 1501
+     remaining: 0
+   Medical Termination Of Pregnancies (Mtps) Up To 12 Weeks Of Pregnancy (To Total Mtps Conducted At Public Institutions) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 694
+     invalid_to_nan: 0
+     actual_imputed: 694
+     remaining: 0
+   Medical Termination Of Pregnancies (Mtps) More Than 12 Weeks Of Pregnancy (To Total Mtps Conducted At Public Institutions) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 694
+     invalid_to_nan: 0
+     actual_imputed: 694
+     remaining: 0
+   Medical Termination Of Pregnancies (Mtps) Conducted At Public Institutions (To Total Mtps (Private + Public)) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 647
+     invalid_to_nan: 0
+     actual_imputed: 647
+     remaining: 0
+   Mtps Conducted At Private Institutions (To Total Mtps (Private + Public)) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 551
+     invalid_to_nan: 2112
+     actual_imputed: 2663
+     remaining: 0
+   Total Medical Termination Of Pregnancies (Mpt) Conducted At Public Institutions (To Total Ante Natal Care Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2112
+     actual_imputed: 2326
+     remaining: 0
+   Wet Mount Tests Conducted (To New Rti Or Sti In Females For Which Treatment Was Initiated) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 347
+     invalid_to_nan: 2186
+     actual_imputed: 2533
+     remaining: 0
+   Vasectomies Conducted In Public And Private Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 454
+     invalid_to_nan: 0
+     actual_imputed: 454
+     remaining: 0
+   Tubectomies Conducted In Public And Private Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 271
+     invalid_to_nan: 0
+     actual_imputed: 271
+     remaining: 0
+   Sterilisation Conducted (UOM:Number), Scaling Factor:1:
+     original_missing: 258
+     invalid_to_nan: 0
+     actual_imputed: 258
+     remaining: 0
+   Male Sterilization (To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 383
+     invalid_to_nan: 0
+     actual_imputed: 383
+     remaining: 0
+   Female Sterilisations (To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 383
+     invalid_to_nan: 0
+     actual_imputed: 383
+     remaining: 0
+   Sterilisation Conducted At Primary Health Centres (Phc) (UOM:Number), Scaling Factor:1:
+     original_missing: 765
+     invalid_to_nan: 2112
+     actual_imputed: 2877
+     remaining: 0
+   Sterilisation Conducted At Community Health Centres (Chc) (UOM:Number), Scaling Factor:1:
+     original_missing: 785
+     invalid_to_nan: 2112
+     actual_imputed: 2897
+     remaining: 0
+   Sterilisation Conducted At Sub-District Hospital (Sdh)Or District Hospital (Dh) (UOM:Number), Scaling Factor:1:
+     original_missing: 472
+     invalid_to_nan: 2112
+     actual_imputed: 2584
+     remaining: 0
+   Sterilisations Conducted At Other Public Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 5071
+     invalid_to_nan: 2112
+     actual_imputed: 7183
+     remaining: 0
+   Sterilisation Conducted At Private Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 3691
+     invalid_to_nan: 0
+     actual_imputed: 3691
+     remaining: 0
+   Sterilisation Conducted At Primary Health Centres (Phc)(To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 333
+     invalid_to_nan: 2112
+     actual_imputed: 2445
+     remaining: 0
+   Sterilisation Conducted At Community Health Centres (Chc) (To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 333
+     invalid_to_nan: 2112
+     actual_imputed: 2445
+     remaining: 0
+   Sterilisation Conducted At Sub-District Hospital(Sdh) Or District Hospital (Dh) (To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 333
+     invalid_to_nan: 2112
+     actual_imputed: 2445
+     remaining: 0
+   Sterilisations Conducted At Other Public Institutions (To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 383
+     invalid_to_nan: 0
+     actual_imputed: 383
+     remaining: 0
+   Sterilisation Conducted At Private Institutions (To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 333
+     invalid_to_nan: 2112
+     actual_imputed: 2445
+     remaining: 0
+   Laparoscopic Sterlisations (To Total Female Sterilisations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 401
+     invalid_to_nan: 0
+     actual_imputed: 401
+     remaining: 0
+   Mini Lap Sterlisations (To Total Female Sterilisations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 401
+     invalid_to_nan: 0
+     actual_imputed: 401
+     remaining: 0
+   Post Partum Sterilisations (To Total Female Sterilisations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 401
+     invalid_to_nan: 0
+     actual_imputed: 401
+     remaining: 0
+   Laparoscopic Sterlisations At Public Institutions (To Total Laparoscopic Sterilisations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1764
+     invalid_to_nan: 0
+     actual_imputed: 1764
+     remaining: 0
+   Laparoscopic Sterlisations At Public Institutions (To Total Mini Lap Sterilisations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1471
+     invalid_to_nan: 1
+     actual_imputed: 1472
+     remaining: 0
+   Post Partum Sterlisations At Public Institutions (To Total Post Partum Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1355
+     invalid_to_nan: 0
+     actual_imputed: 1355
+     remaining: 0
+   Death Cases Following Sterilisation (UOM:Number), Scaling Factor:1:
+     original_missing: 2567
+     invalid_to_nan: 0
+     actual_imputed: 2567
+     remaining: 0
+   Intrauterine Contraceptive Device (Iucd) Insertions Done At Public Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 217
+     invalid_to_nan: 2112
+     actual_imputed: 2329
+     remaining: 0
+   Intrauterine Contraceptive Device (Iucd)Insertions Done At Private Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 2566
+     invalid_to_nan: 2112
+     actual_imputed: 4678
+     remaining: 0
+   Total Intrauterine Contraceptive Device (Iucd) Insertions Done (UOM:Number), Scaling Factor:1:
+     original_missing: 217
+     invalid_to_nan: 2112
+     actual_imputed: 2329
+     remaining: 0
+   Post Partum Intrauterine Contraceptive Device (Iucd) Insertions Done In Public Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 3488
+     invalid_to_nan: 2112
+     actual_imputed: 5600
+     remaining: 0
+   Post Partum Intrauterine Contraceptive Device (Iucd) Insertions In Public Facilities (To Total Iucd Insertions In Public Facilities) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 220
+     invalid_to_nan: 2119
+     actual_imputed: 2339
+     remaining: 0
+   Post Partum Intrauterine Contraceptive Device (Iucd) Insertions In Public Facilities (To Total Institutional Deliveries In Public Facilities) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 214
+     invalid_to_nan: 2112
+     actual_imputed: 2326
+     remaining: 0
+   Intrauterine Contraceptive Device (Iucd) Insertions In Public And Private Facilities (To All Family Planning Methods (Iucd And Permanent Methods)) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 218
+     invalid_to_nan: 0
+     actual_imputed: 218
+     remaining: 0
+   Oral Pills Distributed (UOM:Number), Scaling Factor:1:
+     original_missing: 222
+     invalid_to_nan: 2112
+     actual_imputed: 2334
+     remaining: 0
+   Condom Pieces Distributed (UOM:Number), Scaling Factor:1:
+     original_missing: 216
+     invalid_to_nan: 0
+     actual_imputed: 216
+     remaining: 0
+   Centchroman Pills Distributed (UOM:Number), Scaling Factor:1:
+     original_missing: 1784
+     invalid_to_nan: 2112
+     actual_imputed: 3896
+     remaining: 0
+   Infants Received Birth Dose Of Oral Polio Vaccine (Opv 0) (UOM:Number), Scaling Factor:1:
+     original_missing: 250
+     invalid_to_nan: 2112
+     actual_imputed: 2362
+     remaining: 0
+   Infants Given Bacillus Calmettea Guerin Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 210
+     invalid_to_nan: 2112
+     actual_imputed: 2322
+     remaining: 0
+   Newborns Given Birth Dose Of Oral Polio Vaccine At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 219
+     invalid_to_nan: 3063
+     actual_imputed: 3282
+     remaining: 0
+   Newborns Given Bacillus Calmettea Guerin At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 219
+     invalid_to_nan: 6702
+     actual_imputed: 6921
+     remaining: 0
+   Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt 1) Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 314
+     invalid_to_nan: 2112
+     actual_imputed: 2426
+     remaining: 0
+   Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt 2) Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 302
+     invalid_to_nan: 2112
+     actual_imputed: 2414
+     remaining: 0
+   Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt 3) Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 301
+     invalid_to_nan: 2112
+     actual_imputed: 2413
+     remaining: 0
+   Infants Given Pentavalent 1 Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 3513
+     invalid_to_nan: 0
+     actual_imputed: 3513
+     remaining: 0
+   Infants Given Pentavalent 2 Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 3517
+     invalid_to_nan: 0
+     actual_imputed: 3517
+     remaining: 0
+   Infants Given Pentavalent 3 Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 3518
+     invalid_to_nan: 0
+     actual_imputed: 3518
+     remaining: 0
+   Infants Given Measles Immunisation (UOM:Number), Scaling Factor:1:
+     original_missing: 223
+     invalid_to_nan: 0
+     actual_imputed: 223
+     remaining: 0
+   Infants Under The Age Of 11 Months Received Measles Vaccine (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 219
+     invalid_to_nan: 6078
+     actual_imputed: 6297
+     remaining: 0
+   Fully Immunized Children In The Age Group Of 9 To 11 Months (UOM:Number), Scaling Factor:1:
+     original_missing: 219
+     invalid_to_nan: 2112
+     actual_imputed: 2331
+     remaining: 0
+   Immunization Dropout Between Bacillus Calmettea Guerin And Measles Vaccine (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 212
+     invalid_to_nan: 4039
+     actual_imputed: 4251
+     remaining: 0
+   Infants Received Vitamin - A Dose 1 (UOM:Number), Scaling Factor:1:
+     original_missing: 243
+     invalid_to_nan: 2112
+     actual_imputed: 2355
+     remaining: 0
+   Children Given Vitamin-A Dose 1 (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 219
+     invalid_to_nan: 3716
+     actual_imputed: 3935
+     remaining: 0
+   Children Given Vitamin-A Dose 9 (To Children Given Vitamin-A Dose 1) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 264
+     invalid_to_nan: 1996
+     actual_imputed: 2260
+     remaining: 0
+   Cases Of Other Complications Due To Adverse Events Following Immunization (UOM:Number), Scaling Factor:1:
+     original_missing: 1708
+     invalid_to_nan: 2112
+     actual_imputed: 3820
+     remaining: 0
+   Immunisation Sessions Held (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 335
+     invalid_to_nan: 413
+     actual_imputed: 748
+     remaining: 0
+   Immunisation Sessions Where  Accredited Social Health Activist (Asha) Were Present (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 335
+     invalid_to_nan: 2215
+     actual_imputed: 2550
+     remaining: 0
+   Children With Diphtheria In The Age Group Of 0 To 5 Years (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Children With Pertusis In The Age Group Of 0 To 5 Years (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Children With Neonatorum In The Age Group Of 0 To 5 Years (%)  (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Children With Tetanus Other Than Neonatorum In The Age Group Of 0 To 5 Years (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Children With Polio In The Age Group Of 0 To 5 Years (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Children With Measles In The Age Group Of 0 To 5 Years (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Children With Diarrhea And Dehydration In The Age Group Of 0 To 5 Years (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Children With Malaria In The Age Group Of 0 To 5 Years (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 388
+     invalid_to_nan: 2112
+     actual_imputed: 2500
+     remaining: 0
+   Adult Female In-Patients (To Total Adult Inpatients) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 665
+     invalid_to_nan: 2112
+     actual_imputed: 2777
+     remaining: 0
+   Children In-Patients (To Total In-Patients) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 591
+     invalid_to_nan: 2112
+     actual_imputed: 2703
+     remaining: 0
+   Female In-Patients Deaths (To Total Inpatient Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 910
+     invalid_to_nan: 2112
+     actual_imputed: 3022
+     remaining: 0
+   Number Of In-Patient Department (Ipd) Deaths (To Total Patients In Ipd) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 591
+     invalid_to_nan: 6
+     actual_imputed: 597
+     remaining: 0
+   Patients In In-Patients Department (Ipd) (UOM:Number), Scaling Factor:1:
+     original_missing: 591
+     invalid_to_nan: 0
+     actual_imputed: 591
+     remaining: 0
+   Patients In Out-Patients Department (Opd) (UOM:Number), Scaling Factor:1:
+     original_missing: 513
+     invalid_to_nan: 2112
+     actual_imputed: 2625
+     remaining: 0
+   Patients In In-Patients Department (To Number Of Patients In Opd) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 514
+     invalid_to_nan: 2120
+     actual_imputed: 2634
+     remaining: 0
+   Major Operations Conducted (UOM:Number), Scaling Factor:1:
+     original_missing: 751
+     invalid_to_nan: 0
+     actual_imputed: 751
+     remaining: 0
+   Minor Operations Conducted (UOM:Number), Scaling Factor:1:
+     original_missing: 624
+     invalid_to_nan: 0
+     actual_imputed: 624
+     remaining: 0
+   Major Operations Conducted (To Total Operations Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 632
+     invalid_to_nan: 0
+     actual_imputed: 632
+     remaining: 0
+   Hysterectomy Surgeries Performed (UOM:Number), Scaling Factor:1:
+     original_missing: 3592
+     invalid_to_nan: 0
+     actual_imputed: 3592
+     remaining: 0
+   Hysterectomy Surgeries Performed (To Major Operations Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 884
+     invalid_to_nan: 2116
+     actual_imputed: 3000
+     remaining: 0
+   Patients Given  Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) Treatment In Out-Patient Department (UOM:Number), Scaling Factor:1:
+     original_missing: 993
+     invalid_to_nan: 2112
+     actual_imputed: 3105
+     remaining: 0
+   Patients Given  Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) Treatment In Out-Patient Department (To Patients In Out-Patient Department) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 514
+     invalid_to_nan: 2114
+     actual_imputed: 2628
+     remaining: 0
+   Patients Received Dental Procedure In Out-Patient Department (UOM:Number), Scaling Factor:1:
+     original_missing: 992
+     invalid_to_nan: 2112
+     actual_imputed: 3104
+     remaining: 0
+   Patients In Out-Patient Department With Dental Procedure (To Patients In Out-Patient Department) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 514
+     invalid_to_nan: 2112
+     actual_imputed: 2626
+     remaining: 0
+   Adolescents Counselled (UOM:Number), Scaling Factor:1:
+     original_missing: 1187
+     invalid_to_nan: 2112
+     actual_imputed: 3299
+     remaining: 0
+   Cases Having Hb Less Than 7gm/Dl (To Number Of Haemoglobin (Hb) Tests Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 690
+     invalid_to_nan: 2115
+     actual_imputed: 2805
+     remaining: 0
+   Male Hiv Positive Cases (To Number Of Hiv Tests Conducted On Males) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 754
+     invalid_to_nan: 2121
+     actual_imputed: 2875
+     remaining: 0
+   Female Hiv Positive Cases (To Number Of Hiv Tests Conducted On Females) (%)  (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 741
+     invalid_to_nan: 2126
+     actual_imputed: 2867
+     remaining: 0
+   Total Hiv Positive Cases (To The Number Of Hiv Tests Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 730
+     invalid_to_nan: 2124
+     actual_imputed: 2854
+     remaining: 0
+   Blood Smears Tested Positive For Plasmodium Vivax (To Total Blood Smears Examined For Malaria) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 551
+     invalid_to_nan: 0
+     actual_imputed: 551
+     remaining: 0
+   Blood Smears Tested Positive For Plasmodium Falciparum (To Total Blood Smears Examined For Malaria) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 551
+     invalid_to_nan: 2
+     actual_imputed: 553
+     remaining: 0
+   Infant Deaths Reported (UOM:Number), Scaling Factor:1:
+     original_missing: 1005
+     invalid_to_nan: 0
+     actual_imputed: 1005
+     remaining: 0
+   Infant Deaths Due To Sepsis (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Infant Deaths Due To Asphyxia (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Infant Deaths Due To Low Birth Weight (Lbw) (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Infant Deaths Due To Pneumonia (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Infant Deaths Due To Diarrhea (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Infant Deaths Due To Fever (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Infant Deaths Due To Measles (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Infant Deaths Due To Other Causes (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1116
+     invalid_to_nan: 2112
+     actual_imputed: 3228
+     remaining: 0
+   Women Registered For Ante Natal Care(Anc) (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Registrations For Ante Natal Care (Anc) In The First Trimester (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Women Received 4 Or More (Anc) Check-Ups (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Women Received The Second Dose Of Tetanus-Toxoid Vaccine (Tt2) (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Women Received The Dose Of Tetanus-Toxoid Vaccine (Tt) (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Pregnant Women Received 4 Ante Natal Care (Anc) Check Ups (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6435
+     actual_imputed: 6435
+     remaining: 0
+   Pregnant Women Received Tetanus-Toxoid Vaccine (Tt2) Or Tetanus-Toxoid (Tt)  Booster (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6577
+     actual_imputed: 6577
+     remaining: 0
+   Pregnant Women Received 180 Iron And Folic Acid Tablets (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Women Received 180 Ifa Tablets (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6597
+     actual_imputed: 6597
+     remaining: 0
+   Pregnant Women With Hemoglobin (Hb) Levels<7 (Severe Anemia) (To Women With Hemoglobin (Hb) Levels<11 (Moderate Anemia)) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 26
+     invalid_to_nan: 6352
+     actual_imputed: 6378
+     remaining: 0
+   Women Detected With Hypertension (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Home Deliveries Attended By Doctor Or Nurse Or Auxiliary Nurse Midwife (Anm) Trained As (Sba) (UOM:Number), Scaling Factor:1:
+     original_missing: 3
+     invalid_to_nan: 6293
+     actual_imputed: 6296
+     remaining: 0
+   Home Deliveries Attended By Skilled Birth Attendants (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 84
+     invalid_to_nan: 6293
+     actual_imputed: 6377
+     remaining: 0
+   Women Discharged In Less Than 48 Hours Of Delivery In Public Institutions (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6295
+     actual_imputed: 6295
+     remaining: 0
+   Deliveries Conducted At Private Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 312
+     invalid_to_nan: 6293
+     actual_imputed: 6605
+     remaining: 0
+   Women Discharged Under 48 Hours Of Delivery In Private Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 459
+     invalid_to_nan: 6293
+     actual_imputed: 6752
+     remaining: 0
+   Women Discharged In Less Than 48 Hours Of Delivery In Private Facilities (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 342
+     invalid_to_nan: 6295
+     actual_imputed: 6637
+     remaining: 0
+   Institutional Deliveries Includes Both Public And Private Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Total Reported Deliveries (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Deliveries Conducted At Private Facilities (To Reported Institutional Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Women Received First Post Partum Check Up Within 48 Hours Of Delivery (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Women Received First Postpartum Checkup Between 48 Hours To 14 Days Of Delivery (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Reported Live Births (To Total Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6747
+     actual_imputed: 6747
+     remaining: 0
+   Pregnant Women Given 360 Calcium Tablets (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Pregnant Women Given 360 Calcium Tablets To Total Ante Natal Care (Anc) Registrations (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6425
+     actual_imputed: 6425
+     remaining: 0
+   Pregnant Women Given One Albendazole Tablet After First Trimester (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Pregnant Women Given One Albendazole Tablet After First Trimester (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6300
+     actual_imputed: 6300
+     remaining: 0
+   Pregnant Women Tested For Blood Sugar Using Oral Glucose Tolerance Test (Ogtt) (UOM:Number), Scaling Factor:1:
+     original_missing: 12
+     invalid_to_nan: 6293
+     actual_imputed: 6305
+     remaining: 0
+   Pregnant Women Tested For Blood Sugar Using Oral Glucose Tolerance Test (Ogtt) (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6379
+     actual_imputed: 6379
+     remaining: 0
+   Pregnant Women Tested Positive For Gestational Diabetes Mellitus (UOM:Number), Scaling Factor:1:
+     original_missing: 18
+     invalid_to_nan: 6293
+     actual_imputed: 6311
+     remaining: 0
+   Pregnant Women Tested Positive For Gestational Diabetes Mellitus (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Pregnant Women Tested For Syphilis (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Pregnant Women Tested For Syphilis And Were Found Sero Positive (UOM:Number), Scaling Factor:1:
+     original_missing: 5
+     invalid_to_nan: 6293
+     actual_imputed: 6298
+     remaining: 0
+   Pregnant Women Tested For Syphilis Found To Be  Ante Natal Care (Anc) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6343
+     actual_imputed: 6343
+     remaining: 0
+   Pregnant Women Treated For Syphilis Found To Be Sero Positive For Syphilis (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 442
+     invalid_to_nan: 6409
+     actual_imputed: 6851
+     remaining: 0
+   Babies Treated For Congenital Syphilis (To Total Babies Diagnosed With Congenital Syphilis) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 1764
+     invalid_to_nan: 6344
+     actual_imputed: 8108
+     remaining: 0
+   Maternal Deaths (UOM:Number), Scaling Factor:1:
+     original_missing: 4
+     invalid_to_nan: 6293
+     actual_imputed: 6297
+     remaining: 0
+   Facility Based Maternal Death Reviews Done (UOM:Number), Scaling Factor:1:
+     original_missing: 59
+     invalid_to_nan: 6293
+     actual_imputed: 6352
+     remaining: 0
+   Medical Termination Of Pregnancies (Mtps) Conducted At Private Institutions (To Total Mtps (Private + Public)) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 96
+     invalid_to_nan: 6293
+     actual_imputed: 6389
+     remaining: 0
+   Total Medical Termination Of Pregnancies Conducted At Public Institutions (To Total Ante Natal Care Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Sterilisation Conducted At Public Institutions (UOM:Number), Scaling Factor:1:
+     original_missing: 6
+     invalid_to_nan: 6293
+     actual_imputed: 6299
+     remaining: 0
+   Sterilisations Conducted At Other Priavte Institutions (To Total Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 50
+     invalid_to_nan: 6293
+     actual_imputed: 6343
+     remaining: 0
+   Post Abortion Sterilisations (To Total Female Sterilisations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 51
+     invalid_to_nan: 6293
+     actual_imputed: 6344
+     remaining: 0
+   Post Abortion Sterlisations At Public Institutions (To Total Post Partum Sterilisation) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 609
+     invalid_to_nan: 6293
+     actual_imputed: 6902
+     remaining: 0
+   Death Cases Of Male Following Male Sterilisation (UOM:Number), Scaling Factor:1:
+     original_missing: 44
+     invalid_to_nan: 6293
+     actual_imputed: 6337
+     remaining: 0
+   Death Cases Of Female Following Female Sterilisation (UOM:Number), Scaling Factor:1:
+     original_missing: 41
+     invalid_to_nan: 6293
+     actual_imputed: 6334
+     remaining: 0
+   Cases Of Failure Following Male Sterilisations (UOM:Number), Scaling Factor:1:
+     original_missing: 44
+     invalid_to_nan: 6293
+     actual_imputed: 6337
+     remaining: 0
+   Cases Of Failure Following Female Sterilisations (UOM:Number), Scaling Factor:1:
+     original_missing: 32
+     invalid_to_nan: 6293
+     actual_imputed: 6325
+     remaining: 0
+   Cases Of Complication Following Male Sterilisations (UOM:Number), Scaling Factor:1:
+     original_missing: 27
+     invalid_to_nan: 6293
+     actual_imputed: 6320
+     remaining: 0
+   Cases Of Complication Following Female Sterilisations (UOM:Number), Scaling Factor:1:
+     original_missing: 17
+     invalid_to_nan: 6293
+     actual_imputed: 6310
+     remaining: 0
+   Intrauterine Contraceptive Device Insertions Done At Public Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Intrauterine Contraceptive Device Insertions Done At Private Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 583
+     invalid_to_nan: 6293
+     actual_imputed: 6876
+     remaining: 0
+   Post Partum Intrauterine Contraceptive Device (Pp Iucd) Insertions In Public Facilities (To Total Iucd Insertions In Public Facilities) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 4
+     invalid_to_nan: 6293
+     actual_imputed: 6297
+     remaining: 0
+   Post Partum Intrauterine Contraceptive Device Insertions In Public Facilities (To Total Institutional Deliveries In Public Facilities) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Interval Intrauterine Contraceptive Device Insertions Done (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Post Partum Intrauterine Contraceptive Device Insertions Done (UOM:Number), Scaling Factor:1:
+     original_missing: 3
+     invalid_to_nan: 6293
+     actual_imputed: 6296
+     remaining: 0
+   Post Abortion Intrauterine Contraceptive Device Insertions Done (UOM:Number), Scaling Factor:1:
+     original_missing: 4
+     invalid_to_nan: 6293
+     actual_imputed: 6297
+     remaining: 0
+   Combined Oral Pills Distributed (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Emergency Pills Distributed (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Number Of Centchroman (Weekly Pills) Distributed (UOM:Number), Scaling Factor:1:
+     original_missing: 6
+     invalid_to_nan: 6293
+     actual_imputed: 6299
+     remaining: 0
+   Beneficiaries Given 1st Dose Of Injectable Contraceptive (UOM:Number), Scaling Factor:1:
+     original_missing: 18
+     invalid_to_nan: 6293
+     actual_imputed: 6311
+     remaining: 0
+   Beneficiaries Given 2nd Dose Of Injectable Contraceptive (UOM:Number), Scaling Factor:1:
+     original_missing: 19
+     invalid_to_nan: 6293
+     actual_imputed: 6312
+     remaining: 0
+   Beneficiaries Given 3rd Dose Of Injectable Contraceptive (UOM:Number), Scaling Factor:1:
+     original_missing: 20
+     invalid_to_nan: 6293
+     actual_imputed: 6313
+     remaining: 0
+   Beneficiaries Given 4th Dose Or More Than 4 Doses Of Injectable Contraceptive (UOM:Number), Scaling Factor:1:
+     original_missing: 22
+     invalid_to_nan: 6293
+     actual_imputed: 6315
+     remaining: 0
+   Pregnancy Testing Kits Used (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Infants Given Oral Polio Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Infants Given Bacillus Calmette Guerin (Bcg) Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Infants Given Hepatitis (Birth Dose) (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Newborns Given Oral Poliovirus Vaccines (Opv) At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6673
+     actual_imputed: 6673
+     remaining: 0
+   Newborns Given Bacillus Calmette Guerin  (Bcg) At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 7797
+     actual_imputed: 7797
+     remaining: 0
+   Newborns Given Hep-B0 (Birth Dose) At Birth (To Total Reports Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6396
+     actual_imputed: 6396
+     remaining: 0
+   Number Of Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt) 1 Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 51
+     invalid_to_nan: 6293
+     actual_imputed: 6344
+     remaining: 0
+   Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt) 2 Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 53
+     invalid_to_nan: 6293
+     actual_imputed: 6346
+     remaining: 0
+   Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt) 3 Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 53
+     invalid_to_nan: 6293
+     actual_imputed: 6346
+     remaining: 0
+   Infants Given Measles Rubella Immunisation (UOM:Number), Scaling Factor:1:
+     original_missing: 4
+     invalid_to_nan: 6293
+     actual_imputed: 6297
+     remaining: 0
+   Infants Aged Up To 11 Months Who Received Measles And Measles Rubella Vaccine (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 7807
+     actual_imputed: 7807
+     remaining: 0
+   Number Of Fully Immunized Children In The Age Group Of 9 To 11 Months (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Immunization Dropout Between Bacillus Calmette Guerin (Bcg) And Measles Vaccine (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6546
+     actual_imputed: 6546
+     remaining: 0
+   Abcess Cases Due To Adverse Events Following Immunization (Aefi) (UOM:Number), Scaling Factor:1:
+     original_missing: 2
+     invalid_to_nan: 6293
+     actual_imputed: 6295
+     remaining: 0
+   Deaths Due To Adverse Events Following Immunization (Aefi) (UOM:Number), Scaling Factor:1:
+     original_missing: 15
+     invalid_to_nan: 6293
+     actual_imputed: 6308
+     remaining: 0
+   Cases Of Other Complications Due To Adverse Events Following Immunization (Aefi) (UOM:Number), Scaling Factor:1:
+     original_missing: 1
+     invalid_to_nan: 6293
+     actual_imputed: 6294
+     remaining: 0
+   Immunisation Sessions Where Accredited Social Health Activists (Asha) Were Present (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6330
+     actual_imputed: 6330
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Pneumonia (UOM:Number), Scaling Factor:1:
+     original_missing: 3
+     invalid_to_nan: 6293
+     actual_imputed: 6296
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Asthma (UOM:Number), Scaling Factor:1:
+     original_missing: 6
+     invalid_to_nan: 6293
+     actual_imputed: 6299
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Sepsis (UOM:Number), Scaling Factor:1:
+     original_missing: 5
+     invalid_to_nan: 6293
+     actual_imputed: 6298
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Diphtheria (UOM:Number), Scaling Factor:1:
+     original_missing: 43
+     invalid_to_nan: 6293
+     actual_imputed: 6336
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Pertussis (UOM:Number), Scaling Factor:1:
+     original_missing: 44
+     invalid_to_nan: 6293
+     actual_imputed: 6337
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Tetanus Neonatorum (UOM:Number), Scaling Factor:1:
+     original_missing: 44
+     invalid_to_nan: 6293
+     actual_imputed: 6337
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Tuberculosis (Tb) (UOM:Number), Scaling Factor:1:
+     original_missing: 1
+     invalid_to_nan: 6293
+     actual_imputed: 6294
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Acute Flaccid Paralysis (Afp) (UOM:Number), Scaling Factor:1:
+     original_missing: 8
+     invalid_to_nan: 6293
+     actual_imputed: 6301
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Measles (UOM:Number), Scaling Factor:1:
+     original_missing: 4
+     invalid_to_nan: 6293
+     actual_imputed: 6297
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Malaria (UOM:Number), Scaling Factor:1:
+     original_missing: 1
+     invalid_to_nan: 6293
+     actual_imputed: 6294
+     remaining: 0
+   Children Under 5 Years Of Age Suffered From Diarrhea (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Children Under 5 Years Of Age Treated For Diarrhea In In-Patient Department (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Infants Received The 1st Dose Of Measles Rubella Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 4
+     invalid_to_nan: 6293
+     actual_imputed: 6297
+     remaining: 0
+   Infants Received The 1st Dose Of Rotavirus Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 13
+     invalid_to_nan: 6293
+     actual_imputed: 6306
+     remaining: 0
+   Infants Received The 2nd Dose Of Rotavirus Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 16
+     invalid_to_nan: 6293
+     actual_imputed: 6309
+     remaining: 0
+   Infants Received The 3rd Dose Of Rotavirus Vaccine (UOM:Number), Scaling Factor:1:
+     original_missing: 15
+     invalid_to_nan: 6293
+     actual_imputed: 6308
+     remaining: 0
+   Children Age Group 16 To 24 Months Given The 2nd Dose Of Measles (UOM:Number), Scaling Factor:1:
+     original_missing: 11
+     invalid_to_nan: 6293
+     actual_imputed: 6304
+     remaining: 0
+   Children Age Group 16 To 24 Months Given The 2nd Dose Of Measles Rubella Vaccine   (UOM:Number), Scaling Factor:1:
+     original_missing: 3
+     invalid_to_nan: 6293
+     actual_imputed: 6296
+     remaining: 0
+   Female Adult Patients In In-Patient Department (Ipd) (To Total Adult Patients In Ipd) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Children In In-Patient Department (Ipd) (To Total Patients In Ipd) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Female In-Patient Department (Ipd) Deaths (To Total Deaths In Ipd) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 95
+     invalid_to_nan: 6293
+     actual_imputed: 6388
+     remaining: 0
+   Patients In Out-Patients Department Given Allopathic Treatment (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Patients In Out-Patients Department Given Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) Treatment (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Patients In Out-Patients Department Given Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) And Allopathic Treatment (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Number Of Patients In In-Patient Department (Ipd) (To Number Of Patients In Out-Patients Department (Opd)) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Hysterectomy Surgeries Performed (To Number Of Major Operations Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 82
+     invalid_to_nan: 6311
+     actual_imputed: 6393
+     remaining: 0
+   Patients Given Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) Treatment In Out-Patient Department (Opd) (To Total Number Of Patients In Opd) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Dental Procedure Conducted Patients In Out-Patient Department (Opd) (UOM:Number), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Patients In Out-Patient Department (Opd) On Whom Dental Procedure Was Conducted (To Total Number Of Patients In Opd) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Cases Having Haemoglobin (Hb) Less Than 7gm/Dl (To Number Of Hb Tests Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6293
+     actual_imputed: 6293
+     remaining: 0
+   Male Human Immunodeficiency Virus (Hiv) Positive Cases (To Total Number Of Hiv Tests Conducted On Males) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 8
+     invalid_to_nan: 6293
+     actual_imputed: 6301
+     remaining: 0
+   Females Screened For Human Immunodeficiency Virus (Hiv) (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 0
+     invalid_to_nan: 6491
+     actual_imputed: 6491
+     remaining: 0
+   Female Human Immunodeficiency Virus (Hiv) Positive Cases (To Total Number Of Hiv Tests Conducted On Females) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 6
+     invalid_to_nan: 6293
+     actual_imputed: 6299
+     remaining: 0
+   Human Immunodeficiency Virus (Hiv) Positive Cases (To Total Number Of Hiv Tests Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 5
+     invalid_to_nan: 6293
+     actual_imputed: 6298
+     remaining: 0
+   Deaths Due To Sepsis (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 47
+     invalid_to_nan: 6293
+     actual_imputed: 6340
+     remaining: 0
+   Deaths Due To Asphyxia (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 47
+     invalid_to_nan: 6293
+     actual_imputed: 6340
+     remaining: 0
+   Deaths Due To Pneumonia (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 47
+     invalid_to_nan: 6293
+     actual_imputed: 6340
+     remaining: 0
+   Deaths Due To Diarrhea (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 47
+     invalid_to_nan: 6293
+     actual_imputed: 6340
+     remaining: 0
+   Deaths Due To Fever To Total Reported Infant Deaths (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 47
+     invalid_to_nan: 6293
+     actual_imputed: 6340
+     remaining: 0
+   Deaths Due To Measles (To Total Reported Infant Deaths) (%) (UOM:%(Percentage)), Scaling Factor:1:
+     original_missing: 47
+     invalid_to_nan: 6293
+     actual_imputed: 6340
+     remaining: 0
+   Institutional Deliveries At Urban Health Facilities (UOM:Number), Scaling Factor:1:
+     original_missing: 440
+     invalid_to_nan: 6293
+     actual_imputed: 6733
+     remaining: 0
+
+6. Remaining missing values: 0
+   None
+
+7. Duplicate State+District+Year+source_dataset count: 0
+
+8. Telangana correction report:
+   Rows affected (State=Telangana): 390
+   Columns with values outside 0-100: 216
+   
+D1 Telangana (294 rows):
+     Women Registered For Ante Natal Care (Anc) (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Registered For Ante Natal Care (Anc) Within First Trimester (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Registered Under Janani Suraksha Yojana (Jsy) (UOM:Number), Scaling Factor:1: 248 invalid values
+     Women Received 3 Ante Natal Care (Anc) Check-Ups (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Received The Second Dose Of Tetanus-Toxoid Vaccine (Tt2) Or Booster (UOM:Number), Scaling Factor:1: 250 invalid values
+     Pregnant Women Received 3  Ante Natal Care (Anc) Check Ups (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 26 invalid values
+     Pregnant Women Received The Second Dose Of Tetanus-Toxoid Vaccine (Tt2) Or Booster (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 7 invalid values
+     Pregnant Women Received 100 Iron And Folic Acid (Ifa) Tablets (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Received 100 Ifa Tablets (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 37 invalid values
+     Women Having Tested Moderately Anemic With Hemoglobin (Hb)<11 (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Having Tested With Severe Anemia With Hemoglobin (Hb) And Are Being Treated At An Institution (UOM:Number), Scaling Factor:1: 169 invalid values
+     Pregnant Women With Hemoglobin (Hb) Levels<7 (Severe Anemia) (To Women With Hemoglobin (Hb) Levels<11 (Moderate Anemia)) (UOM:%(Percentage)), Scaling Factor:1: 4 invalid values
+     Home Deliveries (UOM:Number), Scaling Factor:1: 201 invalid values
+     Home Deliveries Attended By Doctor Or Nurse Or Auxiliary Nurse Midwife (Anm)S Trained As Sba (UOM:Number), Scaling Factor:1: 183 invalid values
+     Home Deliveries Attended By Traditional Birth Attendants (Tba) Or Dai Non-Trained As Skill Birth Attendants (Sba) (UOM:Number), Scaling Factor:1: 150 invalid values
+     Janani Suraksha Yojana (Jsy) Incentives Paid For Home Deliveries (UOM:Number), Scaling Factor:1: 31 invalid values
+      Janani Suraksha Yojana (Jsy) Incentives Paid For Home Deliveries (To Total Reported Home Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 1 invalid values
+     Deliveries Conducted At Public Institutions (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Discharged Under 48 Hours Of Delivery In Public Facilities (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Discharged In Less Than 48 Hours Of Delivery (To Total Reported Deliveries In Public Institutions) (%) (UOM:%(Percentage)), Scaling Factor:1: 1 invalid values
+     Institutional Deliveries (UOM:Number), Scaling Factor:1: 250 invalid values
+     Institutional Deliveries (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 1 invalid values
+     Total Deliveries Recorded (UOM:Number), Scaling Factor:1: 250 invalid values
+     Caesarean (C-Section) Deliveries Conducted At Public Facilities (UOM:Number), Scaling Factor:1: 248 invalid values
+     Caesarean (C-Section) Deliveries Conducted At Private Facilities (UOM:Number), Scaling Factor:1: 205 invalid values
+     Mothers Who Were Paid Janani Suraksha Yojana (Jsy) Incentives For Delivery At Public Institution (To Total Public Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 7 invalid values
+     Women Received Postpartum Checkup Within 48 Hours Of Delivery (UOM:Number), Scaling Factor:1: 250 invalid values
+     Women Received Post-Natal Care Or Post Partum Check-Up Between 48 Hours And 14 Days Of Delivery (UOM:Number), Scaling Factor:1: 243 invalid values
+     Women Received Post Partum Check Up Within 48 Hours Of Delivery (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 36 invalid values
+     Women Received A Postpartum Checkup Or Post-Natal Care Between 48 Hours To 14 Days Of Delivery (%) (UOM:%(Percentage)), Scaling Factor:1: 36 invalid values
+     Reported Live Births (UOM:Number), Scaling Factor:1: 250 invalid values
+     Total Reported Live Births (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 137 invalid values
+     Reported Still Births (UOM:Number), Scaling Factor:1: 142 invalid values
+     Newborns Weighed At Birth (UOM:Number), Scaling Factor:1: 250 invalid values
+     Newborns Weighed At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 3 invalid values
+     Newborns Having Weight Less Than 25 Kg (UOM:Number), Scaling Factor:1: 249 invalid values
+     New Borns Breastfed Within 1 Hour (UOM:Number), Scaling Factor:1: 250 invalid values
+     New Borns Visited Within 24 Hrs Of Being Delivered At Home (UOM:Number), Scaling Factor:1: 184 invalid values
+     Newborns Visited Within 24 Hours Of Being Delivered At Home (To Total Reported Home Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 21 invalid values
+     Sex Ratio At Birth (UOM:Ratio), Scaling Factor:1: 250 invalid values
+     Complicated Pregnancies Treated With Iv Antihypertensive Or Magsulph Injection (%) (UOM:%(Percentage)), Scaling Factor:1: 6 invalid values
+     Complicated Pregnancies Treated With Iv Antihypertensive/Magsulph Injection (%) (UOM:%(Percentage)), Scaling Factor:1: 7 invalid values
+     Complicated Pregnancies Treated With Blood Transfusion (To Total Women With Obstetric Complications) (%) (UOM:%(Percentage)), Scaling Factor:1: 5 invalid values
+     Abortions Reported (UOM:Number), Scaling Factor:1: 156 invalid values
+     Medical Termination Of Pregnancies (Mtps) At Public Institutions (UOM:Number), Scaling Factor:1: 32 invalid values
+     Medical Termination Of Pregnancies Conducted At Public Institutions (To Total Abortions) (%) (UOM:%(Percentage)), Scaling Factor:1: 22 invalid values
+     Wet Mount Tests Conducted (To New Rti Or Sti In Females For Which Treatment Was Initiated) (%) (UOM:%(Percentage)), Scaling Factor:1: 4 invalid values
+     Vasectomies Conducted In Public And Private Institutions (UOM:Number), Scaling Factor:1: 133 invalid values
+     Tubectomies Conducted In Public And Private Institutions (UOM:Number), Scaling Factor:1: 249 invalid values
+     Sterilisation Conducted (UOM:Number), Scaling Factor:1: 249 invalid values
+     Sterilisation Conducted At Primary Health Centres (Phc) (UOM:Number), Scaling Factor:1: 243 invalid values
+     Sterilisation Conducted At Community Health Centres (Chc) (UOM:Number), Scaling Factor:1: 190 invalid values
+     Sterilisation Conducted At Sub-District Hospital (Sdh)Or District Hospital (Dh) (UOM:Number), Scaling Factor:1: 236 invalid values
+     Sterilisations Conducted At Other Public Institutions (UOM:Number), Scaling Factor:1: 21 invalid values
+     Sterilisation Conducted At Private Institutions (UOM:Number), Scaling Factor:1: 5 invalid values
+     Intrauterine Contraceptive Device (Iucd) Insertions Done At Public Facilities (UOM:Number), Scaling Factor:1: 243 invalid values
+     Intrauterine Contraceptive Device (Iucd)Insertions Done At Private Facilities (UOM:Number), Scaling Factor:1: 61 invalid values
+     Total Intrauterine Contraceptive Device (Iucd) Insertions Done (UOM:Number), Scaling Factor:1: 243 invalid values
+     Post Partum Intrauterine Contraceptive Device (Iucd) Insertions Done In Public Facilities (UOM:Number), Scaling Factor:1: 21 invalid values
+     Post Partum Intrauterine Contraceptive Device (Iucd) Insertions In Public Facilities (To Total Iucd Insertions In Public Facilities) (%) (UOM:%(Percentage)), Scaling Factor:1: 1 invalid values
+     Oral Pills Distributed (UOM:Number), Scaling Factor:1: 250 invalid values
+     Condom Pieces Distributed (UOM:Number), Scaling Factor:1: 250 invalid values
+     Centchroman Pills Distributed (UOM:Number), Scaling Factor:1: 113 invalid values
+     Infants Received Birth Dose Of Oral Polio Vaccine (Opv 0) (UOM:Number), Scaling Factor:1: 250 invalid values
+     Infants Given Bacillus Calmettea Guerin Vaccine (UOM:Number), Scaling Factor:1: 250 invalid values
+     Newborns Given Birth Dose Of Oral Polio Vaccine At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 44 invalid values
+     Newborns Given Bacillus Calmettea Guerin At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 89 invalid values
+     Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt 1) Vaccine (UOM:Number), Scaling Factor:1: 243 invalid values
+     Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt 2) Vaccine (UOM:Number), Scaling Factor:1: 239 invalid values
+     Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt 3) Vaccine (UOM:Number), Scaling Factor:1: 240 invalid values
+     Infants Given Pentavalent 1 Vaccine (UOM:Number), Scaling Factor:1: 52 invalid values
+     Infants Given Pentavalent 2 Vaccine (UOM:Number), Scaling Factor:1: 50 invalid values
+     Infants Given Pentavalent 3 Vaccine (UOM:Number), Scaling Factor:1: 51 invalid values
+     Infants Given Measles Immunisation (UOM:Number), Scaling Factor:1: 250 invalid values
+     Infants Under The Age Of 11 Months Received Measles Vaccine (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 98 invalid values
+     Fully Immunized Children In The Age Group Of 9 To 11 Months (UOM:Number), Scaling Factor:1: 250 invalid values
+     Immunization Dropout Between Bacillus Calmettea Guerin And Measles Vaccine (%) (UOM:%(Percentage)), Scaling Factor:1: 82 invalid values
+     Infants Received Vitamin - A Dose 1 (UOM:Number), Scaling Factor:1: 250 invalid values
+     Children Given Vitamin-A Dose 1 (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 55 invalid values
+     Children Given Vitamin-A Dose 9 (To Children Given Vitamin-A Dose 1) (%) (UOM:%(Percentage)), Scaling Factor:1: 25 invalid values
+     Cases Of Other Complications Due To Adverse Events Following Immunization (UOM:Number), Scaling Factor:1: 13 invalid values
+     Immunisation Sessions Held (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1: 7 invalid values
+     Immunisation Sessions Where  Accredited Social Health Activist (Asha) Were Present (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1: 5 invalid values
+     Patients In In-Patients Department (Ipd) (UOM:Number), Scaling Factor:1: 249 invalid values
+     Patients In Out-Patients Department (Opd) (UOM:Number), Scaling Factor:1: 250 invalid values
+     Major Operations Conducted (UOM:Number), Scaling Factor:1: 170 invalid values
+     Minor Operations Conducted (UOM:Number), Scaling Factor:1: 213 invalid values
+     Hysterectomy Surgeries Performed (UOM:Number), Scaling Factor:1: 30 invalid values
+     Hysterectomy Surgeries Performed (To Major Operations Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1: 1 invalid values
+     Patients Given  Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) Treatment In Out-Patient Department (UOM:Number), Scaling Factor:1: 233 invalid values
+     Patients Received Dental Procedure In Out-Patient Department (UOM:Number), Scaling Factor:1: 198 invalid values
+     Adolescents Counselled (UOM:Number), Scaling Factor:1: 161 invalid values
+     Infant Deaths Reported (UOM:Number), Scaling Factor:1: 111 invalid values
+   
+D2 Telangana (96 rows):
+     Women Registered For Ante Natal Care(Anc) (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Registered For Ante Natal Care (Anc) Within First Trimester (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Received 4 Or More (Anc) Check-Ups (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Received The Second Dose Of Tetanus-Toxoid Vaccine (Tt2) (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Received The Dose Of Tetanus-Toxoid Vaccine (Tt) (UOM:Number), Scaling Factor:1: 96 invalid values
+     Pregnant Women Received 4 Ante Natal Care (Anc) Check Ups (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 23 invalid values
+     Pregnant Women Received Tetanus-Toxoid Vaccine (Tt2) Or Tetanus-Toxoid (Tt)  Booster (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 42 invalid values
+     Pregnant Women Received 180 Iron And Folic Acid Tablets (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Received 180 Ifa Tablets (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 48 invalid values
+     Women Having Tested Moderately Anemic With Hemoglobin (Hb)<11 (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Having Tested With Severe Anemia With Hemoglobin (Hb) And Are Being Treated At An Institution (UOM:Number), Scaling Factor:1: 83 invalid values
+     Pregnant Women With Hemoglobin (Hb) Levels<7 (Severe Anemia) (To Women With Hemoglobin (Hb) Levels<11 (Moderate Anemia)) (%) (UOM:%(Percentage)), Scaling Factor:1: 1 invalid values
+     Home Deliveries (UOM:Number), Scaling Factor:1: 13 invalid values
+     Home Deliveries Attended By Doctor Or Nurse Or Auxiliary Nurse Midwife (Anm) Trained As (Sba) (UOM:Number), Scaling Factor:1: 5 invalid values
+     Home Deliveries Attended By Traditional Birth Attendants (Tba) Or Dai Non-Trained As Skill Birth Attendants (Sba) (UOM:Number), Scaling Factor:1: 6 invalid values
+     Deliveries Conducted At Public Institutions (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Discharged Under 48 Hours Of Delivery In Public Facilities (UOM:Number), Scaling Factor:1: 96 invalid values
+     Deliveries Conducted At Private Institutions (UOM:Number), Scaling Factor:1: 96 invalid values
+     Women Discharged Under 48 Hours Of Delivery In Private Facilities (UOM:Number), Scaling Factor:1: 59 invalid values
+     Institutional Deliveries Includes Both Public And Private Institutions (UOM:Number), Scaling Factor:1: 96 invalid values
+     Institutional Deliveries (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 10 invalid values
+     Total Reported Deliveries (UOM:Number), Scaling Factor:1: 96 invalid values
+     Caesarean (C-Section) Deliveries Conducted At Public Facilities (UOM:Number), Scaling Factor:1: 94 invalid values
+     Caesarean (C-Section) Deliveries Conducted At Private Facilities (UOM:Number), Scaling Factor:1: 92 invalid values
+     Women Received First Post Partum Check Up Within 48 Hours Of Delivery (UOM:Number), Scaling Factor:1: 77 invalid values
+     Women Received First Postpartum Checkup Between 48 Hours To 14 Days Of Delivery (UOM:Number), Scaling Factor:1: 92 invalid values
+     Women Received Post Partum Check Up Within 48 Hours Of Delivery (To Total Reported Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 68 invalid values
+     Women Received A Postpartum Checkup Or Post-Natal Care Between 48 Hours To 14 Days Of Delivery (%) (UOM:%(Percentage)), Scaling Factor:1: 12 invalid values
+     Reported Live Births (UOM:Number), Scaling Factor:1: 96 invalid values
+     Reported Live Births (To Total Deliveries) (%) (UOM:%(Percentage)), Scaling Factor:1: 72 invalid values
+     Reported Still Births (UOM:Number), Scaling Factor:1: 20 invalid values
+     Newborns Weighed At Birth (UOM:Number), Scaling Factor:1: 96 invalid values
+     Newborns Weighed At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 5 invalid values
+     Newborns Having Weight Less Than 25 Kg (UOM:Number), Scaling Factor:1: 96 invalid values
+     New Borns Breastfed Within 1 Hour (UOM:Number), Scaling Factor:1: 96 invalid values
+     New Borns Breastfed Within 1 Hour (To Total Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 1 invalid values
+     Sex Ratio At Birth (UOM:Ratio), Scaling Factor:1: 96 invalid values
+     Complicated Pregnancies Treated With Blood Transfusion (To Total Women With Obstetric Complications) (%) (UOM:%(Percentage)), Scaling Factor:1: 35 invalid values
+     Pregnant Women Given 360 Calcium Tablets (UOM:Number), Scaling Factor:1: 96 invalid values
+     Pregnant Women Given 360 Calcium Tablets To Total Ante Natal Care (Anc) Registrations (%) (UOM:%(Percentage)), Scaling Factor:1: 32 invalid values
+     Pregnant Women Given One Albendazole Tablet After First Trimester (UOM:Number), Scaling Factor:1: 96 invalid values
+     Pregnant Women Tested For Blood Sugar Using Oral Glucose Tolerance Test (Ogtt) (UOM:Number), Scaling Factor:1: 88 invalid values
+     Pregnant Women Tested Positive For Gestational Diabetes Mellitus (UOM:Number), Scaling Factor:1: 18 invalid values
+     Pregnant Women Tested For Syphilis (UOM:Number), Scaling Factor:1: 95 invalid values
+     Pregnant Women Tested For Syphilis And Were Found Sero Positive (UOM:Number), Scaling Factor:1: 39 invalid values
+     Pregnant Women Tested For Syphilis Found To Be  Ante Natal Care (Anc) (%) (UOM:%(Percentage)), Scaling Factor:1: 3 invalid values
+     Pregnant Women Treated For Syphilis Found To Be Sero Positive For Syphilis (%) (UOM:%(Percentage)), Scaling Factor:1: 4 invalid values
+     Babies Treated For Congenital Syphilis (To Total Babies Diagnosed With Congenital Syphilis) (%) (UOM:%(Percentage)), Scaling Factor:1: 3 invalid values
+     Maternal Deaths (UOM:Number), Scaling Factor:1: 3 invalid values
+     Facility Based Maternal Death Reviews Done (UOM:Number), Scaling Factor:1: 1 invalid values
+     Abortions Reported (UOM:Number), Scaling Factor:1: 32 invalid values
+     Medical Termination Of Pregnancies (Mtps) At Public Institutions (UOM:Number), Scaling Factor:1: 16 invalid values
+     Vasectomies Conducted In Public And Private Institutions (UOM:Number), Scaling Factor:1: 26 invalid values
+     Tubectomies Conducted In Public And Private Institutions (UOM:Number), Scaling Factor:1: 86 invalid values
+     Sterilisation Conducted (UOM:Number), Scaling Factor:1: 89 invalid values
+     Sterilisation Conducted At Private Institutions (UOM:Number), Scaling Factor:1: 22 invalid values
+     Sterilisation Conducted At Public Institutions (UOM:Number), Scaling Factor:1: 89 invalid values
+     Cases Of Complication Following Male Sterilisations (UOM:Number), Scaling Factor:1: 1 invalid values
+     Cases Of Complication Following Female Sterilisations (UOM:Number), Scaling Factor:1: 1 invalid values
+     Intrauterine Contraceptive Device Insertions Done At Public Facilities (UOM:Number), Scaling Factor:1: 77 invalid values
+     Intrauterine Contraceptive Device Insertions Done At Private Facilities (UOM:Number), Scaling Factor:1: 19 invalid values
+     Interval Intrauterine Contraceptive Device Insertions Done (UOM:Number), Scaling Factor:1: 66 invalid values
+     Post Partum Intrauterine Contraceptive Device Insertions Done (UOM:Number), Scaling Factor:1: 35 invalid values
+     Post Abortion Intrauterine Contraceptive Device Insertions Done (UOM:Number), Scaling Factor:1: 3 invalid values
+     Combined Oral Pills Distributed (UOM:Number), Scaling Factor:1: 96 invalid values
+     Emergency Pills Distributed (UOM:Number), Scaling Factor:1: 76 invalid values
+     Condom Pieces Distributed (UOM:Number), Scaling Factor:1: 96 invalid values
+     Number Of Centchroman (Weekly Pills) Distributed (UOM:Number), Scaling Factor:1: 89 invalid values
+     Beneficiaries Given 1st Dose Of Injectable Contraceptive (UOM:Number), Scaling Factor:1: 13 invalid values
+     Beneficiaries Given 2nd Dose Of Injectable Contraceptive (UOM:Number), Scaling Factor:1: 7 invalid values
+     Beneficiaries Given 3rd Dose Of Injectable Contraceptive (UOM:Number), Scaling Factor:1: 3 invalid values
+     Beneficiaries Given 4th Dose Or More Than 4 Doses Of Injectable Contraceptive (UOM:Number), Scaling Factor:1: 21 invalid values
+     Pregnancy Testing Kits Used (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Given Oral Polio Vaccine (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Given Bacillus Calmette Guerin (Bcg) Vaccine (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Given Hepatitis (Birth Dose) (UOM:Number), Scaling Factor:1: 96 invalid values
+     Newborns Given Oral Poliovirus Vaccines (Opv) At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 34 invalid values
+     Newborns Given Bacillus Calmette Guerin  (Bcg) At Birth (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 55 invalid values
+     Newborns Given Hep-B0 (Birth Dose) At Birth (To Total Reports Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 18 invalid values
+     Number Of Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt) 1 Vaccine (UOM:Number), Scaling Factor:1: 39 invalid values
+     Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt) 2 Vaccine (UOM:Number), Scaling Factor:1: 27 invalid values
+     Infants Given Diphtheria, Pertussis (Whooping Cough), And Tetanus (Dpt) 3 Vaccine (UOM:Number), Scaling Factor:1: 37 invalid values
+     Infants Given Pentavalent 1 Vaccine (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Given Pentavalent 2 Vaccine (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Given Pentavalent 3 Vaccine (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Given Measles Immunisation (UOM:Number), Scaling Factor:1: 62 invalid values
+     Infants Given Measles Rubella Immunisation (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Aged Up To 11 Months Who Received Measles And Measles Rubella Vaccine (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 70 invalid values
+     Number Of Fully Immunized Children In The Age Group Of 9 To 11 Months (UOM:Number), Scaling Factor:1: 96 invalid values
+     Immunization Dropout Between Bacillus Calmette Guerin (Bcg) And Measles Vaccine (%) (UOM:%(Percentage)), Scaling Factor:1: 3 invalid values
+     Children Given Vitamin-A Dose 1 (To Reported Live Births) (%) (UOM:%(Percentage)), Scaling Factor:1: 15 invalid values
+     Children Given Vitamin-A Dose 9 (To Children Given Vitamin-A Dose 1) (%) (UOM:%(Percentage)), Scaling Factor:1: 42 invalid values
+     Abcess Cases Due To Adverse Events Following Immunization (Aefi) (UOM:Number), Scaling Factor:1: 5 invalid values
+     Cases Of Other Complications Due To Adverse Events Following Immunization (Aefi) (UOM:Number), Scaling Factor:1: 12 invalid values
+     Immunisation Sessions Held (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1: 17 invalid values
+     Immunisation Sessions Where Accredited Social Health Activists (Asha) Were Present (To Immunisation Sessions Planned) (%) (UOM:%(Percentage)), Scaling Factor:1: 5 invalid values
+     Children Under 5 Years Of Age Suffered From Pneumonia (UOM:Number), Scaling Factor:1: 41 invalid values
+     Children Under 5 Years Of Age Suffered From Asthma (UOM:Number), Scaling Factor:1: 34 invalid values
+     Children Under 5 Years Of Age Suffered From Sepsis (UOM:Number), Scaling Factor:1: 13 invalid values
+     Children Under 5 Years Of Age Suffered From Diphtheria (UOM:Number), Scaling Factor:1: 2 invalid values
+     Children Under 5 Years Of Age Suffered From Tuberculosis (Tb) (UOM:Number), Scaling Factor:1: 2 invalid values
+     Children Under 5 Years Of Age Suffered From Measles (UOM:Number), Scaling Factor:1: 4 invalid values
+     Children Under 5 Years Of Age Suffered From Malaria (UOM:Number), Scaling Factor:1: 14 invalid values
+     Children Under 5 Years Of Age Suffered From Diarrhea (UOM:Number), Scaling Factor:1: 84 invalid values
+     Children Under 5 Years Of Age Treated For Diarrhea In In-Patient Department (UOM:Number), Scaling Factor:1: 65 invalid values
+     Infants Received The 1st Dose Of Measles Rubella Vaccine (UOM:Number), Scaling Factor:1: 96 invalid values
+     Infants Received The 1st Dose Of Rotavirus Vaccine (UOM:Number), Scaling Factor:1: 52 invalid values
+     Infants Received The 2nd Dose Of Rotavirus Vaccine (UOM:Number), Scaling Factor:1: 34 invalid values
+     Infants Received The 3rd Dose Of Rotavirus Vaccine (UOM:Number), Scaling Factor:1: 36 invalid values
+     Children Age Group 16 To 24 Months Given The 2nd Dose Of Measles (UOM:Number), Scaling Factor:1: 66 invalid values
+     Children Age Group 16 To 24 Months Given The 2nd Dose Of Measles Rubella Vaccine   (UOM:Number), Scaling Factor:1: 96 invalid values
+     Patients In In-Patients Department (Ipd) (UOM:Number), Scaling Factor:1: 96 invalid values
+     Patients In Out-Patients Department Given Allopathic Treatment (UOM:Number), Scaling Factor:1: 96 invalid values
+     Patients In Out-Patients Department Given Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) Treatment (UOM:Number), Scaling Factor:1: 96 invalid values
+     Patients In Out-Patients Department Given Ayurveda, Yoga And Naturopathy, Unani, Siddha, And Homoeopathy (Ayush) And Allopathic Treatment (UOM:Number), Scaling Factor:1: 96 invalid values
+     Major Operations Conducted (UOM:Number), Scaling Factor:1: 91 invalid values
+     Minor Operations Conducted (UOM:Number), Scaling Factor:1: 94 invalid values
+     Hysterectomy Surgeries Performed (UOM:Number), Scaling Factor:1: 55 invalid values
+     Hysterectomy Surgeries Performed (To Number Of Major Operations Conducted) (%) (UOM:%(Percentage)), Scaling Factor:1: 2 invalid values
+     Dental Procedure Conducted Patients In Out-Patient Department (Opd) (UOM:Number), Scaling Factor:1: 96 invalid values
+     Females Screened For Human Immunodeficiency Virus (Hiv) (To Total Anc Registrations) (%) (UOM:%(Percentage)), Scaling Factor:1: 3 invalid values
+     Infant Deaths Reported (UOM:Number), Scaling Factor:1: 25 invalid values
+     Institutional Deliveries At Urban Health Facilities (UOM:Number), Scaling Factor:1: 80 invalid values
+   Correction applied: NONE (invalid percentages set to NaN only)
+
+9. D1/D2 year and district coverage:
+   D1 years: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]
+   D2 years: [2017, 2018, 2019]
+   D1 districts: 703
+   D2 districts: 701
+
+10. Column groups in final dataset:
+    Geographic: 5 (['Country', 'State', 'District', 'Year', 'source_dataset'])
+    Percentage: 145
+    Numeric: 140
+    Total columns: 290
+
+11. Negative values cleaned: 0
+12. Pytest result: See tests/

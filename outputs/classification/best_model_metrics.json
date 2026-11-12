@@ -1,0 +1,50 @@
+{
+  "model": "Logistic Regression",
+  "accuracy": 0.9958358120166567,
+  "precision_macro": 0.9957195680971305,
+  "recall_macro": 0.9942579243599227,
+  "f1_macro": 0.9949837321699989,
+  "confusion_matrix": [
+    [
+      521,
+      2,
+      0
+    ],
+    [
+      1,
+      887,
+      1
+    ],
+    [
+      2,
+      1,
+      266
+    ]
+  ],
+  "roc_auc_macro_ovr": 0.9999614640043161,
+  "per_class": {
+    "High Risk": {
+      "precision": 0.994275,
+      "recall": 0.996176,
+      "f1": 0.995224,
+      "support": 523
+    },
+    "Low Risk": {
+      "precision": 0.996629,
+      "recall": 0.99775,
+      "f1": 0.997189,
+      "support": 889
+    },
+    "Medium Risk": {
+      "precision": 0.996255,
+      "recall": 0.988848,
+      "f1": 0.992537,
+      "support": 269
+    }
+  },
+  "confusion_labels": [
+    "High Risk",
+    "Low Risk",
+    "Medium Risk"
+  ]
+}

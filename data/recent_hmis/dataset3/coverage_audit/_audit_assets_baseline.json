@@ -1,0 +1,25 @@
+{
+ "audited": "dataset3/ artifacts",
+ "files": {
+  "data/recent_hmis/dataset3/README.md": "9325e9dd0ee8e7567e095158c2d55528c9301e73ed942f8c038733c0ce9a5737",
+  "data/recent_hmis/dataset3/_build_run_summary.json": "ef4e634f6546ed6aad5f356cc6d0909401d476429cefb503f0712978c1bde876",
+  "data/recent_hmis/dataset3/_invalid_summary.json": "14902a985b4bcb59fd50576eb20aa2a80167b96a102a0e67f09d4d983ac851df",
+  "data/recent_hmis/dataset3/_missingness.json": "59b51b1540e9d70120c95e3ae35a63b2cba29fedca32b1c3609f05769705df89",
+  "data/recent_hmis/dataset3/_protected_files_baseline.json": "df72a2240a9222e2521c2a6f62c934fb5dd193f822d22eddc811f5d2c726e0cb",
+  "data/recent_hmis/dataset3/_zero_denominators.json": "0e8b38a4822e8cd636cb830f09b30c7e24ac7a86909841304008f55f0178e556",
+  "data/recent_hmis/dataset3/coverage_by_state.csv": "51d48ee46d0487191dcd9c4911b20ffc4fbd247e6705dbdafbc75e7fb65173ed",
+  "data/recent_hmis/dataset3/coverage_by_year.csv": "8fc7e18cfcfdbc43f6de7ac158243e3868690220062e645242a006c10513d61b",
+  "data/recent_hmis/dataset3/coverage_new_units_not_in_707.csv": "a770fbb715bb8116db00bc70aa27773ce19edcbc7ca3617bf8ed49e5f4921566",
+  "data/recent_hmis/dataset3/coverage_reference_missing_units.csv": "e6a0231dd82b76ce2b56fbafb43a270cb7b5f37c06197da83cc38ee02ca39d2f",
+  "data/recent_hmis/dataset3/data_quality_report.md": "f7f27e92826d8f47bbabf5537fe5a2db6aee564d88f725b0eba95be6c6db311c",
+  "data/recent_hmis/dataset3/dataset3_build_report.md": "c2342deb3a646ca40942e939a841cc3f5fd64c072a5867a1841ecef3eb11cc8e",
+  "data/recent_hmis/dataset3/dataset3_metadata.json": "ea1e5b93ef435756c451d1879dd946a107874965c4ed990cc2045368c2de4da5",
+  "data/recent_hmis/dataset3/dataset3_recent_hmis.csv": "63683d14b9493775b3d50d16b68b996eaffbd8dba1750dd864ba8b249bbc6eef",
+  "data/recent_hmis/dataset3/district_churn.csv": "6c56a4179350d12bfcca6ff6044b54dda0604b5f50a19e8d8a94cc61f533347c",
+  "data/recent_hmis/dataset3/excluded_features.md": "454762212da639a9fb7e58cc04fe95a0e8a7deb5aba63fbb6da4a46a402dd551",
+  "data/recent_hmis/dataset3/feature_definitions.csv": "69fe487210c49a630062da7e1e2cae69b7ac1bd3bf3884e276cb1ac138394db6",
+  "data/recent_hmis/dataset3/indicator_counts.csv": "191cba975befd0a534a18822c6d4a831ad690b308f8b9db68791072e5f14c955",
+  "data/recent_hmis/dataset3/percent_invalid_flags.csv": "a1856cbcfca4f86b08b6b52639bdd4234f412613132cbae8178d764f7acca3f0",
+  "data/recent_hmis/dataset3/source_file_mapping.csv": "ae8f17a261c6734480187e71d475aa33deeaa7508fc64adb17b67893688ee776"
+ }
+}

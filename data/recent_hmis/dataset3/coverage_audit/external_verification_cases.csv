@@ -1,0 +1,8 @@
+State,Recent_HMIS_District,Candidate_Type,Confidence,Why_Uncertain,@Action_Taken
+Andhra Pradesh,Markapuram,UNCERTAIN,LOW,Single-year (2022-23) AP unit; not present before or after; classified as UNCERTAIN -> EXTERNAL_VERIFICATION_REQUIRED. Markapuram observed in DS3 years 2022-2023,INVESTIGATE
+Andhra Pradesh,Polavaram,UNCERTAIN,LOW,Single-year (2022-23) AP unit; not present before or after; classified as UNCERTAIN -> EXTERNAL_VERIFICATION_REQUIRED. Polavaram observed in DS3 years 2022-2023,INVESTIGATE
+Delhi,Central North,UNCERTAIN,LOW,2022-23-only Delhi unit (14 districts listed that year vs 11 otherwise); not present in any other DS3 year -> EXTERNAL_VERIFICATION_REQUIRED. Central North observed in DS3 years 2022-2023,INVESTIGATE
+Delhi,Old Delhi,UNCERTAIN,LOW,2022-23-only Delhi unit (14 districts listed that year vs 11 otherwise); not present in any other DS3 year -> EXTERNAL_VERIFICATION_REQUIRED. Old Delhi observed in DS3 years 2022-2023,INVESTIGATE
+Delhi,Outer North,UNCERTAIN,LOW,2022-23-only Delhi unit (14 districts listed that year vs 11 otherwise); not present in any other DS3 year -> EXTERNAL_VERIFICATION_REQUIRED. Outer North observed in DS3 years 2022-2023,INVESTIGATE
+Gujarat,Vav-Tharad,UNCERTAIN,LOW,2022-23-only Gujarat unit; absent from 2023-24 file; classified as UNCERTAIN -> EXTERNAL_VERIFICATION_REQUIRED. Vav-Tharad observed in DS3 years 2022-2023,INVESTIGATE
+Karnataka,Bengaluru South,UNCERTAIN,LOW,"2022-23-only Karnataka unit; Ramanagara (in reference) is omitted from the same file, suggesting an HMIS 2022-23 labelling anomaly rather than a real district -> EXTERNAL_VERIFICATION_REQUIRED. Bengaluru South observed in DS3 years 2022-2023 (first data 2022-2023)",INVESTIGATE

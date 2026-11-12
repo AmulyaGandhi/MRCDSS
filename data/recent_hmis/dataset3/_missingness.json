@@ -1,0 +1,162 @@
+[
+ {
+  "feature": "ANC_First_Trimester_Pct",
+  "fiscal_year": "2020-2021",
+  "n_total": 782,
+  "n_valid": 736,
+  "n_missing": 46,
+  "missing_pct": 5.88
+ },
+ {
+  "feature": "ANC_First_Trimester_Pct",
+  "fiscal_year": "2021-2022",
+  "n_total": 782,
+  "n_valid": 737,
+  "n_missing": 45,
+  "missing_pct": 5.75
+ },
+ {
+  "feature": "ANC_First_Trimester_Pct",
+  "fiscal_year": "2022-2023",
+  "n_total": 791,
+  "n_valid": 757,
+  "n_missing": 34,
+  "missing_pct": 4.3
+ },
+ {
+  "feature": "ANC_First_Trimester_Pct",
+  "fiscal_year": "2023-2024",
+  "n_total": 783,
+  "n_valid": 757,
+  "n_missing": 26,
+  "missing_pct": 3.32
+ },
+ {
+  "feature": "ANC_First_Trimester_Pct",
+  "fiscal_year": "2024-2025",
+  "n_total": 168,
+  "n_valid": 161,
+  "n_missing": 7,
+  "missing_pct": 4.17
+ },
+ {
+  "feature": "TT2_Booster_Pct",
+  "fiscal_year": "2020-2021",
+  "n_total": 782,
+  "n_valid": 736,
+  "n_missing": 46,
+  "missing_pct": 5.88
+ },
+ {
+  "feature": "TT2_Booster_Pct",
+  "fiscal_year": "2021-2022",
+  "n_total": 782,
+  "n_valid": 737,
+  "n_missing": 45,
+  "missing_pct": 5.75
+ },
+ {
+  "feature": "TT2_Booster_Pct",
+  "fiscal_year": "2022-2023",
+  "n_total": 791,
+  "n_valid": 757,
+  "n_missing": 34,
+  "missing_pct": 4.3
+ },
+ {
+  "feature": "TT2_Booster_Pct",
+  "fiscal_year": "2023-2024",
+  "n_total": 783,
+  "n_valid": 757,
+  "n_missing": 26,
+  "missing_pct": 3.32
+ },
+ {
+  "feature": "TT2_Booster_Pct",
+  "fiscal_year": "2024-2025",
+  "n_total": 168,
+  "n_valid": 161,
+  "n_missing": 7,
+  "missing_pct": 4.17
+ },
+ {
+  "feature": "Severe_Anemia_Pct",
+  "fiscal_year": "2020-2021",
+  "n_total": 782,
+  "n_valid": 731,
+  "n_missing": 51,
+  "missing_pct": 6.52
+ },
+ {
+  "feature": "Severe_Anemia_Pct",
+  "fiscal_year": "2021-2022",
+  "n_total": 782,
+  "n_valid": 734,
+  "n_missing": 48,
+  "missing_pct": 6.14
+ },
+ {
+  "feature": "Severe_Anemia_Pct",
+  "fiscal_year": "2022-2023",
+  "n_total": 791,
+  "n_valid": 755,
+  "n_missing": 36,
+  "missing_pct": 4.55
+ },
+ {
+  "feature": "Severe_Anemia_Pct",
+  "fiscal_year": "2023-2024",
+  "n_total": 783,
+  "n_valid": 757,
+  "n_missing": 26,
+  "missing_pct": 3.32
+ },
+ {
+  "feature": "Severe_Anemia_Pct",
+  "fiscal_year": "2024-2025",
+  "n_total": 168,
+  "n_valid": 161,
+  "n_missing": 7,
+  "missing_pct": 4.17
+ },
+ {
+  "feature": "Obstetric_Complications_Pct",
+  "fiscal_year": "2020-2021",
+  "n_total": 782,
+  "n_valid": 732,
+  "n_missing": 50,
+  "missing_pct": 6.39
+ },
+ {
+  "feature": "Obstetric_Complications_Pct",
+  "fiscal_year": "2021-2022",
+  "n_total": 782,
+  "n_valid": 734,
+  "n_missing": 48,
+  "missing_pct": 6.14
+ },
+ {
+  "feature": "Obstetric_Complications_Pct",
+  "fiscal_year": "2022-2023",
+  "n_total": 791,
+  "n_valid": 753,
+  "n_missing": 38,
+  "missing_pct": 4.8
+ },
+ {
+  "feature": "Obstetric_Complications_Pct",
+  "fiscal_year": "2023-2024",
+  "n_total": 783,
+  "n_valid": 0,
+  "n_missing": 783,
+  "missing_pct": 100.0
+ },
+ {
+  "feature": "Obstetric_Complications_Pct",
+  "fiscal_year": "2024-2025",
+  "n_total": 168,
+  "n_valid": 0,
+  "n_missing": 168,
+  "missing_pct": 100.0
+ }
+]
