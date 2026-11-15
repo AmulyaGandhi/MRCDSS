@@ -50,7 +50,7 @@ const PAGE_QUESTIONS: Record<AssistantPageContext, string[]> = {
   planning_priorities: [
     'What should planners focus on?',
     'Show me the planning rules',
-    'Which districts are persistently High Priority?',
+    'Which districts show repeated High Priority observations?',
     'How does the DSS map planning focus?',
   ],
   methodology: [

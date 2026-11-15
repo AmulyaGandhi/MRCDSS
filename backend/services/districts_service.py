@@ -2,8 +2,9 @@ import os
 import pandas as pd
 from typing import Optional, List, Dict, Any
 
-from config import DECISION_SUPPORT_CSV, RISK_CLUSTERS_CSV, PREPROCESSED_CSV
-from services.data_loader import load_csv, get_record_count
+from config import DECISION_SUPPORT_CSV, RISK_CLUSTERS_CSV, PRIORITY_SUMMARY_CSV
+from services.data_loader import load_csv
+from services.planning_service import repeated_priority_label, REPEATED_PRIORITY_RULE
 
 
 RISK_CLASS_MAP = {
@@ -69,6 +70,38 @@ def get_districts(state: Optional[str] = None,
     }
 
 
+def _get_priority_history(state: str, district: str) -> Optional[dict]:
+    summary_df = load_csv(PRIORITY_SUMMARY_CSV)
+    if summary_df is None:
+        return None
+    match = summary_df[
+        (summary_df["State"] == state) & (summary_df["District"] == district)
+    ]
+    if len(match) == 0:
+        return None
+    row = match.iloc[0]
+    years_observed = int(row.get("years_observed", 0))
+    high_years = int(row.get("high_risk_years", 0))
+    medium_years = int(row.get("medium_risk_years", 0))
+    low_years = int(row.get("low_risk_years", 0))
+    return {
+        "repeated_priority": repeated_priority_label(row.get("persistent_priority")),
+        "years_observed": years_observed,
+        "high_risk_years": high_years,
+        "medium_risk_years": medium_years,
+        "low_risk_years": low_years,
+        "high_risk_proportion": float(row.get("high_risk_proportion", 0)),
+        "medium_risk_proportion": round(medium_years / years_observed, 4) if years_observed else 0.0,
+        "low_risk_proportion": round(low_years / years_observed, 4) if years_observed else 0.0,
+        "latest_year": int(row.get("latest_year", 0)),
+        "latest_risk_class": row.get("latest_risk_class", ""),
+        "latest_priority": PRIORITY_MAP.get(
+            str(row.get("latest_risk_class", "")).replace(" Risk", ""), ""
+        ),
+        "rule": REPEATED_PRIORITY_RULE,
+    }
+
+
 def get_district_detail(state: str, district: str):
     ds_df = load_csv(DECISION_SUPPORT_CSV)
     rc_df = load_csv(RISK_CLUSTERS_CSV)
@@ -114,11 +147,15 @@ def get_district_detail(state: str, district: str):
 
     years = sorted(set(int(r["year"]) for r in records))
 
+    latest_record = records[-1] if records else None
     return {
         "state": state,
         "district": district,
         "record_count": len(records),
         "years": years,
+        "latest_year": int(latest_record["year"]) if latest_record else None,
+        "assessment_scope": "latest historical district-year record",
+        "priority_history": _get_priority_history(state, district),
         "records": records,
     }
 
@@ -143,7 +180,7 @@ def get_latest_district_observations():
     This is a read-only projection over the existing decision-support CSV. It does
     not modify ML/DSS logic, models, or analytical results. For every unique
     (State, District) pair, the record with the maximum Year is selected and used
-    as that unit's current risk profile.
+    as that unit's latest historical assessment, not as a current/live status.
     """
     df = load_csv(DECISION_SUPPORT_CSV)
     if df is None or len(df) == 0:

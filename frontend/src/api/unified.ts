@@ -12,6 +12,14 @@ export interface UnifiedOverviewData {
   };
   n_state_district_units: number;
   n_states: number;
+  identity_reconciliation: {
+    raw_state_district_entries: number;
+    normalized_state_district_units: number;
+    duplicate_normalized_entries: number;
+    raw_state_strings: number;
+    normalized_states: number;
+    note: string;
+  };
   historical_years: string[];
   recent_years: string[];
   period_texts: {
@@ -38,6 +46,9 @@ export interface UnifiedOverviewData {
 export interface UnifiedDistrictSummary {
   state: string;
   district: string;
+  normalized_state: string;
+  normalized_district: string;
+  aliases: Array<{ State: string; District: string }>;
   historical_records: number;
   recent_records: number;
   historical_years: string[];
@@ -49,7 +60,9 @@ export interface UnifiedDistrictSummary {
 
 export interface UnifiedDistrictsData {
   count: number;
+  raw_entry_count: number;
   districts: UnifiedDistrictSummary[];
+  note: string;
 }
 
 export interface UnifiedHistoricalRecord {
@@ -88,6 +101,11 @@ export interface UnifiedRecentRecord {
 export interface UnifiedDistrictDetail {
   state: string;
   district: string;
+  normalized_state: string;
+  normalized_district: string;
+  aliases: Array<{ State: string; District: string }>;
+  historical_records: number;
+  recent_records: number;
   matched: boolean;
   historical: UnifiedHistoricalRecord[];
   recent: UnifiedRecentRecord[];

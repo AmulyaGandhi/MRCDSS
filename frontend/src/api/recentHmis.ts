@@ -53,6 +53,25 @@ export interface RecentHmisIndicatorsData {
     status: string;
     reason: string;
   }>;
+  data_quality: {
+    total_flags: number;
+    missing_flags: number;
+    range_flags: number;
+    structural_flags: number;
+    zero_denominator_flags: number;
+    by_feature: Record<
+      string,
+      {
+        flags: number;
+        missing_flags: number;
+        range_flags: number;
+        structural_flags: number;
+        zero_denominator_flags: number;
+        max_out_of_range_value: number | null;
+      }
+    >;
+    note: string;
+  };
   disclaimer: string;
 }
 

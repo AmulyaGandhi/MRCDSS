@@ -76,12 +76,20 @@ def _records(df, cols):
     return out
 
 
+def _normalized_key(df: pd.DataFrame):
+    return df["State"].map(_norm) + "||" + df["District"].map(_norm)
+
+
 def get_unified_overview():
     df = _dataframe()
     counts = df["source_dataset"].value_counts().to_dict()
     era = df["data_era"].value_counts().to_dict()
     historical = df[df["data_era"] == "HISTORICAL_MRCDSS"]
     recent = df[df["data_era"] == "RECENT_HMIS"]
+    normalized_units = int(_normalized_key(df).nunique())
+    raw_units = int(df[["State", "District"]].drop_duplicates().shape[0])
+    normalized_states = int(df["State"].map(_norm).nunique())
+    raw_states = int(df["State"].nunique())
     feature_availability = []
     for col in FEATURE_ORDER:
         feature_availability.append({
@@ -104,10 +112,19 @@ def get_unified_overview():
             "HISTORICAL_MRCDSS": int(era.get("HISTORICAL_MRCDSS", 0)),
             "RECENT_HMIS": int(era.get("RECENT_HMIS", 0)),
         },
-        "n_state_district_units": int(
-            df.groupby([df["State"].map(_norm), df["District"].map(_norm)]).ngroups
-        ),
-        "n_states": int(df["State"].nunique()),
+        "n_state_district_units": normalized_units,
+        "n_states": normalized_states,
+        "identity_reconciliation": {
+            "raw_state_district_entries": raw_units,
+            "normalized_state_district_units": normalized_units,
+            "duplicate_normalized_entries": raw_units - normalized_units,
+            "raw_state_strings": raw_states,
+            "normalized_states": normalized_states,
+            "note": (
+                "Raw State/District spellings are retained for provenance. Counts, listings, and "
+                "retrieval use case-, punctuation-, and '&/and'-insensitive normalized keys."
+            ),
+        },
         "historical_years": sorted(historical["Year"].unique().tolist()),
         "recent_years": sorted(recent["Year"].unique().tolist()),
         "period_texts": dict(PERIOD_TEXTS),
@@ -123,33 +140,45 @@ def get_unified_overview():
 
 def get_unified_districts():
     df = _dataframe()
+    work = df.copy()
+    work["_state_key"] = work["State"].map(_norm)
+    work["_district_key"] = work["District"].map(_norm)
     districts = []
-    groups = {
-        "historical": df[df["data_era"] == "HISTORICAL_MRCDSS"],
-        "recent": df[df["data_era"] == "RECENT_HMIS"],
-    }
-    keys = {}
-    for era, sub in groups.items():
-        for (state, district), part in sub.groupby([sub["State"], sub["District"]]):
-            keys.setdefault((state, district), {"historical": pd.DataFrame(), "recent": pd.DataFrame()})
-            keys[(state, district)][era] = part
-    for (state, district), parts in sorted(keys.items()):
-        h = parts["historical"]
-        r = parts["recent"]
-        latest_h = h.sort_values("Year").iloc[-1] if len(h) else None
-        latest_r = r.sort_values("Year").iloc[-1] if len(r) else None
+    for (state_key, district_key), group in work.groupby(["_state_key", "_district_key"], sort=True):
+        historical = group[group["data_era"] == "HISTORICAL_MRCDSS"]
+        recent = group[group["data_era"] == "RECENT_HMIS"]
+        latest_h = historical.sort_values("Year").iloc[-1] if len(historical) else None
+        latest_r = recent.sort_values("Year").iloc[-1] if len(recent) else None
+        display_row = latest_h if latest_h is not None else latest_r
+        aliases = (
+            group[["State", "District"]]
+            .drop_duplicates()
+            .sort_values(["State", "District"])
+            .to_dict("records")
+        )
         districts.append({
-            "state": state,
-            "district": district,
-            "historical_records": int(len(h)),
-            "recent_records": int(len(r)),
-            "historical_years": sorted(h["Year"].unique().tolist()) if len(h) else [],
-            "recent_years": sorted(r["Year"].unique().tolist()) if len(r) else [],
+            "state": display_row["State"],
+            "district": display_row["District"],
+            "normalized_state": state_key,
+            "normalized_district": district_key,
+            "aliases": aliases,
+            "historical_records": int(len(historical)),
+            "recent_records": int(len(recent)),
+            "historical_years": sorted(historical["Year"].unique().tolist()) if len(historical) else [],
+            "recent_years": sorted(recent["Year"].unique().tolist()) if len(recent) else [],
             "latest_historical_year": str(latest_h["Year"]) if latest_h is not None else None,
             "latest_historical_risk_class": latest_h["risk_class"] if latest_h is not None else None,
             "latest_recent_year": str(latest_r["Year"]) if latest_r is not None else None,
         })
-    return {"count": len(districts), "districts": districts}
+    return {
+        "count": len(districts),
+        "raw_entry_count": int(df[["State", "District"]].drop_duplicates().shape[0]),
+        "districts": districts,
+        "note": (
+            "One record per normalized State–District identity. Raw spelling aliases are preserved in "
+            "the aliases field; no source records were merged or rewritten."
+        ),
+    }
 
 
 def get_unified_district(state: str, district: str):
@@ -173,9 +202,20 @@ def get_unified_district(state: str, district: str):
     rec_cols = ["Year", *FEATURE_ORDER, "source_dataset", "hmis_source_file",
                 "indicator_definition_status"]
 
+    aliases = (
+        matched[["State", "District"]]
+        .drop_duplicates()
+        .sort_values(["State", "District"])
+        .to_dict("records")
+    )
     return {
         "state": str(historical["State"].iloc[0]) if len(historical) else str(recent["State"].iloc[0]),
         "district": str(historical["District"].iloc[0]) if len(historical) else str(recent["District"].iloc[0]),
+        "normalized_state": target_s,
+        "normalized_district": target_d,
+        "aliases": aliases,
+        "historical_records": int(len(historical)),
+        "recent_records": int(len(recent)),
         "matched": True,
         "historical": _records(historical, hist_cols),
         "recent": _records(recent, rec_cols),

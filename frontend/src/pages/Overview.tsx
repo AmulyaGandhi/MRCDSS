@@ -1,88 +1,31 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import AppLayout from '../components/AppLayout';
-import TopBar from '../components/TopBar';
-import SectionBlock from '../components/SectionBlock';
-import FeatureBarChart from '../components/charts/FeatureBarChart';
-import DistrictRiskMap, { NO_DATA_FILL, type DistrictMapRecord } from '../components/DistrictRiskMap';
-import DistrictInfoPanel from '../components/DistrictInfoPanel';
+import DistrictRiskMap, { type DistrictMapRecord } from '../components/DistrictRiskMap';
 import LoadingState from '../components/LoadingState';
 import ErrorState from '../components/ErrorState';
 import { getOverview } from '../api/overview';
 import { getPlanningPriorities } from '../api/planning';
-import { getDistricts, getLatestDistrictObservations, type LatestDistrictRecord } from '../api/districts';
+import { getLatestDistrictObservations, type LatestDistrictRecord } from '../api/districts';
 import {
   getRecentHmisOverview,
   getRecentHmisIndicators,
-  getRecentHmisDistrictsLatest,
   type RecentHmisOverviewData,
   type RecentHmisIndicatorsData,
-  type RecentHmisLatestRecord,
 } from '../api/recentHmis';
 import KpiCard from '../components/KpiCard';
-import MetricTable from '../components/MetricTable';
+import { BarChart3, MapPin, AlertTriangle, TrendingUp, Shield } from 'lucide-react';
 import { ASSISTANT_DISTRICT_EVENT } from '../components/Assistant';
-import type { DistrictRecord } from '../types';
-
-function formatFeatureName(feature: string): string {
-  return feature.replace(/_Pct/g, '%').replace(/_/g, ' ');
-}
 
 const RISK_COLORS: Record<string, string> = {
-  Low: '#2e7d32',
-  Medium: '#f9a825',
-  High: '#c62828',
+  Low: '#3a8248',
+  Medium: '#c27d2f',
+  High: '#b94538',
 };
 
-interface DistributionSegment {
-  label: string;
-  value: number;
-  share: number;
-  color: string;
-}
-
-function toDistributionSegments(
-  data: Record<string, number>,
-  colors: Record<string, string> = RISK_COLORS,
-): DistributionSegment[] {
-  const entries = Object.entries(data);
-  const total = entries.reduce((sum, [, value]) => sum + value, 0) || 1;
-  return entries.map(([key, value]) => {
-    const label = key.replace(' Risk', '').replace(' Priority', '');
-    return { label, value, share: value / total, color: colors[label] ?? '#8d99a6' };
-  });
-}
-
-function DistributionBar({ title, data }: { title: string; data: DistributionSegment[] }) {
-  return (
-    <section className="distribution-block">
-      <h3 className="distribution-title">{title}</h3>
-      <div
-        className="dist-bar"
-        role="img"
-        aria-label={`${title}: ${data.map((d) => `${d.label} ${(d.share * 100).toFixed(1)}%`).join(', ')}`}
-      >
-        {data.map((d) => (
-          <div
-            key={d.label}
-            className="dist-seg"
-            style={{ width: `${d.share * 100}%`, backgroundColor: d.color }}
-            title={`${d.label}: ${d.value.toLocaleString()} (${(d.share * 100).toFixed(1)}%)`}
-          />
-        ))}
-      </div>
-      <div className="dist-legend">
-        {data.map((d) => (
-          <div key={d.label} className="dist-legend-item">
-            <span className="dist-swatch" style={{ backgroundColor: d.color }} aria-hidden="true" />
-            <span className="dist-legend-label">{d.label}</span>
-            <span className="dist-legend-value">{d.value.toLocaleString()}</span>
-            <span className="dist-legend-share">{(d.share * 100).toFixed(1)}%</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+function riskColor(riskClass: string) {
+  const key = riskClass.replace(' Risk', '');
+  return RISK_COLORS[key] ?? '#7a8797';
 }
 
 export default function Overview() {
@@ -98,14 +41,10 @@ export default function Overview() {
     feature_ranking: Array<{ feature: string; mean_abs_shap: number }>;
   } | null>(null);
   const [planningData, setPlanningData] = useState<{
-    priority_distribution: Record<string, number>;
-    persistent_priority_info: { total_districts: number; persistent_high: number; persistent_medium: number; persistent_low: number };
+    latest_priority_distribution: Record<string, number>;
     planning_rules: Array<{ feature: string; planning_focus: string; feature_direction: string }>;
-    feature_planning_focus_counts: Array<{ feature: string; count: number }>;
   } | null>(null);
-  const [attentionDistricts, setAttentionDistricts] = useState<DistrictRecord[]>([]);
   const [mapRecords, setMapRecords] = useState<LatestDistrictRecord[]>([]);
-  const [recentMapRecords, setRecentMapRecords] = useState<RecentHmisLatestRecord[]>([]);
   const [mapError, setMapError] = useState<string | null>(null);
   const [selectedDistrict, setSelectedDistrict] = useState<DistrictMapRecord | null>(null);
   const [recentOverview, setRecentOverview] = useState<RecentHmisOverviewData | null>(null);
@@ -116,30 +55,20 @@ export default function Overview() {
     setError(null);
     setMapError(null);
     try {
-      const [overview, planning, districts, latest, recentOverviewData, recentIndicatorsData, recentLatest] = await Promise.all([
-        getOverview(),
-        getPlanningPriorities(),
-        getDistricts({ priority: 'High', page: 1, per_page: 8 }),
-        getLatestDistrictObservations().catch((err) => {
-          setMapError(err instanceof Error ? err.message : 'Unable to load district boundaries.');
-          return { count: 0, records: [], total: 0 };
-        }),
-        getRecentHmisOverview().catch(() => null),
-        getRecentHmisIndicators().catch(() => null),
-        getRecentHmisDistrictsLatest().catch(() => ({ count: 0, records: [] })),
-      ]);
+      const [overview, planning, latest, recentOverviewData, recentIndicatorsData] =
+        await Promise.all([
+          getOverview(),
+          getPlanningPriorities(),
+          getLatestDistrictObservations().catch((err) => {
+            setMapError(err instanceof Error ? err.message : 'District boundaries unavailable.');
+            return { count: 0, records: [], total: 0 };
+          }),
+          getRecentHmisOverview().catch(() => null),
+          getRecentHmisIndicators().catch(() => null),
+        ]);
       setOverviewData(overview);
       setPlanningData(planning);
-      setAttentionDistricts(districts.records.map((r) => ({
-        state: r.state,
-        district: r.district,
-        year: r.year,
-        riskClass: r.risk_class.replace(' Risk', '') as DistrictRecord['riskClass'],
-        priority: r.priority.replace(' Priority', '') as DistrictRecord['priority'],
-        topPlanningFocus: r.top_planning_focus,
-      })));
       setMapRecords(latest.records);
-      setRecentMapRecords(recentLatest.records);
       setRecentOverview(recentOverviewData);
       setRecentIndicators(recentIndicatorsData);
     } catch (err) {
@@ -156,21 +85,23 @@ export default function Overview() {
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent(ASSISTANT_DISTRICT_EVENT, {
-        detail: selectedDistrict ? { state: selectedDistrict.state, district: selectedDistrict.district } : null,
+        detail: selectedDistrict
+          ? { state: selectedDistrict.state, district: selectedDistrict.district }
+          : null,
       }),
     );
   }, [selectedDistrict]);
 
-  const selectedKey = selectedDistrict ? `${selectedDistrict.state}||${selectedDistrict.district}` : null;
-  const selectedRecent =
-    selectedDistrict && recentMapRecords.length > 0
-      ? (recentMapRecords.find((r) => r.state === selectedDistrict.state && r.district === selectedDistrict.district) ?? null)
-      : null;
+  const selectedKey = selectedDistrict
+    ? `${selectedDistrict.state}||${selectedDistrict.district}`
+    : null;
 
   if (loading) {
     return (
       <AppLayout>
-        <main className="content"><LoadingState /></main>
+        <div className="content condensed">
+          <LoadingState />
+        </div>
       </AppLayout>
     );
   }
@@ -178,234 +109,344 @@ export default function Overview() {
   if (error || !overviewData || !planningData) {
     return (
       <AppLayout>
-        <main className="content"><ErrorState message={error ?? 'No data available.'} onRetry={fetchData} /></main>
+        <div className="content condensed">
+          <ErrorState message={error ?? 'No data available.'} onRetry={fetchData} />
+        </div>
       </AppLayout>
     );
   }
 
-  const featureChartData = overviewData.feature_ranking.map((f) => ({
-    name: formatFeatureName(f.feature),
-    value: f.mean_abs_shap,
-  }));
+  const riskDist = overviewData.risk_distribution;
+  const priorityDist = overviewData.priority_distribution;
+  const totalRecords = Object.values(riskDist).reduce((s, v) => s + v, 0);
+  const totalUnits = Object.values(priorityDist).reduce((s, v) => s + v, 0);
+  const highRiskCount = riskDist['High Risk'] ?? 0;
 
-  const focusToFeature: Record<string, string> = {};
-  planningData.planning_rules.forEach((rule) => {
-    focusToFeature[rule.planning_focus] = rule.feature;
-  });
-
-  const RECENT_STATUS: Record<string, string> = {
-    ANC_First_Trimester_Pct: 'Comparable',
-    TT2_Booster_Pct: 'Comparable with caveat',
-    Severe_Anemia_Pct: 'Definition changed',
-    Obstetric_Complications_Pct: 'Schema changes after 2022-23',
-  };
-
-  const shortYears = recentOverview
-    ? recentOverview.years.map((y) => `${y.slice(0, 4)}-${y.slice(-2)}`)
-    : [];
-  const recentPeriod =
-    shortYears.length >= 2
-      ? `${shortYears[0]} → ${shortYears[shortYears.length - 1]}`
-      : '';
-  const recentPartialMatch =
-    recentOverview?.notes?.partial_2024_2025?.match(/(\d+)\s+states with complete UpTo_Mar/i);
-  const recentPartialStates = recentPartialMatch ? recentPartialMatch[1] : null;
-
-  const recentMetricRows = recentIndicators
-    ? recentIndicators.indicators.map((ind) => [
-        ind.name,
-        ind.valid.toLocaleString('en-US'),
-        ind.missing.toLocaleString('en-US'),
-        RECENT_STATUS[ind.key] ?? ind.status,
-      ] as (string | number)[])
-    : [];
+  const recentValid = recentIndicators?.indicators.find(
+    (i) => i.key === 'ANC_First_Trimester_Pct',
+  )?.valid ?? 0;
+  const recentMissing = recentIndicators?.indicators.find(
+    (i) => i.key === 'ANC_First_Trimester_Pct',
+  )?.missing ?? 0;
 
   return (
     <AppLayout>
-      <main className="content">
-        <TopBar
-          title="District-Level Maternal Health Risk Decision Support System"
-          subtitle="Analyze district-level maternal-health patterns to identify planning priorities and support public-health resource planning."
-        />
+      <div className="content">
+        <div className="page-header">
+          <div className="page-header-main">
+            <span className="page-kicker">Executive Dashboard</span>
+            <h1 className="page-title">District Health Intelligence</h1>
+            <p className="page-subtitle">
+              MRCDSS combines historical district-level risk classification (2008–2019) with Recent HMIS
+              evidence (2020–2025) to support district health planning. The map shows the latest historical
+              MRCDSS risk classification per district; recent HMIS evidence is contextual only and carries no
+              risk classification.
+            </p>
+          </div>
+          <div className="page-actions">
+            <Link to="/districts" className="btn btn-outline btn-sm">
+              <MapPin size={16} strokeWidth={2} /> Browse Districts
+            </Link>
+          </div>
+        </div>
 
-        <section className="map-block">
-          <div className="map-block-header">
-            <div className="map-block-heading">
-              <h2 className="map-block-title">District Health Intelligence</h2>
-              <p className="map-block-subtitle">
-                MRCDSS combines historical district-level risk classification with newer HMIS evidence to support
-                district health planning. The map shows the validated MRCDSS district risk classification; selecting
-                a district adds recent HMIS evidence as current context alongside its historical assessment.
-              </p>
+        {/* KPI Row */}
+        <div className="kpi-grid">
+          <KpiCard
+            label="Historical District-Year Records"
+            value={totalRecords.toLocaleString('en-US')}
+            icon={<BarChart3 size={16} strokeWidth={2} />}
+          />
+          <KpiCard
+            label="State–District Units"
+            value={overviewData.state_district_units.toLocaleString('en-US')}
+            icon={<MapPin size={16} strokeWidth={2} />}
+          />
+          <KpiCard
+            label="High Risk Units (Latest)"
+            value={(planningData?.latest_priority_distribution?.['High Priority'] ?? 0).toLocaleString('en-US')}
+            change={((planningData?.latest_priority_distribution?.['High Priority'] ?? 0) / overviewData.state_district_units * 100).toFixed(1) + '% of units'}
+            changeType="neutral"
+            icon={<AlertTriangle size={16} strokeWidth={2} />}
+          />
+          <KpiCard
+            label="States Covered"
+            value={overviewData.state_count.toLocaleString('en-US')}
+            icon={<TrendingUp size={16} strokeWidth={2} />}
+          />
+        </div>
+
+        {/* Map + Attention Table row */}
+        <div className="grid-2">
+          <div className="card elevated">
+            <div className="card-header">
+              <div>
+                <h2 className="card-title">District Risk Map</h2>
+                <p className="note text-small mb-0">
+                  Latest historical MRCDSS risk classification per State–District unit.
+                </p>
+              </div>
+              <span className="badge badge-outline">
+                {mapRecords.length.toLocaleString()} units
+              </span>
+            </div>
+            <div className="card-body" style={{ paddingTop: 0, minHeight: 520 }}>
+              {mapError && (
+                <div className="callout warn" style={{ marginBottom: 0 }}>
+                  <span className="callout-icon">
+                    <AlertTriangle size={16} strokeWidth={2} />
+                  </span>
+                  <div className="callout-body">
+                    <p className="callout-text" style={{ margin: 0 }}>
+                      District boundaries temporarily unavailable: {mapError}
+                    </p>
+                  </div>
+                </div>
+              )}
+              {mapRecords.length === 0 && !mapError ? (
+                <div className="empty-state" style={{ padding: 'var(--space-6) var(--space-4)' }}>
+                  <span className="icon" aria-hidden="true">
+                    <MapPin size={32} strokeWidth={2} />
+                  </span>
+                  <h2>Loading district boundaries…</h2>
+                </div>
+              ) : (
+                <DistrictRiskMap
+                  records={mapRecords}
+                  selectedKey={selectedKey}
+                  onDistrictSelect={setSelectedDistrict}
+                  onNoDataSelect={() => setSelectedDistrict(null)}
+                />
+              )}
             </div>
           </div>
-          <div className="map-key" aria-label="Map legend">
-            <span className="map-key-item"><span className="map-key-swatch" style={{ backgroundColor: '#c62828' }} />High</span>
-            <span className="map-key-item"><span className="map-key-swatch" style={{ backgroundColor: '#f9a825' }} />Medium</span>
-            <span className="map-key-item"><span className="map-key-swatch" style={{ backgroundColor: '#2e7d32' }} />Low</span>
-            <span className="map-key-item"><span className="map-key-swatch" style={{ backgroundColor: NO_DATA_FILL }} />No Data</span>
-          </div>
-          {mapError && <p className="map-coverage-note">District boundaries are temporarily unavailable: {mapError}</p>}
-          <div className="map-layout">
-            {mapRecords.length === 0 && !mapError ? (
-              <div className="map-empty">Loading district boundaries…</div>
-            ) : (
-              <DistrictRiskMap
-                records={mapRecords}
-                selectedKey={selectedKey}
-                onDistrictSelect={setSelectedDistrict}
-                onNoDataSelect={() => setSelectedDistrict(null)}
-              />
-            )}
-            <DistrictInfoPanel
-              record={selectedDistrict}
-              recent={selectedRecent}
-              loading={false}
-              onClear={() => setSelectedDistrict(null)}
-            />
-          </div>
-        </section>
 
-        <SectionBlock title="What Is the Priority?">
-          <div className="distribution-grid">
-            <DistributionBar
-              title="Risk Classification"
-              data={toDistributionSegments(overviewData.risk_distribution)}
-            />
-            <DistributionBar
-              title="Planning Priority"
-              data={toDistributionSegments(overviewData.priority_distribution)}
-            />
-          </div>
-        </SectionBlock>
-
-        <SectionBlock title="Where Is Attention Needed?">
-          <p className="section-note">Districts currently flagged at the highest planning priority.</p>
-          <div className="table-container">
-            <table className="district-table">
-              <thead>
-                <tr>
-                  <th scope="col">District</th>
-                  <th scope="col">State</th>
-                  <th scope="col">Latest Year</th>
-                  <th scope="col">Risk</th>
-                  <th scope="col">Priority</th>
-                  <th scope="col">Key Contributing Indicator</th>
-                  <th scope="col">Planning Focus</th>
-                </tr>
-              </thead>
-              <tbody>
-                {attentionDistricts.map((record, index) => {
-                  const contributingIndicator = focusToFeature[record.topPlanningFocus]
-                    ? formatFeatureName(focusToFeature[record.topPlanningFocus])
-                    : '—';
-                  return (
-                    <tr key={`${record.state}-${record.district}-${record.year}-${index}`} className="district-row" onClick={() => {
-                      const stateParam = encodeURIComponent(record.state);
-                      const districtParam = encodeURIComponent(record.district);
-                      window.location.href = `/districts/${stateParam}/${districtParam}`;
-                    }} tabIndex={0} onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        const stateParam = encodeURIComponent(record.state);
-                        const districtParam = encodeURIComponent(record.district);
-                        window.location.href = `/districts/${stateParam}/${districtParam}`;
-                      }
-                    }}>
-                      <td><strong>{record.district}</strong></td>
-                      <td>{record.state}</td>
-                      <td>{record.year}</td>
-                      <td><span className={`priority-badge badge-${record.riskClass.toLowerCase()}`}>{record.riskClass}</span></td>
-                      <td><span className={`priority-badge badge-${record.priority.toLowerCase()}`}>{record.priority}</span></td>
-                      <td>{contributingIndicator}</td>
-                      <td>{record.topPlanningFocus}</td>
+          <div className="card elevated">
+            <div className="card-header">
+              <div>
+                <h2 className="card-title">Districts Requiring Attention</h2>
+                <p className="note text-small mb-0">
+                  Latest historical High Priority units. Assessment year shown — not current or live status.
+                </p>
+              </div>
+            </div>
+            <div className="card-body" style={{ paddingTop: 0, minHeight: 520 }}>
+              <div className="table-wrap" style={{ maxHeight: 440, overflow: 'auto' }}>
+                <table className="data-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">District</th>
+                      <th scope="col">State</th>
+                      <th scope="col">Year</th>
+                      <th scope="col">Risk</th>
+                      <th scope="col">Priority</th>
+                      <th scope="col">Planning Focus</th>
                     </tr>
+                  </thead>
+                  <tbody>
+                    {mapRecords
+                      .filter((r) => r.priority === 'High Priority')
+                      .slice(0, 8)
+                      .map((record, index) => (
+                        <tr
+                          key={`${record.state}-${record.district}-${record.year}-${index}`}
+                          className="row-link"
+                          onClick={() => {
+                            const stateParam = encodeURIComponent(record.state);
+                            const districtParam = encodeURIComponent(record.district);
+                            window.location.href = `/districts/${stateParam}/${districtParam}`;
+                          }}
+                          tabIndex={0}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              const stateParam = encodeURIComponent(record.state);
+                              const districtParam = encodeURIComponent(record.district);
+                              window.location.href = `/districts/${stateParam}/${districtParam}`;
+                            }
+                          }}
+                        >
+                          <td><strong>{record.district}</strong></td>
+                          <td>{record.state}</td>
+                          <td>{record.year}</td>
+                          <td>
+                            <span
+                              className={`badge ${riskColor(record.risk_class).includes('green') ? 'badge-low' : riskColor(record.risk_class).includes('#c2') ? 'badge-medium' : 'badge-high'}`}
+                              style={{
+                                borderColor:
+                                  record.risk_class === 'High Risk'
+                                    ? 'rgba(185, 69, 56, 0.18)'
+                                    : record.risk_class === 'Medium Risk'
+                                    ? 'rgba(194, 125, 47, 0.18)'
+                                    : 'rgba(58, 130, 72, 0.18)',
+                              }}
+                            >
+                              {record.risk_class.replace(' Risk', '')}
+                            </span>
+                          </td>
+                          <td>
+                            <span className="badge badge-high">{record.priority.replace(' Priority', '')}</span>
+                          </td>
+                          <td style={{ maxWidth: 200 }}>{record.planning_focus_1}</td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+                {highRiskCount === 0 && (
+                  <div className="empty-state" style={{ padding: 'var(--space-4)' }}>
+                    <p className="text-small">No High Priority units in the latest historical assessment.</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Distributions */}
+        <div className="grid-2">
+          <div className="card">
+            <div className="card-header">
+              <h2 className="card-title">Risk Classification Distribution</h2>
+            </div>
+            <div className="card-body" style={{ paddingTop: 0 }}>
+              <div className="distribution">
+                <div className="distribution-title">Historical district-year records by risk class</div>
+                {Object.entries(riskDist).map(([name, value]) => {
+                  const share = totalRecords ? value / totalRecords : 0;
+                  const key = name.replace(' Risk', '');
+                  return (
+                    <>
+                      <div className="dist-bar">
+                        <div
+                          className="dist-seg"
+                          style={{
+                            width: `${share * 100}%`,
+                            backgroundColor: riskColor(name),
+                          }}
+                        />
+                      </div>
+                      <div className="dist-legend">
+                        <span className="dist-swatch" style={{ backgroundColor: riskColor(name) }} />
+                        <span>{key}</span>
+                        <span style={{ marginLeft: 'auto' }}>{value.toLocaleString()}</span>
+                        <span className="dist-legend-share" style={{ color: 'var(--ink-3)' }}>
+                          {(share * 100).toFixed(1)}%
+                        </span>
+                      </div>
+                    </>
                   );
                 })}
-              </tbody>
-            </table>
-          </div>
-        </SectionBlock>
-
-        <SectionBlock title="What Is Driving the Assessment?">
-          <p className="section-note">
-            Mean absolute SHAP values from the Logistic Regression model, indicating each indicator's relative
-            contribution to risk classification (contribution, not causation).
-          </p>
-          <FeatureBarChart data={featureChartData} />
-        </SectionBlock>
-
-        <SectionBlock title="What Should Planners Focus On?">
-          <p className="section-note">
-            Indicators mapped to planning focus areas based on whether higher values are protective or risk-increasing.
-          </p>
-          <div className="focus-list">
-            {planningData.planning_rules.map((rule) => (
-              <div key={rule.feature} className="focus-item">
-                <span className="focus-feature">{formatFeatureName(rule.feature)}</span>
-                <span className={`direction-badge ${rule.feature_direction.includes('risk') ? 'direction-risk' : 'direction-protective'}`}>
-                  {rule.feature_direction}
-                </span>
-                <span className="focus-text">{rule.planning_focus}</span>
               </div>
-            ))}
+            </div>
           </div>
-        </SectionBlock>
 
+          <div className="card">
+            <div className="card-header">
+              <h2 className="card-title">Planning Priority Distribution</h2>
+            </div>
+            <div className="card-body" style={{ paddingTop: 0 }}>
+              <div className="distribution">
+                <div className="distribution-title">Historical district-year records by DSS priority</div>
+                {Object.entries(priorityDist).map(([name, value]) => {
+                  const share = totalUnits ? value / totalUnits : 0;
+                  const key = name.replace(' Priority', '');
+                  const color =
+                    key === 'High' ? '#b94538' : key === 'Medium' ? '#c27d2f' : '#3a8248';
+                  return (
+                    <>
+                      <div className="dist-bar">
+                        <div
+                          className="dist-seg"
+                          style={{ width: `${share * 100}%`, backgroundColor: color }}
+                        />
+                      </div>
+                      <div className="dist-legend">
+                        <span className="dist-swatch" style={{ backgroundColor: color }} />
+                        <span>{key}</span>
+                        <span style={{ marginLeft: 'auto' }}>{value.toLocaleString()}</span>
+                        <span className="dist-legend-share" style={{ color: 'var(--ink-3)' }}>
+                          {(share * 100).toFixed(1)}%
+                        </span>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Recent HMIS evidence strip */}
         {recentOverview && recentIndicators && (
-          <SectionBlock title="Recent HMIS Evidence">
-            <p className="section-note">
-              These indicators are part of the same MRCDSS system and appear as additional current evidence for
-              districts selected on the map above. They are reported as indicators only — never assigned a risk
-              classification — and describe indicator availability and reporting changes across the recent
-              acquisition period.
-            </p>
-            <div className="kpi-grid">
-              <KpiCard
-                label="District-Year Observations"
-                value={recentOverview.total_observations.toLocaleString('en-US')}
-              />
-              <KpiCard
-                label="States Represented"
-                value={recentOverview.n_states.toLocaleString('en-US')}
-              />
-              <KpiCard
-                label="Acquired HMIS Period"
-                value={recentPeriod}
-              />
-              <KpiCard
-                label="States with Complete UpTo_Mar Data in 2024-25"
-                value={recentPartialStates ?? '—'}
-              />
+          <section className="section">
+            <div className="card elevated">
+              <div className="card-header">
+                <div>
+                  <h2 className="card-title">Recent HMIS Evidence</h2>
+                  <p className="note text-small mb-0">
+                    Dataset 3 (2020–2025) — contextual indicator evidence only; not used to retrain the
+                    historical model and no risk class assigned.
+                  </p>
+                </div>
+                <Link to="/recent-hmis" className="btn btn-outline btn-sm">
+                  View Full Report
+                </Link>
+              </div>
+              <div className="card-body" style={{ paddingTop: 0 }}>
+                <div className="grid-4" style={{ gap: 'var(--space-3)' }}>
+                  <div className="kpi-card" style={{ padding: 'var(--space-3)' }}>
+                    <span className="kpi-label">Observations</span>
+                    <span className="kpi-value" style={{ fontSize: '1.5rem' }}>
+                      {recentOverview.total_observations.toLocaleString('en-US')}
+                    </span>
+                  </div>
+                  <div className="kpi-card" style={{ padding: 'var(--space-3)' }}>
+                    <span className="kpi-label">Units</span>
+                    <span className="kpi-value" style={{ fontSize: '1.5rem' }}>
+                      {recentOverview.n_state_district_units.toLocaleString('en-US')}
+                    </span>
+                  </div>
+                  <div className="kpi-card" style={{ padding: 'var(--space-3)' }}>
+                    <span className="kpi-label">States</span>
+                    <span className="kpi-value" style={{ fontSize: '1.5rem' }}>
+                      {recentOverview.n_states.toLocaleString('en-US')}
+                    </span>
+                  </div>
+                  <div className="kpi-card" style={{ padding: 'var(--space-3)' }}>
+                    <span className="kpi-label">ANC Available / Missing</span>
+                    <span className="kpi-value" style={{ fontSize: '1.3rem' }}>
+                      {recentValid.toLocaleString('en-US')} / {recentMissing.toLocaleString('en-US')}
+                    </span>
+                  </div>
+                </div>
+                <div className="callout info" style={{ marginTop: 'var(--space-4)' }}>
+                  <span className="callout-icon">
+                    <Shield size={16} strokeWidth={2} />
+                  </span>
+                  <div className="callout-body">
+                    <p className="callout-title" style={{ margin: 0 }}>
+                      Recent HMIS is evidence, not a risk re-assessment
+                    </p>
+                    <p className="callout-text" style={{ margin: 0 }}>
+                      Recent records were not used to retrain or externally validate the historical MRCDSS
+                      model, and no High / Medium / Low risk class is assigned to them.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <MetricTable
-              headers={['Indicator', 'Available', 'Missing', 'Status']}
-              rows={recentMetricRows}
-              caption="Recent HMIS indicator availability across the acquired fiscal years."
-            />
-            <div className="callout-box">
-              <p className="body-text">
-                Recent HMIS evidence extends the same MRCDSS system with current district-level indicators. It was
-                not used to retrain or externally validate the existing historical MRCDSS risk model, and no risk
-                class is assigned to recent records.
-              </p>
-              <p className="body-text">
-                Changes in HMIS reporting definitions prevent direct harmonization of several historical
-                indicators across the full period. Indicators were retained only where their definitions
-                could be reconstructed with sufficient evidence.
-              </p>
-            </div>
-          </SectionBlock>
+          </section>
         )}
 
-        <footer className="page-footer">
+        <footer className="page-footer" style={{ marginTop: 'var(--space-8)' }}>
           <p className="page-footer-text">
-            For data sources, preprocessing, and the analytical pipeline, see <Link to="/methodology">Methodology</Link>.
-            For system purpose, intended users, and limitations, see <Link to="/about">About</Link>.
-            Browse every district in the <Link to="/districts">District Explorer</Link>.
+            For data sources, preprocessing, and the analytical pipeline, see{' '}
+            <Link to="/methodology">Methodology</Link>. For system purpose, intended users, and limitations,
+            see <Link to="/about">About</Link>. Browse every district in the{' '}
+            <Link to="/districts">District Explorer</Link>.
           </p>
         </footer>
-      </main>
+      </div>
     </AppLayout>
   );
 }

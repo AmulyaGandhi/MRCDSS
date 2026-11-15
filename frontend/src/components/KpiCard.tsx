@@ -3,15 +3,25 @@ interface KpiCardProps {
   value: string;
   change?: string;
   changeType?: 'positive' | 'negative' | 'neutral';
+  icon?: React.ReactNode;
 }
 
-export default function KpiCard({ label, value, change, changeType }: KpiCardProps) {
+export default function KpiCard({
+  label,
+  value,
+  change,
+  changeType,
+  icon,
+}: KpiCardProps) {
   return (
     <div className="kpi-card">
-      <span className="kpi-label">{label}</span>
+      <div className="kpi-head">
+        <span className="kpi-label">{label}</span>
+        {icon && <span className="kpi-icon">{icon}</span>}
+      </div>
       <span className="kpi-value">{value}</span>
       {change && (
-        <span className={`kpi-change ${changeType ? `kpi-change-${changeType}` : ''}`}>
+        <span className={`kpi-delta ${changeType ? `kpi-delta-${changeType}` : 'kpi-delta-neutral'}`}>
           {change}
         </span>
       )}

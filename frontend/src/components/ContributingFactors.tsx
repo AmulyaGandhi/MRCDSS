@@ -24,7 +24,7 @@ export default function ContributingFactors({ factors }: ContributingFactorsProp
               <span className="factor-name">{factor.feature}</span>
               {factor.direction && (
                 <span className="factor-direction">
-                  {factor.direction === 'positive' ? 'Increases risk' : 'Decreases risk'}
+                  {factor.direction === 'positive' ? 'Pushes toward High Risk' : 'Pushes away from High Risk'}
                 </span>
               )}
               {factor.value !== undefined && (

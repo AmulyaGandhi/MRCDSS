@@ -12,7 +12,7 @@ export type AssistantResponse = {
   answer: string;
   grounded: boolean;
   sources: string[];
-  mode: 'ollama' | 'fallback' | 'general';
+  mode: 'ollama' | 'groq' | 'fallback' | 'general';
   intent: string;
   context: AssistantContext | null;
 };

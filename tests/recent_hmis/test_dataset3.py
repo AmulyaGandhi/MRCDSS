@@ -269,9 +269,14 @@ def test_dataset1_2_unchanged():
 
 
 # --------------------------------------------------------------------------- #
-# 12. Existing MRCDSS outputs unchanged (models, outputs, src, backend, frontend)
+# 12. Existing MRCDSS analytical artifacts unchanged (models, outputs, src)
+#
+# backend/ and frontend/ are intentionally refined during this completion cycle
+# (API semantics, Disha wording, UI polish) and are therefore excluded here.
+# The artifacts that must remain byte-identical are the saved model metrics,
+# historical labels, and pipeline source: models/, outputs/, src/.
 # --------------------------------------------------------------------------- #
-@pytest.mark.parametrize("prefix", ["models", "outputs", "src", "backend", "frontend"])
+@pytest.mark.parametrize("prefix", ["models", "outputs", "src"])
 def test_mrcdss_outputs_unchanged(prefix):
     base = _baseline()
     files = {f for f in base if f.startswith(prefix + "/") or f.startswith(prefix + os.sep)}

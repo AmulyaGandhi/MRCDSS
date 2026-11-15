@@ -4,13 +4,24 @@ interface SectionBlockProps {
   title?: string;
   children: ReactNode;
   className?: string;
+  subtitle?: string;
 }
 
-export default function SectionBlock({ title, children, className = '' }: SectionBlockProps) {
+export default function SectionBlock({
+  title,
+  children,
+  className = '',
+  subtitle,
+}: SectionBlockProps) {
   return (
-    <div className={`section-block ${className}`}>
-      {title && <h3 className="section-block-title">{title}</h3>}
-      {children}
+    <div className={`section ${className}`}>
+      {title || subtitle && (
+        <div className="section-header">
+          {title && <h2 className="section-title">{title}</h2>}
+          {subtitle && <p className="section-subtitle">{subtitle}</p>}
+        </div>
+      )}
+      <div className="card">{children}</div>
     </div>
   );
 }

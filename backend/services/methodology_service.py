@@ -24,7 +24,7 @@ def get_methodology():
 
     clustering_info = (
         "Risk profiles derived using K-Means clustering (K=3, random_state=42, n_init=10) "
-        "on StandardScaler-normalized features from the six validated maternal-health indicators."
+        "on StandardScaler-normalized features from the six selected maternal-health indicators."
     )
     if clustering_metrics:
         clustering_info += (

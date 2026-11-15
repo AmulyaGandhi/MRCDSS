@@ -119,7 +119,7 @@ class TestAssistantRetrievalIntents:
     def test_aggregate(self, client):
         data = _chat(client, "How many districts are high risk?")
         assert data["intent"] == "aggregate"
-        assert "High Priority" in data["answer"]
+        assert "High Risk" in data["answer"]
 
     def test_methodology_kmeans(self, client):
         data = _chat(client, "How were the risk classes generated?")
@@ -160,7 +160,7 @@ class TestAssistantGrounding:
         data = _chat(client, "What is the risk classification?", state="Andhra Pradesh", district="Anakapalli")
         assert data["intent"] == "district_risk"
         assert data["grounded"] is True
-        assert "no validated historical MRCDSS risk classification" in data["answer"]
+        assert "no derived historical MRCDSS risk classification" in data["answer"]
 
     def test_no_fabricated_risk_from_recent_hmis(self, client):
         data = _chat(client, "Does recent HMIS reassign the risk class?")
@@ -222,7 +222,7 @@ class TestAssistantOllamaAvailableMocked:
         _chat(client, "What is the risk of Warangal?", state="Telangana", district="Warangal")
         prompt = calls["prompt"]
         assert "You are Disha, the MRCDSS Decision Assistant." in prompt
-        assert "Do not invent district statistics" in prompt
+        assert "Answer the exact question first" in prompt
         assert "Do not treat SHAP as causal evidence" in prompt
         assert "not available in the current MRCDSS evidence" in prompt
         assert "Grounded MRCDSS evidence:" in prompt

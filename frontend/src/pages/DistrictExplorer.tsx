@@ -29,6 +29,12 @@ function mapApiRecord(r: {
   };
 }
 
+const RISK_BADGE: Record<string, { bg: string; color: string; border: string }> = {
+  Low: { bg: '#e9f3ea', color: '#3a8248', border: 'rgba(58, 130, 72, 0.18)' },
+  Medium: { bg: '#fdf3e3', color: '#c27d2f', border: 'rgba(194, 125, 47, 0.18)' },
+  High: { bg: '#fbecea', color: '#b94538', border: 'rgba(185, 69, 56, 0.18)' },
+};
+
 export default function DistrictExplorer() {
   const navigate = useNavigate();
   const [stateFilter, setStateFilter] = useState<string>('');
@@ -124,48 +130,48 @@ export default function DistrictExplorer() {
   if (initialLoading && !error) {
     return (
       <AppLayout>
-        <main className="content">
-          <TopBar title="District Explorer" subtitle="Investigate district-level maternal health risk profiles and priorities" />
+        <div className="content condensed">
+          <TopBar title="District Explorer" subtitle="Explore district-level maternal health risk profiles and priorities across the dataset" />
           <LoadingState />
-        </main>
+        </div>
       </AppLayout>
     );
   }
 
   return (
     <AppLayout>
-      <main className="content">
-        <TopBar title="District Explorer" subtitle="Explore district-level maternal health risk profiles and priorities across the dataset" />
-
-        <section className="purpose-section">
-          <h2 className="purpose-title">District Explorer</h2>
-          <p className="purpose-text">
-            Browse and investigate {totalRecords.toLocaleString()} historical MRCDSS district-year records
-            spanning {states.length} states
-            {years.length >= 2 ? ` from ${years[0]}–${years[years.length - 1]}` : ''}. Filter by state,
-            district, year, risk class, or priority to identify areas requiring attention, then select any
-            district to view its complete unified history — the historical MRCDSS assessment together with
-            recent HMIS evidence for the same district.
-          </p>
-          <div className="purpose-facts">
-            <div className="purpose-fact">
-              <span className="purpose-fact-value">{totalRecords.toLocaleString()}</span>
-              <span className="purpose-fact-label">Total Records</span>
-            </div>
-            <div className="purpose-fact">
-              <span className="purpose-fact-value">{String(states.length)}</span>
-              <span className="purpose-fact-label">States</span>
-            </div>
-            <div className="purpose-fact">
-              <span className="purpose-fact-value">{String(years.length)}</span>
-              <span className="purpose-fact-label">Years</span>
-            </div>
-            <div className="purpose-fact">
-              <span className="purpose-fact-value">{records.length}</span>
-              <span className="purpose-fact-label">Currently Showing</span>
+      <div className="content">
+        <div className="page-header">
+          <div className="page-header-main">
+            <span className="page-kicker">District Explorer</span>
+            <h1 className="page-title">District Explorer</h1>
+            <p className="page-subtitle">
+              Browse and investigate {totalRecords.toLocaleString()} historical MRCDSS district-year records
+              spanning {states.length} states{years.length >= 2 ? ` from ${years[0]}–${years[years.length - 1]}` : ''}.
+              Filter by state, district, year, risk class, or priority to identify areas requiring attention,
+              then select any district to view its complete unified history — the historical MRCDSS assessment
+              together with recent HMIS evidence for the same district.
+            </p>
+            <div className="grid-4" style={{ marginTop: 'var(--space-4)', gap: 'var(--space-3)' }}>
+              <div className="kpi-card" style={{ padding: 'var(--space-4)' }}>
+                <span className="kpi-label">Total Records</span>
+                <span className="kpi-value" style={{ fontSize: '1.7rem' }}>{totalRecords.toLocaleString('en-US')}</span>
+              </div>
+              <div className="kpi-card" style={{ padding: 'var(--space-4)' }}>
+                <span className="kpi-label">States</span>
+                <span className="kpi-value" style={{ fontSize: '1.7rem' }}>{String(states.length)}</span>
+              </div>
+              <div className="kpi-card" style={{ padding: 'var(--space-4)' }}>
+                <span className="kpi-label">Years</span>
+                <span className="kpi-value" style={{ fontSize: '1.7rem' }}>{String(years.length)}</span>
+              </div>
+              <div className="kpi-card" style={{ padding: 'var(--space-4)' }}>
+                <span className="kpi-label">Currently Showing</span>
+                <span className="kpi-value" style={{ fontSize: '1.7rem' }}>{records.length}</span>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
 
         <SectionBlock>
           <FilterBar
@@ -186,11 +192,13 @@ export default function DistrictExplorer() {
           />
         </SectionBlock>
 
-        {error && <div className="mt-16"><ErrorState message={error} onRetry={fetchRecords} /></div>}
+        {error && (
+          <div className="mt-6"><ErrorState message={error} onRetry={fetchRecords} /></div>
+        )}
 
-        <SectionBlock className="mt-16">
-          <div className="table-container">
-            <table className="district-table">
+        <SectionBlock className="mt-6">
+          <div className="table-wrap">
+            <table className="data-table">
               <thead>
                 <tr>
                   <th scope="col">State</th>
@@ -202,47 +210,70 @@ export default function DistrictExplorer() {
                 </tr>
               </thead>
               <tbody>
-                {records.map((record, index) => (
-                  <tr
-                    key={`${record.state}-${record.district}-${record.year}-${index}`}
-                    className="district-row"
-                    tabIndex={0}
-                    onClick={() => handleRowClick(record)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleRowClick(record);
-                      }
-                    }}
-                  >
-                    <td>{record.state}</td>
-                    <td>{record.district}</td>
-                    <td>{record.year}</td>
-                    <td>
-                      <span className={`priority-badge badge-${record.riskClass.toLowerCase()}`}>
-                        {record.riskClass}
-                      </span>
-                    </td>
-                    <td>
-                      <span className={`priority-badge badge-${record.priority.toLowerCase()}`}>
-                        {record.priority}
-                      </span>
-                    </td>
-                    <td>{record.topPlanningFocus}</td>
-                  </tr>
-                ))}
+                {records.map((record, index) => {
+                  const style = RISK_BADGE[record.riskClass] ?? RISK_BADGE.Low;
+                  return (
+                    <tr
+                      key={`${record.state}-${record.district}-${record.year}-${index}`}
+                      className="row-link"
+                      tabIndex={0}
+                      onClick={() => handleRowClick(record)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          handleRowClick(record);
+                        }
+                      }}
+                    >
+                      <td>{record.state}</td>
+                      <td>{record.district}</td>
+                      <td>{record.year}</td>
+                      <td>
+                        <span className="badge" style={{ backgroundColor: style.bg, color: style.color, borderColor: style.border }}>
+                          {record.riskClass}
+                        </span>
+                      </td>
+                      <td>
+                        <span
+                          className={`badge ${record.priority === 'High' ? 'badge-high' : record.priority === 'Medium' ? 'badge-medium' : 'badge-low'}`}
+                        >
+                          {record.priority}
+                        </span>
+                      </td>
+                      <td>{record.topPlanningFocus}</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
           {totalPages > 1 && (
-            <div className="pagination-wrapper">
-              <button type="button" className="pagination-button" disabled={currentPage === 1} onClick={() => handlePageChange(currentPage - 1)} aria-label="Previous page">Previous</button>
-              <span className="pagination-info" aria-live="polite">Page {currentPage} of {totalPages}</span>
-              <button type="button" className="pagination-button" disabled={currentPage === totalPages} onClick={() => handlePageChange(currentPage + 1)} aria-label="Next page">Next</button>
+            <div className="pagination-wrapper" style={{ marginTop: 'var(--space-4)' }}>
+              <button
+                type="button"
+                className="btn btn-outline btn-sm"
+                disabled={currentPage === 1}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Previous page"
+              >
+                Previous
+              </button>
+              <span className="filter-result-count" style={{ margin: '0 var(--space-2)' }}>
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                type="button"
+                className="btn btn-outline btn-sm"
+                disabled={currentPage === totalPages}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Next page"
+              >
+                Next
+              </button>
             </div>
           )}
         </SectionBlock>
-      </main>
+      </div>
     </AppLayout>
   );
 }

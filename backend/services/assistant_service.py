@@ -3,7 +3,7 @@
 Disha uses natural-language understanding to map a question to a MRCDSS topic,
 retrieves the relevant evidence from the existing MRCDSS services (unified
 dataset, methodology, model comparison, SHAP, planning, Recent HMIS), and then
-lets an optional local Ollama model phrase/answer the question. When Ollama is
+lets an optional LLM provider phrase/answer the question. When the LLM is
 unavailable every grounded question is still answered deterministically from
 the retrieved evidence, so MRCDSS functionality never depends on the LLM.
 
@@ -17,8 +17,11 @@ Key properties:
   * Nothing is written and no model is trained.
 
 Configuration (environment):
-    MRCDSS_LLM_PROVIDER          ollama (default) | off
-    MRCDSS_OLLAMA_MODEL          model name to use; empty => deterministic only
+    MRCDSS_LLM_PROVIDER          ollama | groq | off
+    GROQ_API_KEY                 Groq Cloud API key (backend only)
+    GROQ_MODEL                   Groq model name (default: openai/gpt-oss-120b)
+    GROQ_BASE_URL                Groq API base URL (default: https://api.groq.com/openai/v1)
+    MRCDSS_OLLAMA_MODEL          Ollama model name; empty => deterministic only
     MRCDSS_OLLAMA_BASE_URL       default http://localhost:11434
 """
 from __future__ import annotations
@@ -48,14 +51,28 @@ SOURCE_PLANNING = "Planning Priorities"
 SYSTEM_PROMPT = (
     "You are Disha, the MRCDSS Decision Assistant.\n"
     "Answer only from the supplied MRCDSS evidence.\n"
-    "Do not invent district statistics, risk classifications, SHAP values, HMIS "
-    "values, dates, or planning priorities.\n"
-    "If the supplied evidence does not contain the answer, say that the "
-    "information is not available in the current MRCDSS evidence.\n"
+    "Answer the exact question first, using simple, natural, conversational English.\n"
+    "Prefer 1–4 short sentences. Use bullet points only when listing items.\n"
+    "Avoid unnecessary introductions, explanations, or repeating information.\n"
+    "Never dump multiple statistics or entire backend responses.\n"
+    "Avoid excessive technical terminology unless explicitly requested.\n"
+    "Never provide unrelated information just because it exists in retrieved context.\n"
     "Do not treat SHAP as causal evidence.\n"
     "Do not provide patient-level diagnosis, treatment, or emergency medical advice.\n"
     "Recent HMIS evidence is contextual evidence and was not used to assign the "
-    "historical MRCDSS risk classification."
+    "historical MRCDSS risk classification.\n"
+    "Explain technical concepts in simple language when needed.\n"
+    "K-Means risk labels are derived analytical classifications, not clinical ground truth.\n"
+    "Supervised metrics measure reproduction of derived labels on seen units, not "
+    "clinical prediction accuracy.\n"
+    "SHAP indicates model attribution, not causation.\n"
+    "Severe Anemia has cross-dataset comparability limitations (D1 vs D2 "
+    "harmonization uncertainty).\n"
+    "Distinguish historical MRCDSS assessments (2008-2019) from recent HMIS "
+    "evidence (2020-2025).\n"
+    "Never fabricate an answer to appear helpful.\n"
+    "If the supplied evidence does not contain the answer, say that the "
+    "information is not available in the current MRCDSS evidence."
 )
 
 TOPIC_ABOUT = "about"
@@ -317,6 +334,17 @@ def _understand_deterministic(message: str, page_context: str | None,
            "why did you choose", "why logistic"):
         return TOPIC_METHODOLOGY, "grounded"
 
+    if has("repeated priority", "repeated high priority", "repeated medium priority",
+           "repeated low priority", "what does repeated", "repeated priority rule"):
+        return TOPIC_AGGREGATE, "grounded"
+
+    if has("latest assessment year", "latest year", "assessment year"):
+        return TOPIC_AGGREGATE, "grounded"
+
+    if has("clinically validated", "clinical validation", "is the model clinically",
+           "clinical accuracy", "external validation"):
+        return TOPIC_LIMITATIONS, "grounded"
+
     if has("k means", "k-means", "kmeans", "clustering", "cluster", "how were the risk",
            "how was the risk", "risk classes generated", "generated the risk",
            "how did you create the risk", "clinical labels", "are these clinical",
@@ -518,7 +546,7 @@ def _global_shap_ranking():
 
 
 def _priority_summary():
-    return planning_service.get_planning_priorities().get("persistent_priority_info", {})
+    return planning_service.get_planning_priorities().get("repeated_priority_info", {})
 
 
 def _risk_counts():
@@ -533,19 +561,48 @@ def _risk_counts():
 def _high_priority_district_names(limit=15):
     try:
         from services import districts_service
-        res = districts_service.get_districts(priority="High", page=1, per_page=limit * 2)
+        res = districts_service.get_latest_district_observations()
     except Exception:
         return []
-    names, seen = [], set()
-    for r in res.get("records", []):
-        key = (r.get("district"), r.get("state"))
-        if key in seen:
-            continue
-        seen.add(key)
-        names.append(f"{r.get('district')} ({r.get('state')})")
-        if len(names) >= limit:
-            break
-    return names
+    latest_high = [
+        r for r in res.get("records", [])
+        if r.get("priority") == "High Priority"
+    ]
+    latest_high.sort(key=lambda r: (str(r.get("state")), str(r.get("district"))))
+    return [
+        f"{r.get('district')} ({r.get('state')})"
+        for r in latest_high[:limit]
+    ]
+
+
+def _districts_by_latest_risk_class(risk_class: str, limit: int = 10):
+    """Return district names from the latest historical observation, filtered by risk class."""
+    try:
+        from services import districts_service
+        res = districts_service.get_latest_district_observations()
+    except Exception:
+        return [], 0
+    matched = [
+        r for r in res.get("records", [])
+        if r.get("risk_class") == f"{risk_class} Risk"
+    ]
+    matched.sort(key=lambda r: (str(r.get("state")), str(r.get("district"))))
+    names = [f"{r.get('district')} ({r.get('state')})" for r in matched[:limit]]
+    return names, len(matched)
+
+
+def _latest_assessment_year():
+    """Return the latest historical assessment year."""
+    try:
+        from services import districts_service
+        res = districts_service.get_latest_district_observations()
+    except Exception:
+        return None
+    records = res.get("records", [])
+    if not records:
+        return None
+    years = [int(r.get("year", 0)) for r in records if r.get("year")]
+    return max(years) if years else None
 
 
 # --------------------------------------------------------------------------- #
@@ -567,7 +624,7 @@ def _district_line(ctx: dict, include_priority=True) -> str:
         if ctx.get("historical_years"):
             years = ", historical records for " + _years_text(ctx["historical_years"])
         return (f"The unified MRCDSS dataset contains recent HMIS records for {name} but no "
-                f"validated historical MRCDSS risk classification{years}.")
+                f"derived historical MRCDSS risk classification{years}.")
     parts = [f"{name} is classified as {ctx['risk_class']}"]
     if include_priority:
         parts.append(f"{ctx['priority']}")
@@ -593,12 +650,10 @@ def _dispatch(topic: str, message: str, ctx: dict | None):
     if topic == TOPIC_ABOUT:
         return (
             "MRCDSS (Maternal Health Risk Decision Support System) is a district-level maternal-health "
-            "decision-support system. It derives risk profiles (Low, Medium, High risk) from historical "
-            "district-year records (Dataset 1 + Dataset 2, 2008–2019) using K-Means clustering, replicates "
-            "them with supervised models, and maps them to planning priorities through a rule-based Decision "
-            "Support System. Dataset 3 extends the system with newer HMIS evidence (2020–2025) for the same "
-            "districts. It is designed to support district health planning, not to provide clinical diagnoses "
-            "or individual medical advice.",
+            "decision-support system. It derives risk profiles (Low, Medium, High) from historical "
+            "district-year records (2008–2019) using K-Means clustering and supervised models, and maps "
+            "them to planning priorities. Dataset 3 adds Recent HMIS evidence (2020–2025) as context. "
+            "It supports district health planning, not clinical diagnoses.",
             True, [SOURCE_METHODOLOGY],
         )
 
@@ -730,8 +785,9 @@ def _contributing_answer(ctx):
     features = ", ".join(_label(f) for f in top)
     answer = (f"Across the MRCDSS model, the indicators with the highest mean absolute SHAP "
               f"contribution are {features}. ")
-    answer += ("SHAP values indicate contribution direction and magnitude to the model "
-               "classification; they do not establish causation.")
+    answer += ("SHAP values indicate model attribution; the global summary separates positive and "
+               "negative contributions to the High Risk class, but signed district-specific direction "
+               "is not stored for this detail. SHAP does not establish causation.")
     return answer, True, [SOURCE_SHAP]
 
 
@@ -739,16 +795,17 @@ def _shap_answer(ctx):
     top = _global_shap_ranking()[:3]
     answer = (
         "SHAP (SHapley Additive exPlanations) values show how much each feature contributed to the "
-        "Logistic Regression model's classification of each district-year record. "
+        "Logistic Regression model output. The saved global test-set explanation is for the High Risk "
+        "class: positive values push toward High Risk and negative values push away from it. "
     )
     if top:
-        answer += f"Across all districts, the highest mean absolute SHAP values are for {', '.join(_label(f) for f in top)}. "
-    answer += ("SHAP values indicate contribution direction and magnitude to the model classification; "
-               "they do not establish causation.")
+        answer += f"Across all test records, the highest mean absolute SHAP values are for {', '.join(_label(f) for f in top)}. "
+    answer += ("SHAP values indicate model attribution, not causation, and global summaries are not "
+               "signed explanations for an individual district-year record.")
     if ctx is not None and ctx.get("matched") and ctx.get("top_contributing"):
         features = ", ".join(_label(f) for f in ctx["top_contributing"] if f)
-        answer += (f" For {ctx['district']} ({ctx['state']}), the top contributing features were "
-                   f"{features}.")
+        answer += (f" For {ctx['district']} ({ctx['state']}), the saved top contributors are {features}; "
+                   "their signed district-specific direction is not available in this detail view.")
     return answer, True, [SOURCE_SHAP]
 
 
@@ -774,8 +831,9 @@ def _planning_answer(ctx):
     counts = planning.get("feature_planning_focus_counts", [])
     if counts:
         top = [c["feature"] for c in counts[:3]]
-        answer += (f"The indicators that most frequently contribute to planning priorities are "
-                   f"{', '.join(_label(f) for f in top)}.")
+        answer += ("The indicators appearing most often among the model's top-three contributors "
+                   f"across historical district-year records are {', '.join(_label(f) for f in top)}. "
+                   "These are model-attributed planning focuses, not a verified needs assessment.")
     return answer, True, [SOURCE_PLANNING]
 
 
@@ -831,43 +889,104 @@ def _recent_risk_change_answer(ctx):
             return (f"{base} {ctx['district']} ({ctx['state']}) retains its historical MRCDSS class of "
                     f"{ctx['risk_class']}. Recent HMIS records carry no High / Medium / Low MRCDSS risk label.",
                     True, [SOURCE_RECENT, SOURCE_DISTRICT])
-        return (f"{base} Historical risk classes (Low / Medium / High) come only from the validated "
+        return (f"{base} Historical risk classes (Low / Medium / High) come only from the derived "
                 "historical MRCDSS methodology (Datasets 1 and 2).", True, [SOURCE_RECENT, SOURCE_METHODOLOGY])
-    return (f"{base} Historical risk classes (Low / Medium / High) come only from the validated "
+    return (f"{base} Historical risk classes (Low / Medium / High) come only from the derived "
             "historical MRCDSS methodology (Datasets 1 and 2); Dataset 3 adds evidence without new "
             "risk labels.", True, [SOURCE_RECENT, SOURCE_METHODOLOGY])
 
 
 def _aggregate_answer(message):
+    text = " ".join((message or "").lower().split())
+    counts = _risk_counts()
+    latest_year = _latest_assessment_year()
+    period = f"latest historical assessment ({latest_year})" if latest_year else "latest historical assessment"
+
+    # --- District list questions ---
+    if "low risk" in text and ("which" in text or "districts" in text or "list" in text):
+        names, total = _districts_by_latest_risk_class("Low")
+        if not names:
+            return (f"No Low Risk districts found in {period}.", True, [SOURCE_DISTRICT])
+        listed = ", ".join(names)
+        extra = f" Showing first {len(names)} of {total:,}." if total > len(names) else ""
+        return (
+            f"Low Risk districts in {period}: {listed}.{extra} "
+            f"{'Would you like the remaining districts?' if total > len(names) else ''}",
+            True, [SOURCE_DISTRICT],
+        )
+
+    if "high risk" in text and ("which" in text or "districts" in text or "list" in text):
+        names, total = _districts_by_latest_risk_class("High")
+        if not names:
+            return (f"No High Risk districts found in {period}.", True, [SOURCE_DISTRICT])
+        listed = ", ".join(names)
+        extra = f" Showing first {len(names)} of {total:,}." if total > len(names) else ""
+        return (
+            f"High Risk districts in {period}: {listed}.{extra} "
+            f"{'Would you like the remaining districts?' if total > len(names) else ''}",
+            True, [SOURCE_DISTRICT],
+        )
+
+    # --- Count questions ---
+    if "medium risk" in text and ("how many" in text or "count" in text):
+        return (
+            f"{counts['Medium Risk']:,} of {sum(counts.values()):,} districts are Medium Risk "
+            f"in {period}.",
+            True, [SOURCE_DISTRICT],
+        )
+
+    if "high risk" in text and ("how many" in text or "count" in text):
+        return (
+            f"{counts['High Risk']:,} of {sum(counts.values()):,} districts are High Risk "
+            f"in {period}.",
+            True, [SOURCE_DISTRICT],
+        )
+
+    if "low risk" in text and ("how many" in text or "count" in text):
+        return (
+            f"{counts['Low Risk']:,} of {sum(counts.values()):,} districts are Low Risk "
+            f"in {period}.",
+            True, [SOURCE_DISTRICT],
+        )
+
+    # --- Repeated priority question ---
+    if "repeated" in text and "high priority" in text:
+        summary = _priority_summary()
+        total = summary.get("total_units", 0)
+        repeated_high = summary.get("repeated_high", 0)
+        return (
+            f"Repeated High Priority means a district was classified High Priority in at least "
+            f"two historical district-year records. It does not require consecutive years, and "
+            f"it is not the latest priority. {repeated_high:,} of {total:,} units meet this rule.",
+            True, [SOURCE_PLANNING],
+        )
+
+    # --- Latest assessment year ---
+    if ("latest" in text and "year" in text) or "assessment year" in text:
+        if latest_year:
+            return (
+                f"The latest historical MRCDSS assessment year is {latest_year}.",
+                True, [SOURCE_DISTRICT],
+            )
+        return (NOT_AVAILABLE, False, [])
+
+    # --- General aggregate summary (only when no specific intent detected) ---
     summary = _priority_summary()
-    total = summary.get("total_districts", 0)
+    total = summary.get("total_units", 0)
     parts = []
     if total:
         parts.append(
-            f"Out of {total:,} districts in the MRCDSS priority summary, "
-            f"{summary.get('persistent_high', 0):,} are persistently High Priority, "
-            f"{summary.get('persistent_medium', 0):,} Medium Priority, and "
-            f"{summary.get('persistent_low', 0):,} Low Priority."
+            f"{total:,} State–District units are covered historically. "
+            f"{summary.get('repeated_high', 0):,} meet the repeated High Priority rule, "
+            f"{summary.get('repeated_medium', 0):,} repeated Medium, "
+            f"{summary.get('repeated_low', 0):,} repeated Low."
         )
-    if "list" in message.lower() or "which districts" in message.lower():
-        records = _high_priority_district_names(limit=15)
-        if records:
-            parts.append("High-priority districts include " + ", ".join(records) + ".")
-        else:
-            parts.append("No high-priority districts were returned by the DSS summary.")
-    counts = _risk_counts()
-    if counts["High Risk"]:
-        parts.append(
-            f"By latest historical MRCDSS risk classification, {counts['High Risk']:,} districts are "
-            f"High Risk, {counts['Medium Risk']:,} Medium Risk, and {counts['Low Risk']:,} Low Risk."
-        )
-    recent_units = sum(1 for d in _feature_index() if d.get("recent_records", 0) > 0)
-    if recent_units:
-        parts.append(f"Recent HMIS evidence is available for {recent_units:,} districts.")
+    parts.append(
+        f"By latest historical risk classification: {counts['High Risk']:,} High Risk, "
+        f"{counts['Medium Risk']:,} Medium Risk, {counts['Low Risk']:,} Low Risk."
+    )
     answer = " ".join(parts)
-    if not answer:
-        return NOT_AVAILABLE, False, []
-    return answer, True, [SOURCE_DISTRICT, SOURCE_RECENT]
+    return answer, True, [SOURCE_DISTRICT]
 
 
 def _model_comparison_text():
@@ -886,7 +1005,7 @@ def _model_comparison_text():
         if m.get("f1") is not None:
             parts.append(f"F1 {float(m['f1']):.4f}")
         if m.get("roc_auc") is not None:
-            parts.append(f"ROC-AUC {float(m['roc_auc']):.4f}")
+            parts.append(f"ROC-AUC {float(m['roc_auc']):.6f}")
         lines.append("; ".join(parts))
     return "; ".join(lines)
 
@@ -900,8 +1019,8 @@ def _methodology_answer(message):
             "indicator definitions are not directly comparable across the periods — for example the "
             "Severe Anemia Hb threshold changed (<7 g/dl to <=7 g/dl from 2023-24), and Institutional "
             "Delivery and PNC within 48h are not available in a comparable form in Dataset 3. This keeps "
-            "the historical risk classes stable and validated while recent HMIS adds current evidence; "
-            "it is a methodological strength, not a UI separation.",
+            "the historical analytical artifacts unchanged while recent HMIS adds contextual evidence; "
+            "it also avoids implying that the historical labels are clinically validated.",
             True, [SOURCE_METHODOLOGY],
         )
 
@@ -922,8 +1041,8 @@ def _methodology_answer(message):
 
     overview = overview_service.get_overview_data()
     answer = (
-        "MRCDSS processes district-level maternal-health records into validated features, derives risk "
-        "profiles with K-Means, replicates them with supervised models, explains classifications with "
+        "MRCDSS processes district-level maternal-health records into selected analytical features, derives "
+        "risk profiles with K-Means, replicates them with supervised models, explains classifications with "
         "SHAP, and maps results to planning priorities via a rule-based Decision Support System. "
     )
     answer += (f"The historical dataset covers {overview.get('year_coverage', {}).get('start')}"
@@ -943,34 +1062,33 @@ def _model_methodology_answer():
     except Exception:
         metrics = {}
     answer = (
-        "Supervised models — Logistic Regression, Decision Tree, Random Forest, XGBoost — were trained to "
-        "replicate the K-Means-derived risk classes using the same six-feature space. A stratified 80/20 "
-        "train/test split (random_state=42) was used for evaluation. Logistic Regression was selected as "
-        "the best-performing model based on accuracy, F1, and ROC-AUC."
+        "Logistic Regression was selected by macro-F1. It was trained to replicate the K-Means-derived "
+        "risk classes using the same six-feature space on a record-level 80/20 split. The reported "
+        "metrics measure label reproduction on seen units, not clinical prediction accuracy."
     )
     if metrics.get("accuracy") is not None:
-        answer += (f" The selected Logistic Regression model reports accuracy {metrics['accuracy']:.4f} "
-                   f"(F1 {metrics.get('f1', 0):.4f}, ROC-AUC {metrics.get('roc_auc', 0):.4f}).")
-    other = _model_comparison_text()
-    if other:
-        answer += f" Full comparison: {other}."
-    answer += (" High accuracy reflects consistency with the derived risk profiles, not independent "
-               "clinical validity.")
+        answer += (
+            f" Logistic Regression reports accuracy {metrics['accuracy']:.4f} "
+            f"(macro-F1 {metrics.get('f1', 0):.4f}, macro ROC-AUC {metrics.get('roc_auc', 0):.6f})."
+        )
+    answer += " Grouped or temporal validation and external clinical validation have not been performed."
     return answer, True, [SOURCE_METHODOLOGY]
 
 
 def _clustering_methodology_answer():
     answer = (
         "Risk classes were derived using K-Means clustering (K=3, random_state=42, n_init=10) on "
-        "StandardScaler-normalized features from six validated maternal-health indicators. The three "
-        "clusters were labeled Low, Medium, and High risk. They are derived analytical groups, not "
-        "clinical diagnoses."
+        "StandardScaler-normalized features from six selected maternal-health indicators. K=3 was fixed "
+        "for the Low/Medium/High design rather than selected through a full K-selection diagnostic. The "
+        "clusters are derived analytical groups, not clinical diagnoses."
     )
     val = next((i["value"] for i in methodology_service.get_methodology().get("items", [])
                 if i.get("title") == "K-Means Clustering"), "")
     m = re.search(r"Silhouette=([0-9.]+)", val)
     if m:
-        answer += f" Clustering quality: Silhouette {m.group(1)}."
+        answer += (f" Silhouette {m.group(1)} indicates weak-to-moderate separation, not strong cluster "
+                   "structure. Excluding Severe Anemia changes the risk class of 54.35% of records, so "
+                   "the labels are sensitive to feature choice.")
     return answer, True, [SOURCE_METHODOLOGY]
 
 
@@ -1016,8 +1134,8 @@ def _dataset_answer(message):
         )
     if "difference between the historical" in text or "differences between" in text:
         parts.append(
-            "Historical records (Datasets 1/2) carry a validated High/Medium/Low MRCDSS risk class and the "
-            "full six-feature signal; Recent HMIS (Dataset 3) carries current indicator values only — no "
+            "Historical records (Datasets 1/2) carry their original derived High/Medium/Low MRCDSS risk "
+            "class and the full six-feature signal; Recent HMIS (Dataset 3) carries current indicator values only — no "
             "risk classes are assigned — and several indicator definitions differ (Severe Anemia Hb "
             "threshold changed from <7 to <=7; Institutional Delivery and PNC within 48h are not "
             "comparable in Dataset 3; Obstetric Complications only through 2022-23)."
@@ -1036,12 +1154,16 @@ def _dataset_answer(message):
         )
     try:
         cov = recent_hmis_service.get_recent_hmis_coverage()
-        cand = cov.get("candidate_mapping", {})
+        cand = cov.get("district_coverage", {})
         if cand:
+            identity = overview.get("identity_reconciliation", {})
             parts.append(
-                f"Dataset 3 uses {cand.get('dataset_3_distinct_identifiers', '')} distinct district "
-                f"identifiers vs the {cand.get('reference_707_units', '')} historical reference units; "
-                f"the difference reflects district reorganization, aliases, and formatting variants."
+                f"After alias/format normalization, Dataset 3 uses {cand.get('dataset_3_distinct_identifiers', '')} "
+                f"distinct State–District units vs the {cand.get('reference_707_units', '')} historical "
+                f"reference units; the difference includes newly reported districts and genuine coverage "
+                f"change, not just spelling variants. The unified dataset has "
+                f"{identity.get('raw_state_district_entries', '')} raw State/District entries collapsing "
+                f"to {identity.get('normalized_state_district_units', '')} normalized units."
             )
     except Exception:
         pass
@@ -1069,7 +1191,7 @@ def _preprocessing_answer():
 def _features_answer(message):
     text = " ".join((message or "").lower().split())
     answer = (
-        "The final feature set is six validated maternal-health indicators: ANC First Trimester, "
+        "The final feature set is six selected maternal-health indicators: ANC First Trimester, "
         "TT2 / Booster, Severe Anemia, Institutional Delivery, PNC within 48h, and Obstetric Complications. "
     )
     if any(w in text for w in ("ifa", "sba")):
@@ -1082,10 +1204,10 @@ def _features_answer(message):
         answer += "These six were chosen because they are present and comparably defined in Datasets 1 and 2. "
     answer += (
         "Severe Anemia was retained despite cross-dataset harmonization uncertainty (D1 median 3.6% vs "
-        "D2 median 51.5%): a sensitivity analysis excluding it showed only a marginal impact "
-        "(silhouette 0.231 vs 0.238). Higher values indicate higher risk for Severe Anemia and Obstetric "
-        "Complications; lower values indicate higher risk for the ANC, TT2, Institutional Delivery, and "
-        "PNC indicators."
+        "D2 median 51.5%). A sensitivity analysis excluding it changes the risk class of 54.35% of "
+        "records; the similar silhouette values (0.231 vs 0.238) do not demonstrate label robustness. "
+        "Higher values indicate higher risk for Severe Anemia and Obstetric Complications; lower values "
+        "indicate higher risk for the ANC, TT2, Institutional Delivery, and PNC indicators."
     )
     return answer, True, [SOURCE_METHODOLOGY]
 
@@ -1106,7 +1228,7 @@ def _limitations_answer():
 def _system_answer():
     answer = (
         "End to end, MRCDSS: (1) preprocesses district-year maternal-health records from Datasets 1 and 2; "
-        "(2) selects six validated indicators; (3) derives risk classes with K-Means clustering; "
+        "(2) selects six selected indicators; (3) derives risk classes with K-Means clustering; "
         "(4) trains supervised models (Logistic Regression, Decision Tree, Random Forest, XGBoost) to "
         "replicate the classes; (5) explains each classification with SHAP; and (6) maps results to "
         "priority levels and planning focus areas via a rule-based Decision Support System. "
@@ -1254,13 +1376,14 @@ def _build_grounded_prompt(message, topic, ctx, draft, evidence, history):
 
 def _build_general_prompt(message, history, scope):
     lines = [
-        "You are Disha, a helpful assistant integrated with the MRCDSS maternal-health decision support "
-        "project.",
+        "You are Disha, the MRCDSS Decision Assistant.\n"
+        "Answer the exact question first, using simple, natural, conversational English.\n"
+        "Prefer 1–4 short sentences.\n"
         "You may answer general questions using general knowledge, and generic ML/AI concept questions "
-        "also using general knowledge with an MRCDSS tie-in when natural.",
-        "Never claim that a general answer came from MRCDSS evidence.",
+        "also using general knowledge with an MRCDSS tie-in when natural.\n"
+        "Never claim that a general answer came from MRCDSS evidence.\n"
         "For any MRCDSS-specific factual question always answer only from the supplied MRCDSS evidence and "
-        "never guess.",
+        "never guess.\n"
         "Keep answers concise and professional.",
     ]
     if scope:
@@ -1273,7 +1396,7 @@ def _build_general_prompt(message, history, scope):
 
 
 # --------------------------------------------------------------------------- #
-# Ollama (optional)
+# LLM provider abstraction (Groq Cloud primary; Ollama local fallback)
 # --------------------------------------------------------------------------- #
 def _llm_provider():
     return os.environ.get("MRCDSS_LLM_PROVIDER", "ollama").strip().lower()
@@ -1285,6 +1408,23 @@ def _ollama_base_url():
 
 def _ollama_model():
     return os.environ.get("MRCDSS_OLLAMA_MODEL", "").strip()
+
+
+def _groq_api_key():
+    return os.environ.get("GROQ_API_KEY", "").strip()
+
+
+def _groq_base_url():
+    return os.environ.get("GROQ_BASE_URL", "https://api.groq.com/openai/v1").rstrip("/")
+
+
+def _groq_model():
+    return os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b").strip()
+
+
+def _groq_active() -> bool:
+    """Groq is usable only when explicitly selected and an API key is present."""
+    return _llm_provider() == "groq" and bool(_groq_api_key())
 
 
 def _ollama_active() -> bool:
@@ -1307,7 +1447,12 @@ def _ollama_active() -> bool:
     return any(m == target or m.split(":")[0] == target.split(":")[0] for m in models)
 
 
-def _llm_chat(prompt: str) -> str | None:
+def _llm_active() -> bool:
+    """Any configured LLM provider is available."""
+    return _groq_active() or _ollama_active()
+
+
+def _ollama_chat(prompt: str) -> str | None:
     payload = {
         "model": _ollama_model(),
         "prompt": prompt,
@@ -1327,6 +1472,45 @@ def _llm_chat(prompt: str) -> str | None:
         return None
     out = (body.get("response") or "").strip()
     return out or None
+
+
+def _groq_chat(prompt: str) -> str | None:
+    """Call Groq Cloud through its OpenAI-compatible chat/completions endpoint."""
+    if not _groq_api_key():
+        return None
+    payload = {
+        "model": _groq_model(),
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.2,
+        "stream": False,
+    }
+    req = urllib.request.Request(
+        f"{_groq_base_url()}/chat/completions",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {_groq_api_key()}",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:  # noqa: S310
+            body = json.loads(resp.read().decode("utf-8"))
+    except Exception:
+        return None
+    choices = body.get("choices") or []
+    if not choices:
+        return None
+    message = choices[0].get("message") or {}
+    out = (message.get("content") or "").strip()
+    return out or None
+
+
+def _llm_chat(prompt: str) -> str | None:
+    """Route to the configured LLM provider. Groq takes precedence when selected."""
+    if _llm_provider() == "groq":
+        return _groq_chat(prompt)
+    return _ollama_chat(prompt)
 
 
 # --------------------------------------------------------------------------- #
@@ -1365,7 +1549,7 @@ def chat(message: str,
             topic, kind = follow, "grounded"
 
     if kind == "general":
-        if _ollama_active():
+        if _llm_active():
             try:
                 answer = _llm_chat(_build_general_prompt(message, history, scope))
             except Exception:
@@ -1375,7 +1559,7 @@ def chat(message: str,
                     "answer": answer,
                     "grounded": False,
                     "sources": [],
-                    "mode": "general",
+                    "mode": "groq" if _llm_provider() == "groq" else "general",
                     "intent": TOPIC_GENERAL,
                     "context": _context_payload(ctx, topic),
                 }
@@ -1391,7 +1575,7 @@ def chat(message: str,
 
     if kind == "conceptual":
         glossary_answer, g_grounded, g_sources = _dispatch(TOPIC_CONCEPTUAL, message, ctx)
-        if _ollama_active():
+        if _llm_active():
             try:
                 answer = _llm_chat(_build_general_prompt(message, history, scope))
             except Exception:
@@ -1401,7 +1585,7 @@ def chat(message: str,
                     "answer": answer,
                     "grounded": False,
                     "sources": [],
-                    "mode": "general",
+                    "mode": "groq" if _llm_provider() == "groq" else "general",
                     "intent": TOPIC_CONCEPTUAL,
                     "context": _context_payload(ctx, topic),
                 }
@@ -1423,13 +1607,13 @@ def chat(message: str,
             answer, grounded, sources = _dispatch(topic, message, ctx)
 
     mode = "fallback"
-    if grounded and _ollama_active():
+    if grounded and _llm_active():
         try:
             evidence = _evidence_for(topic, message, ctx)
             refined = _llm_chat(_build_grounded_prompt(message, topic, ctx, answer, evidence, history))
             if refined:
                 answer = refined
-                mode = "ollama"
+                mode = "groq" if _llm_provider() == "groq" else "ollama"
         except Exception:
             pass
 

@@ -18,11 +18,29 @@ export interface DistrictRecordDetail {
   Obstetric_Complications_Pct: number;
 }
 
+export interface PriorityHistory {
+  repeated_priority: string;
+  years_observed: number;
+  high_risk_years: number;
+  medium_risk_years: number;
+  low_risk_years: number;
+  high_risk_proportion: number;
+  medium_risk_proportion: number;
+  low_risk_proportion: number;
+  latest_year: number;
+  latest_risk_class: string;
+  latest_priority: string;
+  rule: string;
+}
+
 export interface DistrictDetailResponse {
   state: string;
   district: string;
   record_count: number;
   years: number[];
+  latest_year: number | null;
+  assessment_scope: string;
+  priority_history: PriorityHistory | null;
   records: DistrictRecordDetail[];
 }
 

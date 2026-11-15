@@ -4,13 +4,6 @@ interface HealthIndicatorsProps {
   indicators: HealthIndicator[];
 }
 
-function getInterpretationClass(value: number, name: string): string {
-  if (name === 'Severe Anemia' || name === 'Obstetric Complications') {
-    return value <= 15 ? 'indicator-good' : value <= 25 ? 'indicator-moderate' : 'indicator-concerning';
-  }
-  return value >= 50 ? 'indicator-good' : value >= 30 ? 'indicator-moderate' : 'indicator-concerning';
-}
-
 export default function HealthIndicators({ indicators }: HealthIndicatorsProps) {
   return (
     <section className="section">
@@ -28,7 +21,7 @@ export default function HealthIndicators({ indicators }: HealthIndicatorsProps) 
             <tr key={indicator.name}>
               <td>{indicator.name}</td>
               <td>
-                <span className={`indicator-value ${getInterpretationClass(indicator.value, indicator.name)}`}>
+                <span className="indicator-value">
                   {indicator.value}{indicator.unit}
                 </span>
               </td>

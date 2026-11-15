@@ -6,8 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from api.routes.overview import router as overview_router
 from api.routes.districts import router as districts_router
@@ -36,6 +37,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.exception_handler(FileNotFoundError)
+async def file_not_found_handler(_request: Request, exc: FileNotFoundError):
+    return JSONResponse(
+        status_code=404,
+        content={"detail": str(exc) or "Requested data file is not available."},
+    )
 
 app.include_router(overview_router, prefix="/api/overview", tags=["Overview"])
 app.include_router(districts_router, prefix="/api/districts", tags=["Districts"])

@@ -15,6 +15,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
 D3_DIR = os.path.join(PROJECT_ROOT, "data", "recent_hmis", "dataset3")
 D3_CSV = os.path.join(D3_DIR, "dataset3_recent_hmis.csv")
 AUDIT_MAPPING_CSV = os.path.join(D3_DIR, "coverage_audit", "district_mapping_candidates.csv")
+QUALITY_FLAGS_CSV = os.path.join(D3_DIR, "percent_invalid_flags.csv")
 
 FEATURE_DISPLAY = {
     "ANC_First_Trimester_Pct": "ANC First Trimester",
@@ -187,6 +188,46 @@ def get_recent_hmis_coverage():
     }
 
 
+def _quality_summary():
+    if not os.path.exists(QUALITY_FLAGS_CSV):
+        return {}
+    flags = pd.read_csv(QUALITY_FLAGS_CSV)
+    if len(flags) == 0:
+        return {}
+    flag_text = flags["flag"].fillna("").astype(str).str.lower()
+    flags = flags.assign(
+        _missing=flag_text.str.contains("missing"),
+        _range=flag_text.str.contains("range"),
+        _structural=flag_text.str.contains("structurally unavailable"),
+        _zero_denominator=flag_text.str.contains("denominator == 0"),
+    )
+    by_feature = {}
+    for feature, part in flags.groupby("Feature"):
+        range_values = pd.to_numeric(part.loc[part["_range"], "value"], errors="coerce")
+        by_feature[feature] = {
+            "flags": int(len(part)),
+            "missing_flags": int(part["_missing"].sum()),
+            "range_flags": int(part["_range"].sum()),
+            "structural_flags": int(part["_structural"].sum()),
+            "zero_denominator_flags": int(part["_zero_denominator"].sum()),
+            "max_out_of_range_value": (
+                float(range_values.max()) if range_values.notna().any() else None
+            ),
+        }
+    return {
+        "total_flags": int(len(flags)),
+        "missing_flags": int(flags["_missing"].sum()),
+        "range_flags": int(flags["_range"].sum()),
+        "structural_flags": int(flags["_structural"].sum()),
+        "zero_denominator_flags": int(flags["_zero_denominator"].sum()),
+        "by_feature": by_feature,
+        "note": (
+            "Flags identify missing numerators/denominators and values outside 0–100. Out-of-range "
+            "values are retained in the API and are not clipped or silently replaced."
+        ),
+    }
+
+
 def _feature_distribution(df_feature):
     """Bucket percentages into 10-pp bins; values above 100 form their own bin (not clipped)."""
     values = df_feature.dropna().astype(float)
@@ -262,5 +303,6 @@ def get_recent_hmis_indicators():
         "indicators": indicators,
         "distributions": distributions,
         "harmonization": list(HARMONIZATION_ROWS),
+        "data_quality": _quality_summary(),
         "disclaimer": DISCLAIMER,
     }

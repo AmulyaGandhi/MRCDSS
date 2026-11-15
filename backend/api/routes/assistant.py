@@ -49,7 +49,7 @@ class AssistantChatResponse(BaseModel):
     answer: str
     grounded: bool
     sources: list[str]
-    mode: Literal["ollama", "fallback", "general"]
+    mode: Literal["ollama", "groq", "fallback", "general"]
     intent: str
     context: Optional[AssistantContext] = None
 
