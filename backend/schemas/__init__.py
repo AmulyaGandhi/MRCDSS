@@ -57,15 +57,22 @@ class SensitivityAnalysis(BaseModel):
     sensitivity_features: int
     primary_silhouette: float
     sensitivity_silhouette: float
+    primary_high_risk_size: int
     sensitivity_high_risk_size: int
+    risk_class_changed: int
+    risk_class_change_proportion: float
+    risk_class_agreement: float
 
 
 class RiskAnalysisResponse(BaseModel):
     risk_counts: dict
     cluster_profiles: list
     clustering_metrics: ClusteringMetrics
+    clustering_notes: dict
     model_comparison: list
     confusion_matrix: list
+    evaluation_design: dict
+    shap_summary: dict
     sensitivity_analysis: SensitivityAnalysis
 
 
@@ -123,7 +130,7 @@ class DistrictProfileResponse(BaseModel):
     high_risk_proportion: float
     latest_year: int
     latest_risk_class: str
-    persistent_priority: str
+    repeated_priority: str
     indicators: Optional[list] = None
     contributing_factors: Optional[list] = None
     planning_focus: Optional[list] = None
@@ -137,9 +144,14 @@ class PlanningRule(BaseModel):
 
 class PlanningPrioritiesResponse(BaseModel):
     priority_distribution: dict
-    persistent_priority_info: dict
+    latest_priority_distribution: dict
+    repeated_priority_info: dict
+    priority_semantics: dict
+    planning_focus_label: str
+    planning_focus_note: str
     planning_rules: list
     feature_planning_focus_counts: list
+    feature_planning_focus_note: str
 
 
 class MethodologyItem(BaseModel):
@@ -173,4 +185,5 @@ class RecentHmisIndicatorsResponse(BaseModel):
     indicators: List[Dict]
     distributions: Dict
     harmonization: List[Dict]
+    data_quality: Dict
     disclaimer: str
